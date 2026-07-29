@@ -1,5 +1,7 @@
 # Customer Support Churn Prevention System
 
+A data‑driven platform that combines support tickets, CRM, billing, and cancellation history to predict customer churn, generate proactive alerts, and provide actionable recommendations for retention.
+
 **Version:** 1.1  
 **Date:** 23 July 2026
 
@@ -11,9 +13,7 @@
 ---
 
 ## Executive Summary
-Customer retention is one of the most important business objectives for service-oriented organizations. Traditional customer support systems efficiently manage support tickets but rarely connect unresolved complaints, escalation history, and customer dissatisfaction with cancellation behavior. 
-
-The **Customer Support Churn Prevention System** integrates customer support, CRM, billing, and historical cancellation data to predict churn risk, generate proactive alerts, and provide actionable recommendations that help customer success teams intervene before customers leave.
+Customer retention is a key objective for service‑oriented businesses. While support systems efficiently manage tickets, they often fail to link unresolved complaints, escalation history, and customer dissatisfaction to churn behavior.
 
 ## 1. Problem Statement
 Modern customer support platforms manage ticket categories, escalation records, and resolution times but fail to correlate these factors with customer churn. Support teams resolve individual tickets without understanding long-term customer behavior. Consequently, organizations lose valuable customers because warning signs remain unnoticed until cancellation occurs.

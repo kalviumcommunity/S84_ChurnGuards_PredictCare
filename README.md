@@ -15,6 +15,8 @@ A data‑driven platform that combines support tickets, CRM, billing, and cancel
 ## Executive Summary
 Customer retention is a key objective for service‑oriented businesses. While support systems efficiently manage tickets, they often fail to link unresolved complaints, escalation history, and customer dissatisfaction to churn behavior.
 
+This project proposes a unified churn-prevention layer that turns fragmented support and billing signals into actionable retention insights. The goal is to help teams identify at-risk customers earlier, prioritize interventions, and measure the impact of support operations on long-term revenue.
+
 ## 1. Problem Statement
 Modern customer support platforms manage ticket categories, escalation records, and resolution times but fail to correlate these factors with customer churn. Support teams resolve individual tickets without understanding long-term customer behavior. Consequently, organizations lose valuable customers because warning signs remain unnoticed until cancellation occurs.
 
@@ -35,6 +37,20 @@ Reducing churn directly increases profitability. Existing customers are signific
 - Generate real-time risk alerts.
 - Reduce churn and improve customer satisfaction (CSAT).
 - Reduce resolution times and provide executive insights.
+
+## Data Inputs and Outputs
+
+**Primary inputs:**
+- Support ticket volume, category, escalation count, and resolution time.
+- CRM attributes such as account age, plan tier, and customer segment.
+- Billing signals such as failed payments, overdue invoices, and subscription changes.
+- Cancellation history, CSAT scores, and previous retention actions.
+
+**Primary outputs:**
+- A churn risk score for each customer.
+- Priority alerts for support and customer success teams.
+- Retention recommendations based on the most likely churn drivers.
+- KPI views that show churn trends, response time, and intervention outcomes.
 
 ## 5. Scope
 **In Scope:** 

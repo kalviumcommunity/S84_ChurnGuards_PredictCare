@@ -17,6 +17,12 @@ Customer retention is a key objective for service‑oriented businesses. While s
 
 This project proposes a unified churn-prevention layer that turns fragmented support and billing signals into actionable retention insights. The goal is to help teams identify at-risk customers earlier, prioritize interventions, and measure the impact of support operations on long-term revenue.
 
+## Quick Features
+- Simple churn risk scoring for support and success teams.
+- Basic alerting for customers who may need attention.
+- Clear KPI tracking for churn, CSAT, and resolution performance.
+- One place to view support, billing, and retention signals.
+
 ## 1. Problem Statement
 Modern customer support platforms manage ticket categories, escalation records, and resolution times but fail to correlate these factors with customer churn. Support teams resolve individual tickets without understanding long-term customer behavior. Consequently, organizations lose valuable customers because warning signs remain unnoticed until cancellation occurs.
 

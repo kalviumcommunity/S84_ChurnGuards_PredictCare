@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churnguard-ai"
+version = "1.1.0"
+description = "Customer Support Churn Prevention System using Python, Pandas, and Streamlit"
+readme = "README.md"
+authors = [
+    {name = "Akshit Sharma"},
+    {name = "Arman Singh"},
+    {name = "Saksham Kaushal"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "streamlit>=1.48.1",
+    "pandas>=2.2.2",
+    "numpy>=1.26.4",
+    "plotly>=6.9.0",
+    "openpyxl>=3.1.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/churnguard-ai"
+Repository = "https://github.com/yourusername/churnguard-ai"
+Documentation = "https://github.com/yourusername/churnguard-ai/blob/main/README.md"
+Issues = "https://github.com/yourusername/churnguard-ai/issues"
+
+[tool.black]
+line-length = 100
+target-version = ['py310', 'py311', 'py312']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]

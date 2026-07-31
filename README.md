@@ -1,124 +1,225 @@
-# Customer Support Churn Prevention System
+# Customer Support Churn Prevention System - Streamlit Version
 
-A data‑driven platform that combines support tickets, CRM, billing, and cancellation history to predict customer churn, generate proactive alerts, and provide actionable recommendations for retention.
+A data-driven platform built with **Python and Streamlit** combining support tickets, CRM, billing, and cancellation history to predict customer churn, generate proactive alerts, and provide actionable retention recommendations.
+
+## Tech Stack (Sprint 1 Curriculum)
+
+This project uses technologies from the **Turn Data Into a Product** curriculum:
+
+- **Python 3.10+** - Core programming language
+- **Pandas** - Data cleaning, transformation, and analysis
+- **NumPy** - Numerical computation and vectorized processing
+- **Streamlit** - Interactive dashboard and data product interfaces
+- **Plotly** - Interactive visualizations and charts
+- **SQL** (Future) - Business analytics and database queries
+
+## Project Structure
+
+```
+churn-prevention-system/
+├── streamlit_app.py          # Main Streamlit application
+├── requirements.txt          # Python dependencies
+├── .gitignore               # Git ignore rules
+├── README_STREAMLIT.md      # This file
+├── data/                    # CSV/JSON datasets (to be added)
+├── scripts/                 # Data processing scripts
+│   ├── data_ingestion.py    # CSV & JSON data loading
+│   ├── data_cleaning.py     # Missing values, duplicates, standardization
+│   ├── feature_engineering.py # Derived business columns
+│   └── churn_analysis.py    # GroupBy, KPIs, behavioral analysis
+└── notebooks/               # Exploratory analysis (optional)
+```
+
+## Installation
+
+### 1. Set up Python virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 2. Activate the virtual environment
+
+**Windows:**
+```bash
+venv\Scripts\activate
+```
+
+**Mac/Linux:**
+```bash
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Application
+
+```bash
+streamlit run streamlit_app.py
+```
+
+The application will open automatically at **http://localhost:8501**
+
+## Features Implemented
+
+### 📊 Executive Dashboard
+- **KPI Cards** - Projected churn rate, revenue at risk, prevention actions
+- **Churn Trends** - Stacked bar charts showing actual vs prevented churn
+- **Segment Analysis** - Pie chart of risk distribution
+- **Dissatisfaction Analysis** - Top reasons with progress bars
+
+### 🚨 Risk Command Center
+- **Health Score Summary** - Low Risk, Medium, Critical counts
+- **Active Risk Alerts** - Real-time feed of critical events
+- **High-Risk Accounts Table** - Sortable list with risk scores
+- **Account Details** - ARR, last activity, risk indicators
+
+### 🎫 Support Workspace
+- **Ticket Management** - Search, filter, and prioritize tickets
+- **Customer 360 Context** - Risk scores and sentiment per ticket
+- **Priority Indicators** - Visual badges for Critical, High, Medium, Low
+- **Quick Metrics** - Open tickets, response time, high-risk count
+
+### 👤 Customer 360 Profile
+- **Account Overview** - Industry, ARR, contract details
+- **Key Metrics** - Health score, support tickets, login activity
+- **Customer Timeline** - Chronological interaction history
+- **AI Recommendations** - Retention strategies and actions
+
+## Sprint 1 Skills Demonstrated
+
+### Data Handling (Modules 2.3-2.6)
+- ✅ Pandas DataFrame operations
+- ✅ Data cleaning and transformation workflows
+- ✅ NumPy vectorized computations
+- ✅ Dataset profiling and quality assessment
+
+### Analysis & Insights (Modules 2.29-2.36)
+- ✅ GroupBy aggregation and segment insights
+- ✅ KPI definition and business metric design
+- ✅ Behavioral analysis and user segmentation
+- ✅ Anomaly detection and risk identification
+
+### Visualization & Reporting (Modules 2.45-2.50)
+- ✅ Interactive Plotly chart design
+- ✅ KPI card and summary metric display
+- ✅ Data storytelling and insight narrative
+- ✅ Executive reporting and stakeholder communication
+
+### Streamlit Development (Modules 2.51-2.57)
+- ✅ App structure and navigation
+- ✅ Interactive filters and widgets
+- ✅ Session state management
+- ✅ Real-time KPI dashboard development
+- ✅ Alert monitoring and threshold detection
+
+## Data Sources
+
+### Expected CSV/JSON Files (to be added in `data/` folder)
+
+1. **customers.csv** - Customer account information
+   - customer_id, company_name, industry, arr, contract_type, renewal_date, csm_name
+
+2. **tickets.csv** - Support ticket records
+   - ticket_id, customer_id, subject, priority, status, created_date, resolved_date, sentiment
+
+3. **interactions.csv** - Customer interaction timeline
+   - interaction_id, customer_id, interaction_type, description, timestamp
+
+4. **churn_history.csv** - Historical churn events
+   - customer_id, churn_date, churn_reason, revenue_lost
+
+### Data Ingestion Workflow (Module 2.15)
+
+```python
+import pandas as pd
+
+# CSV loading with proper encoding
+customers = pd.read_csv('data/customers.csv', encoding='utf-8')
+
+# JSON loading for nested data
+tickets = pd.read_json('data/tickets.json')
+
+# Basic ingestion checks
+print(f"Customers loaded: {len(customers)} rows")
+print(f"Tickets loaded: {len(tickets)} rows")
+```
+
+## Development Workflow (Modules 2.11-2.13)
+
+### Setup Commands
+
+```bash
+# Create virtual environment
+python -m venv venv
+
+# Activate (Windows)
+venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Freeze current dependencies
+pip freeze > requirements.txt
+```
+
+### Git Workflow (Module 2.12)
+
+```bash
+# Initialize repository
+git init
+git add .
+git commit -m "Initial commit: Streamlit churn prevention dashboard"
+
+# Create feature branch
+git checkout -b feature/customer-profile
+
+# Push to GitHub
+git remote add origin <your-repo-url>
+git push -u origin main
+```
+
+## Future Enhancements
+
+### Phase 2: SQL Integration (Modules 2.37-2.44)
+- [ ] Connect to SQL database for persistent storage
+- [ ] SQL business metrics query design
+- [ ] Window functions for ranking and trends
+- [ ] Query optimization and views
+
+### Phase 3: Automation (Modules 2.58-2.60)
+- [ ] Automated data pipeline execution
+- [ ] GitHub Actions for validation
+- [ ] Scheduled report generation
+- [ ] Email alert integration
+
+### Phase 4: Advanced Analytics
+- [ ] Machine learning churn prediction model
+- [ ] Real-time risk score calculation
+- [ ] Anomaly detection algorithms
+- [ ] Customer lifetime value (CLV) forecasting
+
+## Team
+
+- **Akshit Sharma**
+- **Arman Singh**
+- **Saksham Kaushal**
 
 **Version:** 1.1  
-**Date:** 23 July 2026
+**Date:** July 30, 2026
 
-## Project Team
-- Akshit Sharma
-- Arman Singh
-- Sksham Kaushal
+## Documentation
+
+For detailed curriculum alignment, see:
+- **Module 2.51-2.57** - Streamlit foundations and dashboard development
+- **Module 2.3-2.6** - Python data structures and Pandas workflows
+- **Module 2.29-2.36** - Business analytics and KPI analysis
+- **Module 2.45-2.50** - Visualization and executive reporting
 
 ---
 
-## Executive Summary
-Customer retention is a key objective for service‑oriented businesses. While support systems efficiently manage tickets, they often fail to link unresolved complaints, escalation history, and customer dissatisfaction to churn behavior.
-
-This project proposes a unified churn-prevention layer that turns fragmented support and billing signals into actionable retention insights. The goal is to help teams identify at-risk customers earlier, prioritize interventions, and measure the impact of support operations on long-term revenue.
-
-## Quick Features
-- Simple churn risk scoring for support and success teams.
-- Basic alerting for customers who may need attention.
-- Clear KPI tracking for churn, CSAT, and resolution performance.
-- One place to view support, billing, and retention signals.
-
-## 1. Problem Statement
-Modern customer support platforms manage ticket categories, escalation records, and resolution times but fail to correlate these factors with customer churn. Support teams resolve individual tickets without understanding long-term customer behavior. Consequently, organizations lose valuable customers because warning signs remain unnoticed until cancellation occurs.
-
-## 2. Root Cause Summary
-Current support systems cannot accurately predict churn because:
-- Ticketing systems record events but don't model customer behavior.
-- Customer data is fragmented across CRM, billing, and support tools.
-- No analytics layer connects historical support activity with cancellations.
-- Teams focus on resolving tickets rather than identifying churn patterns.
-- Organizations lack proactive retention insights and intervention workflows.
-
-## 3. Business Opportunity
-Reducing churn directly increases profitability. Existing customers are significantly less expensive to retain than acquiring new ones. A proactive support intelligence platform enables organizations to identify dissatisfied customers early, improve customer lifetime value, and strengthen brand loyalty.
-
-## 4. Objectives
-- Predict churn risk.
-- Correlate unresolved complaints with cancellations.
-- Generate real-time risk alerts.
-- Reduce churn and improve customer satisfaction (CSAT).
-- Reduce resolution times and provide executive insights.
-
-## Data Inputs and Outputs
-
-**Primary inputs:**
-- Support ticket volume, category, escalation count, and resolution time.
-- CRM attributes such as account age, plan tier, and customer segment.
-- Billing signals such as failed payments, overdue invoices, and subscription changes.
-- Cancellation history, CSAT scores, and previous retention actions.
-
-**Primary outputs:**
-- A churn risk score for each customer.
-- Priority alerts for support and customer success teams.
-- Retention recommendations based on the most likely churn drivers.
-- KPI views that show churn trends, response time, and intervention outcomes.
-
-## 5. Scope
-**In Scope:** 
-- Customer dashboard, ticket analytics, churn prediction, customer timeline, automated alerts, KPI reporting, escalation tracking.
-
-**Out of Scope:** 
-- Payment processing, marketing automation, HR management, inventory management.
-
-## 6. User Personas
-- **Support Agent:** Needs complete customer history.
-- **Customer Success Manager:** Needs churn alerts and intervention workflows.
-- **Product Manager:** Needs KPIs and churn trends.
-
-## 7. Proposed Solution
-Develop a unified platform integrating CRM, billing, ticketing systems, and customer history. A churn scoring engine evaluates complaint frequency, resolution delays, escalation history, CSAT, billing behavior, and subscription status to generate proactive retention alerts and recommendations.
-
-## 8. Functional Requirements
-- Customer Dashboard & Customer Timeline
-- Ticket Management & Escalation Tracking
-- Churn Risk Score & Retention Recommendations
-- Automated Notifications
-- KPI Dashboard & Reporting Module
-
-## 9. Non-Functional Requirements
-- Response time < 2 seconds
-- 99.9% availability
-- Role-based authentication
-- Audit logs
-- Scalable architecture supporting 1M+ customers
-- Encrypted storage
-
-## 10. User Stories
-- **Support Agent:** View customer history.
-- **Customer Success Manager:** Receive churn alerts.
-- **Product Manager:** Monitor KPIs.
-
-## 11. Workflow
-1. Customer Complaint 
-2. Ticket Creation 
-3. Agent Assignment 
-4. Issue Resolution 
-5. Customer Feedback 
-6. Churn Score Calculation 
-7. Risk Alert 
-8. Retention Action 
-9. Customer Retained
-
-## 12. KPIs
-- Reduce churn by 15%
-- Reduce average resolution time by 20%
-- Increase CSAT by 10%
-- Improve first-contact resolution by 15%
-- Reduce escalation rate by 18%
-
-## 13. Development Roadmap
-- **Phase 1:** Requirement Analysis
-- **Phase 2:** UI/UX Design
-- **Phase 3:** Backend & Database
-- **Phase 4:** Churn Prediction Engine
-- **Phase 5:** Testing
-- **Phase 6:** Deployment
-- **Phase 7:** Monitoring & Continuous Improvement
-
-## 14. Conclusion
-The Customer Support Churn Prevention System transforms traditional support into a proactive retention platform by combining operational data with predictive analytics, enabling early intervention, improved customer experience, reduced churn, and increased long-term profitability.
+Built with Python, Streamlit, and Pandas for enterprise-scale customer retention.

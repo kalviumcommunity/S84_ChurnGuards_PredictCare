@@ -833,6 +833,14 @@ elif page == "Ticket Workspace":
     st.markdown('</div>', unsafe_allow_html=True)
 
 
+# Function to export customer data to CSV
+def export_customer_data():
+    """Export customer data with risk metrics and health status"""
+    export_data = customers_df[['customer_id', 'company_name', 'risk_score', 'arr', 'health_status', 'sentiment']].copy()
+    export_data['last_activity'] = customers_df['last_activity'].dt.strftime('%Y-%m-%d')
+    csv = export_data.to_csv(index=False)
+    return csv
+
 # PAGE 4: CUSTOMER DIRECTORY
 elif page == "Customer Directory":
     # Header
@@ -843,7 +851,15 @@ elif page == "Customer Directory":
                    unsafe_allow_html=True)
     with col2:
         st.markdown('<br>', unsafe_allow_html=True)
-        st.markdown('<a href="#" class="btn-primary" style="padding: 10px 20px;">⚡ Initiate Intervention</a>', 
+        csv_data = export_customer_data()
+        st.download_button(
+            label="📥 Export Customer Data",
+            data=csv_data,
+            file_name=f"customer_directory_{datetime.now().strftime('%Y%m%d')}.csv",
+            mime="text/csv",
+            key="export_customers"
+        )
+        st.markdown('<a href="#" class="btn-primary" style="padding: 10px 20px; margin-left: 8px;">⚡ Initiate Intervention</a>', 
                    unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)

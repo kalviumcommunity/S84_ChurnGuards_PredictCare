@@ -244,6 +244,13 @@ def load_data():
 
 customers_df, tickets_df = load_data()
 
+# Function to filter customers by risk level
+def filter_customers_by_risk(df, risk_filter):
+    """Filter customers based on selected risk levels"""
+    if "All Levels" in risk_filter:
+        return df
+    return df[df['health_status'].isin(risk_filter)]
+
 # PAGE 1: EXECUTIVE DASHBOARD
 if page == "Executive Dashboard":
     # Header
@@ -253,50 +260,72 @@ if page == "Executive Dashboard":
         st.markdown("Real-time overview of churn risk and retention performance.")
     with col2:
         st.markdown('<br>', unsafe_allow_html=True)
-        st.markdown('<a href="#" class="btn-secondary">📄 Export Report</a> &nbsp; <a href="#" class="btn-primary">🔍 Filter View</a>', 
+        st.markdown('<a href="#" class="btn-secondary">📄 Export Report</a>', 
                    unsafe_allow_html=True)
+    
+    # Risk Filter
+    st.markdown("<br>", unsafe_allow_html=True)
+    col1, col2, col3, col4 = st.columns([2, 2, 2, 6])
+    with col1:
+        st.markdown("**🔍 Filter by Risk:**")
+    with col2:
+        risk_filter = st.multiselect(
+            "Risk Level",
+            options=["All Levels", "Critical", "Medium", "Low Risk"],
+            default=["All Levels"],
+            label_visibility="collapsed"
+        )
+    with col3:
+        filtered_customers = filter_customers_by_risk(customers_df, risk_filter)
+        st.markdown(f"**Showing {len(filtered_customers)} of {len(customers_df)} customers**")
     
     st.markdown("<br>", unsafe_allow_html=True)
     
-    # KPI Cards Row
+    # KPI Cards Row - Dynamic based on filter
     col1, col2, col3, col4 = st.columns(4)
     
+    # Calculate dynamic metrics
+    total_arr = filtered_customers['arr'].sum()
+    avg_risk = int(filtered_customers['risk_score'].mean())
+    critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
+    churn_rate = (critical_count / len(filtered_customers) * 100) if len(filtered_customers) > 0 else 0
+    
     with col1:
-        st.markdown("""
+        st.markdown(f"""
         <div class="metric-card">
             <div style="display: flex; justify-content: space-between; align-items: start;">
                 <div class="metric-label">PROJECTED CHURN RATE</div>
                 <div style="font-size: 18px;">📉</div>
             </div>
-            <div class="metric-value">12.4%</div>
+            <div class="metric-value">{churn_rate:.1f}%</div>
             <div class="metric-change negative">↗ 1.2%</div>
             <div style="font-size: 12px; color: #737373; margin-top: 4px;">vs. last month</div>
         </div>
         """, unsafe_allow_html=True)
     
     with col2:
-        st.markdown("""
+        st.markdown(f"""
         <div class="metric-card">
             <div style="display: flex; justify-content: space-between; align-items: start;">
                 <div class="metric-label">REVENUE AT RISK</div>
                 <div style="font-size: 18px;">💰</div>
             </div>
-            <div class="metric-value">$4.2M</div>
+            <div class="metric-value">${total_arr/1000000:.1f}M</div>
             <div class="metric-change negative">↗ $200k</div>
-            <div style="font-size: 12px; color: #737373; margin-top: 4px;">Active High-Risk accounts</div>
+            <div style="font-size: 12px; color: #737373; margin-top: 4px;">{critical_count} High-Risk accounts</div>
         </div>
         """, unsafe_allow_html=True)
     
     with col3:
-        st.markdown("""
+        st.markdown(f"""
         <div class="metric-card">
             <div style="display: flex; justify-content: space-between; align-items: start;">
                 <div class="metric-label">AVERAGE RISK SCORE</div>
                 <div style="font-size: 18px;">📊</div>
             </div>
-            <div class="metric-value">68</div>
+            <div class="metric-value">{avg_risk}</div>
             <div style="background: #e5e5e5; height: 4px; border-radius: 2px; margin-top: 8px;">
-                <div style="background: #1a1a1a; width: 68%; height: 100%;"></div>
+                <div style="background: #1a1a1a; width: {avg_risk}%; height: 100%;"></div>
             </div>
             <div style="font-size: 12px; color: #737373; margin-top: 4px;">Critical threshold: 75</div>
         </div>

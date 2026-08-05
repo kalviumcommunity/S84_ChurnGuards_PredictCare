@@ -1,0 +1,5002 @@
+[
+    {
+        "ticket_id": "TKT-2800",
+        "customer_id": "CUST-1161",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-11T01:43:15",
+        "resolved_date": "2026-07-11T08:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2801",
+        "customer_id": "CUST-1198",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-06-14T14:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2802",
+        "customer_id": "CUST-1113",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-17T01:43:15",
+        "resolved_date": "2026-06-18T05:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2803",
+        "customer_id": "CUST-1188",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-16T16:43:15",
+        "resolved_date": "2026-06-19T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2804",
+        "customer_id": "CUST-1061",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-02T13:43:15",
+        "resolved_date": "2026-05-04T21:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2805",
+        "customer_id": "CUST-1000",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-05T20:43:15",
+        "resolved_date": "2026-07-06T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2806",
+        "customer_id": "CUST-1178",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-04T19:43:15",
+        "resolved_date": "2026-05-06T09:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2807",
+        "customer_id": "CUST-1109",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-08-02T02:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2808",
+        "customer_id": "CUST-1064",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-04T18:43:15",
+        "resolved_date": "2026-05-05T02:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2809",
+        "customer_id": "CUST-1066",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-06-07T04:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2810",
+        "customer_id": "CUST-1077",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-02T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2811",
+        "customer_id": "CUST-1054",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-28T14:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2812",
+        "customer_id": "CUST-1124",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-12T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2813",
+        "customer_id": "CUST-1010",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-08-03T11:43:15",
+        "resolved_date": "2026-08-04T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2814",
+        "customer_id": "CUST-1136",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-23T16:43:15",
+        "resolved_date": "2026-07-25T06:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2815",
+        "customer_id": "CUST-1157",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "In Progress",
+        "created_date": "2026-05-11T00:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2816",
+        "customer_id": "CUST-1013",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-15T18:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2817",
+        "customer_id": "CUST-1153",
+        "subject": "API timeout issues",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-05-23T14:43:15",
+        "resolved_date": "2026-05-23T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2818",
+        "customer_id": "CUST-1099",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-29T01:43:15",
+        "resolved_date": "2026-06-30T19:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2819",
+        "customer_id": "CUST-1056",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-11T06:43:15",
+        "resolved_date": "2026-07-12T09:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2820",
+        "customer_id": "CUST-1153",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-13T05:43:15",
+        "resolved_date": "2026-06-13T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2821",
+        "customer_id": "CUST-1106",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-06-02T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2822",
+        "customer_id": "CUST-1163",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-09T15:43:15",
+        "resolved_date": "2026-07-10T02:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2823",
+        "customer_id": "CUST-1149",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-12T10:43:15",
+        "resolved_date": "2026-06-13T10:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2824",
+        "customer_id": "CUST-1108",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-15T17:43:15",
+        "resolved_date": "2026-07-18T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2825",
+        "customer_id": "CUST-1060",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-24T03:43:15",
+        "resolved_date": "2026-05-24T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2826",
+        "customer_id": "CUST-1107",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Open",
+        "created_date": "2026-07-01T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2827",
+        "customer_id": "CUST-1048",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-23T17:43:15",
+        "resolved_date": "2026-07-26T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2828",
+        "customer_id": "CUST-1148",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-19T00:43:15",
+        "resolved_date": "2026-06-19T08:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2829",
+        "customer_id": "CUST-1088",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-27T04:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2830",
+        "customer_id": "CUST-1015",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-09T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2831",
+        "customer_id": "CUST-1006",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-07-28T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2832",
+        "customer_id": "CUST-1145",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-06T13:43:15",
+        "resolved_date": "2026-06-08T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2833",
+        "customer_id": "CUST-1187",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-04T12:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2834",
+        "customer_id": "CUST-1014",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-25T13:43:15",
+        "resolved_date": "2026-06-27T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2835",
+        "customer_id": "CUST-1107",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-22T18:43:15",
+        "resolved_date": "2026-07-24T12:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2836",
+        "customer_id": "CUST-1017",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-07-01T13:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2837",
+        "customer_id": "CUST-1015",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-06T19:43:15",
+        "resolved_date": "2026-07-09T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2838",
+        "customer_id": "CUST-1176",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-11T05:43:15",
+        "resolved_date": "2026-07-13T22:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2839",
+        "customer_id": "CUST-1152",
+        "subject": "Data export failing",
+        "priority": "Critical",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-28T18:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2840",
+        "customer_id": "CUST-1139",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-20T19:43:15",
+        "resolved_date": "2026-07-23T15:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2841",
+        "customer_id": "CUST-1045",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-06-23T06:43:15",
+        "resolved_date": "2026-06-25T21:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2842",
+        "customer_id": "CUST-1071",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-05-25T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2843",
+        "customer_id": "CUST-1168",
+        "subject": "Data export failing",
+        "priority": "Critical",
+        "status": "In Progress",
+        "created_date": "2026-05-23T01:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2844",
+        "customer_id": "CUST-1008",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-31T07:43:15",
+        "resolved_date": "2026-08-02T08:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2845",
+        "customer_id": "CUST-1002",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-30T18:43:15",
+        "resolved_date": "2026-07-01T11:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2846",
+        "customer_id": "CUST-1104",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-08T03:43:15",
+        "resolved_date": "2026-05-08T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2847",
+        "customer_id": "CUST-1039",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-30T10:43:15",
+        "resolved_date": "2026-05-30T19:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2848",
+        "customer_id": "CUST-1132",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-08T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2849",
+        "customer_id": "CUST-1044",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-17T23:43:15",
+        "resolved_date": "2026-06-19T15:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2850",
+        "customer_id": "CUST-1005",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-10T04:43:15",
+        "resolved_date": "2026-06-11T13:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2851",
+        "customer_id": "CUST-1088",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-06T20:43:15",
+        "resolved_date": "2026-06-08T17:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2852",
+        "customer_id": "CUST-1057",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-28T05:43:15",
+        "resolved_date": "2026-06-30T02:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2853",
+        "customer_id": "CUST-1038",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-26T01:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2854",
+        "customer_id": "CUST-1012",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-04T00:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2855",
+        "customer_id": "CUST-1069",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-02T10:43:15",
+        "resolved_date": "2026-05-03T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2856",
+        "customer_id": "CUST-1078",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-01T10:43:15",
+        "resolved_date": "2026-05-03T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2857",
+        "customer_id": "CUST-1191",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-07-16T08:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2858",
+        "customer_id": "CUST-1013",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-31T14:43:15",
+        "resolved_date": "2026-06-02T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2859",
+        "customer_id": "CUST-1138",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-14T00:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2860",
+        "customer_id": "CUST-1173",
+        "subject": "API timeout issues",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-06-15T01:43:15",
+        "resolved_date": "2026-06-16T03:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2861",
+        "customer_id": "CUST-1118",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-07-23T03:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2862",
+        "customer_id": "CUST-1026",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-08-02T21:43:15",
+        "resolved_date": "2026-08-03T19:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2863",
+        "customer_id": "CUST-1083",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-04T15:43:15",
+        "resolved_date": "2026-05-07T02:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2864",
+        "customer_id": "CUST-1188",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-08-04T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2865",
+        "customer_id": "CUST-1071",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-23T18:43:15",
+        "resolved_date": "2026-07-24T21:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2866",
+        "customer_id": "CUST-1049",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-13T04:43:15",
+        "resolved_date": "2026-06-15T02:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2867",
+        "customer_id": "CUST-1147",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-21T15:43:15",
+        "resolved_date": "2026-06-21T18:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2868",
+        "customer_id": "CUST-1165",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-25T19:43:15",
+        "resolved_date": "2026-05-26T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2869",
+        "customer_id": "CUST-1071",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-08-02T12:43:15",
+        "resolved_date": "2026-08-05T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2870",
+        "customer_id": "CUST-1044",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-02T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2871",
+        "customer_id": "CUST-1144",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-28T01:43:15",
+        "resolved_date": "2026-07-29T18:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2872",
+        "customer_id": "CUST-1160",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-16T14:43:15",
+        "resolved_date": "2026-05-17T10:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2873",
+        "customer_id": "CUST-1160",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-04-30T10:43:15",
+        "resolved_date": "2026-05-01T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2874",
+        "customer_id": "CUST-1121",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-31T06:43:15",
+        "resolved_date": "2026-06-02T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2875",
+        "customer_id": "CUST-1194",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-21T19:43:15",
+        "resolved_date": "2026-06-24T08:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2876",
+        "customer_id": "CUST-1071",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-02T03:43:15",
+        "resolved_date": "2026-05-02T11:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2877",
+        "customer_id": "CUST-1133",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-29T01:43:15",
+        "resolved_date": "2026-07-29T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2878",
+        "customer_id": "CUST-1086",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-25T02:43:15",
+        "resolved_date": "2026-06-25T14:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2879",
+        "customer_id": "CUST-1135",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-16T13:43:15",
+        "resolved_date": "2026-07-18T10:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2880",
+        "customer_id": "CUST-1149",
+        "subject": "Billing question",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-06-15T00:43:15",
+        "resolved_date": "2026-06-15T18:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2881",
+        "customer_id": "CUST-1092",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-08-02T02:43:15",
+        "resolved_date": "2026-08-04T15:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2882",
+        "customer_id": "CUST-1185",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-20T19:43:15",
+        "resolved_date": "2026-05-22T02:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2883",
+        "customer_id": "CUST-1151",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-05T00:43:15",
+        "resolved_date": "2026-05-07T12:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2884",
+        "customer_id": "CUST-1078",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-29T15:43:15",
+        "resolved_date": "2026-07-02T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2885",
+        "customer_id": "CUST-1017",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-07T14:43:15",
+        "resolved_date": "2026-06-07T17:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2886",
+        "customer_id": "CUST-1171",
+        "subject": "Feature request",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-28T08:43:15",
+        "resolved_date": "2026-07-30T02:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2887",
+        "customer_id": "CUST-1059",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-28T06:43:15",
+        "resolved_date": "2026-05-30T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2888",
+        "customer_id": "CUST-1144",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-07T16:43:15",
+        "resolved_date": "2026-05-10T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2889",
+        "customer_id": "CUST-1192",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-01T07:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2890",
+        "customer_id": "CUST-1079",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-19T01:43:15",
+        "resolved_date": "2026-06-19T15:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2891",
+        "customer_id": "CUST-1170",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-08-04T07:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2892",
+        "customer_id": "CUST-1048",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-13T01:43:15",
+        "resolved_date": "2026-05-14T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2893",
+        "customer_id": "CUST-1188",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-18T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2894",
+        "customer_id": "CUST-1000",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-28T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2895",
+        "customer_id": "CUST-1019",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-28T11:43:15",
+        "resolved_date": "2026-05-28T23:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2896",
+        "customer_id": "CUST-1183",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-28T18:43:15",
+        "resolved_date": "2026-04-30T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2897",
+        "customer_id": "CUST-1044",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-05-12T13:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2898",
+        "customer_id": "CUST-1007",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-07-27T18:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2899",
+        "customer_id": "CUST-1118",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-10T21:43:15",
+        "resolved_date": "2026-05-13T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2900",
+        "customer_id": "CUST-1112",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-14T19:43:15",
+        "resolved_date": "2026-05-16T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2901",
+        "customer_id": "CUST-1141",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-29T11:43:15",
+        "resolved_date": "2026-05-30T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2902",
+        "customer_id": "CUST-1062",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-04T10:43:15",
+        "resolved_date": "2026-06-07T08:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2903",
+        "customer_id": "CUST-1158",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-23T03:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2904",
+        "customer_id": "CUST-1022",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-08-01T06:43:15",
+        "resolved_date": "2026-08-01T19:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2905",
+        "customer_id": "CUST-1142",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-12T05:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2906",
+        "customer_id": "CUST-1048",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-14T17:43:15",
+        "resolved_date": "2026-07-16T02:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2907",
+        "customer_id": "CUST-1073",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-07-25T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2908",
+        "customer_id": "CUST-1155",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-10T04:43:15",
+        "resolved_date": "2026-07-13T02:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2909",
+        "customer_id": "CUST-1014",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-31T10:43:15",
+        "resolved_date": "2026-08-02T06:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2910",
+        "customer_id": "CUST-1116",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-06-22T23:43:15",
+        "resolved_date": "2026-06-24T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2911",
+        "customer_id": "CUST-1140",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-06-14T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2912",
+        "customer_id": "CUST-1156",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-28T20:43:15",
+        "resolved_date": "2026-05-29T23:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2913",
+        "customer_id": "CUST-1089",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-29T18:43:15",
+        "resolved_date": "2026-06-29T22:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2914",
+        "customer_id": "CUST-1190",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-23T05:43:15",
+        "resolved_date": "2026-05-26T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2915",
+        "customer_id": "CUST-1053",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-29T16:43:15",
+        "resolved_date": "2026-06-29T23:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2916",
+        "customer_id": "CUST-1136",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-18T23:43:15",
+        "resolved_date": "2026-06-19T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2917",
+        "customer_id": "CUST-1153",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-24T04:43:15",
+        "resolved_date": "2026-06-26T05:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2918",
+        "customer_id": "CUST-1146",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-17T08:43:15",
+        "resolved_date": "2026-07-18T02:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2919",
+        "customer_id": "CUST-1107",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-27T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2920",
+        "customer_id": "CUST-1198",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-13T20:43:15",
+        "resolved_date": "2026-07-15T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2921",
+        "customer_id": "CUST-1006",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-09T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2922",
+        "customer_id": "CUST-1187",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-27T03:43:15",
+        "resolved_date": "2026-06-28T03:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2923",
+        "customer_id": "CUST-1096",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-24T05:43:15",
+        "resolved_date": "2026-06-25T17:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2924",
+        "customer_id": "CUST-1048",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-27T03:43:15",
+        "resolved_date": "2026-05-27T16:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2925",
+        "customer_id": "CUST-1199",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-08T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2926",
+        "customer_id": "CUST-1129",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-06-08T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2927",
+        "customer_id": "CUST-1149",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-04-28T13:43:15",
+        "resolved_date": "2026-04-28T21:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2928",
+        "customer_id": "CUST-1105",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-03T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2929",
+        "customer_id": "CUST-1002",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-23T19:43:15",
+        "resolved_date": "2026-07-24T03:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2930",
+        "customer_id": "CUST-1120",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-30T16:43:15",
+        "resolved_date": "2026-08-02T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2931",
+        "customer_id": "CUST-1015",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-15T04:43:15",
+        "resolved_date": "2026-05-16T13:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2932",
+        "customer_id": "CUST-1104",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-22T08:43:15",
+        "resolved_date": "2026-07-25T02:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2933",
+        "customer_id": "CUST-1150",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-01T01:43:15",
+        "resolved_date": "2026-06-03T15:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2934",
+        "customer_id": "CUST-1100",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-30T14:43:15",
+        "resolved_date": "2026-07-03T02:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2935",
+        "customer_id": "CUST-1157",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-24T06:43:15",
+        "resolved_date": "2026-06-25T17:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2936",
+        "customer_id": "CUST-1148",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-17T05:43:15",
+        "resolved_date": "2026-05-17T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2937",
+        "customer_id": "CUST-1024",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-14T22:43:15",
+        "resolved_date": "2026-05-15T08:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2938",
+        "customer_id": "CUST-1079",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "In Progress",
+        "created_date": "2026-06-29T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2939",
+        "customer_id": "CUST-1116",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-04-28T03:43:15",
+        "resolved_date": "2026-04-28T16:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2940",
+        "customer_id": "CUST-1011",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-10T21:43:15",
+        "resolved_date": "2026-07-13T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2941",
+        "customer_id": "CUST-1042",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-18T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2942",
+        "customer_id": "CUST-1009",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-04T17:43:15",
+        "resolved_date": "2026-07-06T03:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2943",
+        "customer_id": "CUST-1082",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-04T12:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2944",
+        "customer_id": "CUST-1079",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-06-03T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2945",
+        "customer_id": "CUST-1123",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-25T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2946",
+        "customer_id": "CUST-1061",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-28T05:43:15",
+        "resolved_date": "2026-06-30T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2947",
+        "customer_id": "CUST-1085",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-05-10T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2948",
+        "customer_id": "CUST-1078",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-05-05T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2949",
+        "customer_id": "CUST-1180",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-27T07:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2950",
+        "customer_id": "CUST-1138",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-16T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2951",
+        "customer_id": "CUST-1156",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-10T08:43:15",
+        "resolved_date": "2026-07-12T12:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2952",
+        "customer_id": "CUST-1128",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-01T19:43:15",
+        "resolved_date": "2026-06-03T12:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2953",
+        "customer_id": "CUST-1187",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-07-25T18:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2954",
+        "customer_id": "CUST-1187",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-27T14:43:15",
+        "resolved_date": "2026-07-28T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2955",
+        "customer_id": "CUST-1128",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-31T13:43:15",
+        "resolved_date": "2026-06-02T08:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2956",
+        "customer_id": "CUST-1158",
+        "subject": "Feature request",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-19T07:43:15",
+        "resolved_date": "2026-07-21T17:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2957",
+        "customer_id": "CUST-1185",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-14T05:43:15",
+        "resolved_date": "2026-05-16T08:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2958",
+        "customer_id": "CUST-1111",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-07-28T02:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2959",
+        "customer_id": "CUST-1194",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-11T03:43:15",
+        "resolved_date": "2026-07-13T05:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2960",
+        "customer_id": "CUST-1113",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-06-24T13:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2961",
+        "customer_id": "CUST-1094",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-08-02T14:43:15",
+        "resolved_date": "2026-08-03T22:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2962",
+        "customer_id": "CUST-1058",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-19T04:43:15",
+        "resolved_date": "2026-07-20T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2963",
+        "customer_id": "CUST-1171",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-13T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2964",
+        "customer_id": "CUST-1174",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-27T13:43:15",
+        "resolved_date": "2026-04-28T01:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2965",
+        "customer_id": "CUST-1150",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-27T22:43:15",
+        "resolved_date": "2026-07-28T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2966",
+        "customer_id": "CUST-1091",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-14T01:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2967",
+        "customer_id": "CUST-1049",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-05-11T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2968",
+        "customer_id": "CUST-1002",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-14T01:43:15",
+        "resolved_date": "2026-07-16T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2969",
+        "customer_id": "CUST-1105",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-27T00:43:15",
+        "resolved_date": "2026-06-27T08:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2970",
+        "customer_id": "CUST-1105",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-31T09:43:15",
+        "resolved_date": "2026-08-03T01:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2971",
+        "customer_id": "CUST-1168",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-20T05:43:15",
+        "resolved_date": "2026-06-22T23:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2972",
+        "customer_id": "CUST-1120",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-06T14:43:15",
+        "resolved_date": "2026-05-07T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2973",
+        "customer_id": "CUST-1055",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-19T17:43:15",
+        "resolved_date": "2026-07-22T15:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2974",
+        "customer_id": "CUST-1036",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-31T16:43:15",
+        "resolved_date": "2026-08-01T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2975",
+        "customer_id": "CUST-1187",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-15T02:43:15",
+        "resolved_date": "2026-07-15T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2976",
+        "customer_id": "CUST-1079",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-26T08:43:15",
+        "resolved_date": "2026-05-26T11:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2977",
+        "customer_id": "CUST-1158",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-12T10:43:15",
+        "resolved_date": "2026-07-13T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2978",
+        "customer_id": "CUST-1057",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-13T14:43:15",
+        "resolved_date": "2026-05-14T20:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2979",
+        "customer_id": "CUST-1112",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-16T20:43:15",
+        "resolved_date": "2026-07-19T03:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2980",
+        "customer_id": "CUST-1160",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-04T21:43:15",
+        "resolved_date": "2026-05-06T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2981",
+        "customer_id": "CUST-1089",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-18T21:43:15",
+        "resolved_date": "2026-06-19T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2982",
+        "customer_id": "CUST-1112",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-06-16T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2983",
+        "customer_id": "CUST-1169",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-15T23:43:15",
+        "resolved_date": "2026-05-16T18:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2984",
+        "customer_id": "CUST-1073",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-04T07:43:15",
+        "resolved_date": "2026-05-05T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2985",
+        "customer_id": "CUST-1056",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-26T18:43:15",
+        "resolved_date": "2026-06-27T18:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2986",
+        "customer_id": "CUST-1030",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-06-06T00:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2987",
+        "customer_id": "CUST-1157",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-05T12:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2988",
+        "customer_id": "CUST-1079",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-04T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2989",
+        "customer_id": "CUST-1183",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-05-27T00:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2990",
+        "customer_id": "CUST-1006",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-08T15:43:15",
+        "resolved_date": "2026-06-10T00:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2991",
+        "customer_id": "CUST-1175",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-05-21T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2992",
+        "customer_id": "CUST-1130",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-22T07:43:15",
+        "resolved_date": "2026-07-25T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2993",
+        "customer_id": "CUST-1168",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-07T15:43:15",
+        "resolved_date": "2026-05-10T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-2994",
+        "customer_id": "CUST-1060",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-25T14:43:15",
+        "resolved_date": "2026-05-26T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2995",
+        "customer_id": "CUST-1097",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-25T05:43:15",
+        "resolved_date": "2026-06-25T22:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2996",
+        "customer_id": "CUST-1021",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-05-22T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2997",
+        "customer_id": "CUST-1037",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-15T05:43:15",
+        "resolved_date": "2026-06-16T21:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-2998",
+        "customer_id": "CUST-1134",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-02T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-2999",
+        "customer_id": "CUST-1078",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-10T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3000",
+        "customer_id": "CUST-1152",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-25T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3001",
+        "customer_id": "CUST-1179",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-23T16:43:15",
+        "resolved_date": "2026-06-25T07:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3002",
+        "customer_id": "CUST-1011",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-05-27T17:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3003",
+        "customer_id": "CUST-1071",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-25T08:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3004",
+        "customer_id": "CUST-1011",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-15T02:43:15",
+        "resolved_date": "2026-05-18T00:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3005",
+        "customer_id": "CUST-1160",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-08-01T18:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3006",
+        "customer_id": "CUST-1003",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-07-03T20:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3007",
+        "customer_id": "CUST-1118",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-04T03:43:15",
+        "resolved_date": "2026-07-06T01:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3008",
+        "customer_id": "CUST-1101",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-14T23:43:15",
+        "resolved_date": "2026-07-16T03:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3009",
+        "customer_id": "CUST-1024",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-09T07:43:15",
+        "resolved_date": "2026-07-12T03:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3010",
+        "customer_id": "CUST-1008",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "In Progress",
+        "created_date": "2026-07-31T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3011",
+        "customer_id": "CUST-1174",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-06T00:43:15",
+        "resolved_date": "2026-06-08T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3012",
+        "customer_id": "CUST-1020",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-04-28T14:43:15",
+        "resolved_date": "2026-04-29T20:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3013",
+        "customer_id": "CUST-1040",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-05-12T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3014",
+        "customer_id": "CUST-1016",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-08T13:43:15",
+        "resolved_date": "2026-06-09T11:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3015",
+        "customer_id": "CUST-1124",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-06T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3016",
+        "customer_id": "CUST-1147",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "In Progress",
+        "created_date": "2026-07-07T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3017",
+        "customer_id": "CUST-1046",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-03T09:43:15",
+        "resolved_date": "2026-06-04T10:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3018",
+        "customer_id": "CUST-1144",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-08T15:43:15",
+        "resolved_date": "2026-06-09T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3019",
+        "customer_id": "CUST-1186",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-14T17:43:15",
+        "resolved_date": "2026-05-15T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3020",
+        "customer_id": "CUST-1034",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-22T08:43:15",
+        "resolved_date": "2026-07-24T22:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3021",
+        "customer_id": "CUST-1087",
+        "subject": "Feature request",
+        "priority": "Critical",
+        "status": "Open",
+        "created_date": "2026-05-12T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3022",
+        "customer_id": "CUST-1169",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-17T17:43:15",
+        "resolved_date": "2026-06-17T20:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3023",
+        "customer_id": "CUST-1174",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-25T22:43:15",
+        "resolved_date": "2026-05-26T17:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3024",
+        "customer_id": "CUST-1029",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-06-05T08:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3025",
+        "customer_id": "CUST-1077",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-07T22:43:15",
+        "resolved_date": "2026-05-10T09:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3026",
+        "customer_id": "CUST-1119",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-05T04:43:15",
+        "resolved_date": "2026-05-06T21:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3027",
+        "customer_id": "CUST-1049",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-24T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3028",
+        "customer_id": "CUST-1188",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-16T07:43:15",
+        "resolved_date": "2026-07-17T16:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3029",
+        "customer_id": "CUST-1086",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Open",
+        "created_date": "2026-05-09T11:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3030",
+        "customer_id": "CUST-1092",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-21T03:43:15",
+        "resolved_date": "2026-07-23T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3031",
+        "customer_id": "CUST-1198",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-15T17:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3032",
+        "customer_id": "CUST-1161",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-21T09:43:15",
+        "resolved_date": "2026-06-24T03:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3033",
+        "customer_id": "CUST-1152",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-10T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3034",
+        "customer_id": "CUST-1105",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-07T04:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3035",
+        "customer_id": "CUST-1083",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-28T04:43:15",
+        "resolved_date": "2026-04-30T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3036",
+        "customer_id": "CUST-1042",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-19T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3037",
+        "customer_id": "CUST-1105",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-11T15:43:15",
+        "resolved_date": "2026-05-14T05:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3038",
+        "customer_id": "CUST-1016",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-09T07:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3039",
+        "customer_id": "CUST-1146",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-25T05:43:15",
+        "resolved_date": "2026-06-25T16:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3040",
+        "customer_id": "CUST-1108",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-08-04T04:43:15",
+        "resolved_date": "2026-08-06T17:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3041",
+        "customer_id": "CUST-1007",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-07T05:43:15",
+        "resolved_date": "2026-05-10T02:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3042",
+        "customer_id": "CUST-1083",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-06-18T13:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3043",
+        "customer_id": "CUST-1155",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-03T08:43:15",
+        "resolved_date": "2026-07-04T03:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3044",
+        "customer_id": "CUST-1028",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-21T03:43:15",
+        "resolved_date": "2026-07-23T18:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3045",
+        "customer_id": "CUST-1117",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-20T02:43:15",
+        "resolved_date": "2026-05-22T05:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3046",
+        "customer_id": "CUST-1001",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-05-13T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3047",
+        "customer_id": "CUST-1011",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-26T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3048",
+        "customer_id": "CUST-1048",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "In Progress",
+        "created_date": "2026-05-18T07:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3049",
+        "customer_id": "CUST-1163",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-07T15:43:15",
+        "resolved_date": "2026-07-08T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3050",
+        "customer_id": "CUST-1194",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-06T00:43:15",
+        "resolved_date": "2026-07-08T19:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3051",
+        "customer_id": "CUST-1056",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-13T04:43:15",
+        "resolved_date": "2026-07-14T12:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3052",
+        "customer_id": "CUST-1164",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-06-27T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3053",
+        "customer_id": "CUST-1145",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-18T16:43:15",
+        "resolved_date": "2026-06-21T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3054",
+        "customer_id": "CUST-1063",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-06T01:43:15",
+        "resolved_date": "2026-05-07T15:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3055",
+        "customer_id": "CUST-1131",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-10T00:43:15",
+        "resolved_date": "2026-06-11T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3056",
+        "customer_id": "CUST-1153",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-09T09:43:15",
+        "resolved_date": "2026-05-09T13:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3057",
+        "customer_id": "CUST-1058",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-06T02:43:15",
+        "resolved_date": "2026-05-06T08:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3058",
+        "customer_id": "CUST-1086",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-29T02:43:15",
+        "resolved_date": "2026-06-30T13:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3059",
+        "customer_id": "CUST-1108",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-06T23:43:15",
+        "resolved_date": "2026-07-07T16:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3060",
+        "customer_id": "CUST-1122",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-16T23:43:15",
+        "resolved_date": "2026-06-19T04:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3061",
+        "customer_id": "CUST-1043",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-14T19:43:15",
+        "resolved_date": "2026-06-15T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3062",
+        "customer_id": "CUST-1110",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-04T12:43:15",
+        "resolved_date": "2026-05-05T01:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3063",
+        "customer_id": "CUST-1018",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-19T09:43:15",
+        "resolved_date": "2026-07-20T09:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3064",
+        "customer_id": "CUST-1063",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-30T19:43:15",
+        "resolved_date": "2026-07-31T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3065",
+        "customer_id": "CUST-1138",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-20T21:43:15",
+        "resolved_date": "2026-06-21T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3066",
+        "customer_id": "CUST-1069",
+        "subject": "Data export failing",
+        "priority": "Critical",
+        "status": "Open",
+        "created_date": "2026-06-24T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3067",
+        "customer_id": "CUST-1189",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-14T06:43:15",
+        "resolved_date": "2026-06-15T15:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3068",
+        "customer_id": "CUST-1174",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-15T17:43:15",
+        "resolved_date": "2026-05-17T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3069",
+        "customer_id": "CUST-1062",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-24T04:43:15",
+        "resolved_date": "2026-05-24T23:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3070",
+        "customer_id": "CUST-1113",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-18T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3071",
+        "customer_id": "CUST-1125",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-06-12T02:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3072",
+        "customer_id": "CUST-1056",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-12T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3073",
+        "customer_id": "CUST-1029",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-07-27T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3074",
+        "customer_id": "CUST-1135",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "In Progress",
+        "created_date": "2026-08-03T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3075",
+        "customer_id": "CUST-1103",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-08-04T08:43:15",
+        "resolved_date": "2026-08-06T23:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3076",
+        "customer_id": "CUST-1141",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-08-01T06:43:15",
+        "resolved_date": "2026-08-01T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3077",
+        "customer_id": "CUST-1065",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-20T17:43:15",
+        "resolved_date": "2026-06-21T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3078",
+        "customer_id": "CUST-1193",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-20T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3079",
+        "customer_id": "CUST-1026",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-02T05:43:15",
+        "resolved_date": "2026-07-04T12:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3080",
+        "customer_id": "CUST-1012",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-31T19:43:15",
+        "resolved_date": "2026-06-03T00:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3081",
+        "customer_id": "CUST-1182",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-07-10T14:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3082",
+        "customer_id": "CUST-1177",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-11T16:43:15",
+        "resolved_date": "2026-06-12T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3083",
+        "customer_id": "CUST-1058",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-17T14:43:15",
+        "resolved_date": "2026-05-17T18:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3084",
+        "customer_id": "CUST-1078",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-01T18:43:15",
+        "resolved_date": "2026-07-03T19:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3085",
+        "customer_id": "CUST-1037",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-09T18:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3086",
+        "customer_id": "CUST-1120",
+        "subject": "Billing question",
+        "priority": "Critical",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-25T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3087",
+        "customer_id": "CUST-1195",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-17T03:43:15",
+        "resolved_date": "2026-07-18T23:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3088",
+        "customer_id": "CUST-1178",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-13T19:43:15",
+        "resolved_date": "2026-05-16T03:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3089",
+        "customer_id": "CUST-1137",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-07T11:43:15",
+        "resolved_date": "2026-07-09T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3090",
+        "customer_id": "CUST-1195",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-02T12:43:15",
+        "resolved_date": "2026-07-03T05:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3091",
+        "customer_id": "CUST-1144",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-13T17:43:15",
+        "resolved_date": "2026-05-15T11:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3092",
+        "customer_id": "CUST-1104",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-25T09:43:15",
+        "resolved_date": "2026-06-26T03:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3093",
+        "customer_id": "CUST-1136",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-23T08:43:15",
+        "resolved_date": "2026-07-24T00:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3094",
+        "customer_id": "CUST-1161",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-11T11:43:15",
+        "resolved_date": "2026-05-13T08:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3095",
+        "customer_id": "CUST-1148",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-18T09:43:15",
+        "resolved_date": "2026-07-20T05:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3096",
+        "customer_id": "CUST-1048",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-15T01:43:15",
+        "resolved_date": "2026-07-17T10:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3097",
+        "customer_id": "CUST-1164",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-18T15:43:15",
+        "resolved_date": "2026-06-19T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3098",
+        "customer_id": "CUST-1130",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-22T02:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3099",
+        "customer_id": "CUST-1089",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-12T01:43:15",
+        "resolved_date": "2026-07-14T13:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3100",
+        "customer_id": "CUST-1091",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-19T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3101",
+        "customer_id": "CUST-1164",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-23T21:43:15",
+        "resolved_date": "2026-06-25T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3102",
+        "customer_id": "CUST-1056",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-11T11:43:15",
+        "resolved_date": "2026-07-11T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3103",
+        "customer_id": "CUST-1159",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-20T05:43:15",
+        "resolved_date": "2026-05-22T08:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3104",
+        "customer_id": "CUST-1103",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-24T23:43:15",
+        "resolved_date": "2026-05-25T03:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3105",
+        "customer_id": "CUST-1003",
+        "subject": "API timeout issues",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-04-28T23:43:15",
+        "resolved_date": "2026-04-30T19:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3106",
+        "customer_id": "CUST-1031",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-09T16:43:15",
+        "resolved_date": "2026-06-10T07:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3107",
+        "customer_id": "CUST-1025",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-07T00:43:15",
+        "resolved_date": "2026-05-09T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3108",
+        "customer_id": "CUST-1094",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-24T23:43:15",
+        "resolved_date": "2026-07-27T19:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3109",
+        "customer_id": "CUST-1187",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-18T16:43:15",
+        "resolved_date": "2026-06-20T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3110",
+        "customer_id": "CUST-1104",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-09T19:43:15",
+        "resolved_date": "2026-07-11T23:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3111",
+        "customer_id": "CUST-1060",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-28T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3112",
+        "customer_id": "CUST-1140",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-27T14:43:15",
+        "resolved_date": "2026-06-29T12:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3113",
+        "customer_id": "CUST-1074",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-28T00:43:15",
+        "resolved_date": "2026-07-29T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3114",
+        "customer_id": "CUST-1098",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "In Progress",
+        "created_date": "2026-05-27T03:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3115",
+        "customer_id": "CUST-1088",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-07T00:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3116",
+        "customer_id": "CUST-1114",
+        "subject": "Billing question",
+        "priority": "Critical",
+        "status": "In Progress",
+        "created_date": "2026-05-15T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3117",
+        "customer_id": "CUST-1007",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-22T15:43:15",
+        "resolved_date": "2026-06-24T01:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3118",
+        "customer_id": "CUST-1083",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-03T11:43:15",
+        "resolved_date": "2026-05-05T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3119",
+        "customer_id": "CUST-1100",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Open",
+        "created_date": "2026-07-27T07:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3120",
+        "customer_id": "CUST-1103",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-22T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3121",
+        "customer_id": "CUST-1092",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-14T07:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3122",
+        "customer_id": "CUST-1033",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-26T14:43:15",
+        "resolved_date": "2026-07-27T17:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3123",
+        "customer_id": "CUST-1116",
+        "subject": "Feature request",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-05-25T19:43:15",
+        "resolved_date": "2026-05-26T15:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3124",
+        "customer_id": "CUST-1115",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-05T22:43:15",
+        "resolved_date": "2026-05-07T19:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3125",
+        "customer_id": "CUST-1057",
+        "subject": "API timeout issues",
+        "priority": "Critical",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-29T11:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3126",
+        "customer_id": "CUST-1121",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-26T01:43:15",
+        "resolved_date": "2026-07-26T06:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3127",
+        "customer_id": "CUST-1055",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-25T08:43:15",
+        "resolved_date": "2026-06-25T19:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3128",
+        "customer_id": "CUST-1070",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-16T23:43:15",
+        "resolved_date": "2026-07-18T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3129",
+        "customer_id": "CUST-1115",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-31T13:43:15",
+        "resolved_date": "2026-08-01T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3130",
+        "customer_id": "CUST-1067",
+        "subject": "API timeout issues",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-16T20:43:15",
+        "resolved_date": "2026-07-18T00:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3131",
+        "customer_id": "CUST-1190",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-29T21:43:15",
+        "resolved_date": "2026-05-31T13:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3132",
+        "customer_id": "CUST-1184",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-12T02:43:15",
+        "resolved_date": "2026-07-13T12:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3133",
+        "customer_id": "CUST-1180",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-12T23:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3134",
+        "customer_id": "CUST-1137",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-05T14:43:15",
+        "resolved_date": "2026-06-07T23:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3135",
+        "customer_id": "CUST-1163",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-14T14:43:15",
+        "resolved_date": "2026-06-16T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3136",
+        "customer_id": "CUST-1178",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-16T07:43:15",
+        "resolved_date": "2026-06-17T10:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3137",
+        "customer_id": "CUST-1021",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-18T14:43:15",
+        "resolved_date": "2026-06-19T06:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3138",
+        "customer_id": "CUST-1186",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-19T13:43:15",
+        "resolved_date": "2026-07-20T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3139",
+        "customer_id": "CUST-1067",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-25T02:43:15",
+        "resolved_date": "2026-07-25T19:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3140",
+        "customer_id": "CUST-1103",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-31T17:43:15",
+        "resolved_date": "2026-06-03T11:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3141",
+        "customer_id": "CUST-1168",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-06-26T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3142",
+        "customer_id": "CUST-1080",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "In Progress",
+        "created_date": "2026-05-12T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3143",
+        "customer_id": "CUST-1099",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-11T11:43:15",
+        "resolved_date": "2026-06-12T02:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3144",
+        "customer_id": "CUST-1013",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-01T04:43:15",
+        "resolved_date": "2026-07-02T13:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3145",
+        "customer_id": "CUST-1167",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-06T17:43:15",
+        "resolved_date": "2026-06-08T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3146",
+        "customer_id": "CUST-1063",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-05-17T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3147",
+        "customer_id": "CUST-1171",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-23T02:43:15",
+        "resolved_date": "2026-06-25T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3148",
+        "customer_id": "CUST-1113",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-25T05:43:15",
+        "resolved_date": "2026-05-28T00:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3149",
+        "customer_id": "CUST-1074",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-25T11:43:15",
+        "resolved_date": "2026-05-27T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3150",
+        "customer_id": "CUST-1117",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-30T07:43:15",
+        "resolved_date": "2026-05-03T04:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3151",
+        "customer_id": "CUST-1046",
+        "subject": "Integration error",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-16T14:43:15",
+        "resolved_date": "2026-07-19T08:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3152",
+        "customer_id": "CUST-1146",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-07-28T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3153",
+        "customer_id": "CUST-1135",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-11T18:43:15",
+        "resolved_date": "2026-07-14T03:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3154",
+        "customer_id": "CUST-1061",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-31T06:43:15",
+        "resolved_date": "2026-06-01T10:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3155",
+        "customer_id": "CUST-1130",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-24T19:43:15",
+        "resolved_date": "2026-06-27T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3156",
+        "customer_id": "CUST-1153",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-08-02T12:43:15",
+        "resolved_date": "2026-08-03T10:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3157",
+        "customer_id": "CUST-1107",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-16T03:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3158",
+        "customer_id": "CUST-1066",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-05T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3159",
+        "customer_id": "CUST-1099",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-29T20:43:15",
+        "resolved_date": "2026-05-02T07:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3160",
+        "customer_id": "CUST-1009",
+        "subject": "Billing question",
+        "priority": "Critical",
+        "status": "In Progress",
+        "created_date": "2026-05-31T17:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3161",
+        "customer_id": "CUST-1021",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-17T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3162",
+        "customer_id": "CUST-1067",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-08T11:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3163",
+        "customer_id": "CUST-1105",
+        "subject": "Feature request",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-26T08:43:15",
+        "resolved_date": "2026-07-28T06:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3164",
+        "customer_id": "CUST-1155",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-08T14:43:15",
+        "resolved_date": "2026-07-09T15:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3165",
+        "customer_id": "CUST-1042",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-09T17:43:15",
+        "resolved_date": "2026-07-10T10:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3166",
+        "customer_id": "CUST-1150",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-06-26T05:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3167",
+        "customer_id": "CUST-1039",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-28T01:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3168",
+        "customer_id": "CUST-1137",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-08T11:43:15",
+        "resolved_date": "2026-06-10T11:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3169",
+        "customer_id": "CUST-1101",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-06T23:43:15",
+        "resolved_date": "2026-06-07T02:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3170",
+        "customer_id": "CUST-1106",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-27T17:43:15",
+        "resolved_date": "2026-07-27T23:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3171",
+        "customer_id": "CUST-1186",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-29T14:43:15",
+        "resolved_date": "2026-05-01T22:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3172",
+        "customer_id": "CUST-1113",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-06T06:43:15",
+        "resolved_date": "2026-06-07T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3173",
+        "customer_id": "CUST-1185",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-18T10:43:15",
+        "resolved_date": "2026-07-18T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3174",
+        "customer_id": "CUST-1128",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-29T01:43:15",
+        "resolved_date": "2026-07-31T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3175",
+        "customer_id": "CUST-1156",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "In Progress",
+        "created_date": "2026-08-04T06:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3176",
+        "customer_id": "CUST-1195",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-26T09:43:15",
+        "resolved_date": "2026-05-27T20:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3177",
+        "customer_id": "CUST-1020",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-08T12:43:15",
+        "resolved_date": "2026-07-09T13:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3178",
+        "customer_id": "CUST-1054",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-10T23:43:15",
+        "resolved_date": "2026-07-12T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3179",
+        "customer_id": "CUST-1112",
+        "subject": "Billing question",
+        "priority": "Critical",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-08T05:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3180",
+        "customer_id": "CUST-1117",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-07-01T05:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3181",
+        "customer_id": "CUST-1126",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-09T20:43:15",
+        "resolved_date": "2026-05-12T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3182",
+        "customer_id": "CUST-1044",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-09T23:43:15",
+        "resolved_date": "2026-05-10T22:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3183",
+        "customer_id": "CUST-1032",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-30T00:43:15",
+        "resolved_date": "2026-07-30T22:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3184",
+        "customer_id": "CUST-1137",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-23T17:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3185",
+        "customer_id": "CUST-1046",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-08T01:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3186",
+        "customer_id": "CUST-1174",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-07T12:43:15",
+        "resolved_date": "2026-07-07T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3187",
+        "customer_id": "CUST-1156",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-23T04:43:15",
+        "resolved_date": "2026-05-25T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3188",
+        "customer_id": "CUST-1047",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-08-04T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3189",
+        "customer_id": "CUST-1012",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-26T12:43:15",
+        "resolved_date": "2026-06-29T11:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3190",
+        "customer_id": "CUST-1061",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-07T19:43:15",
+        "resolved_date": "2026-06-10T12:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3191",
+        "customer_id": "CUST-1025",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-08-01T21:43:15",
+        "resolved_date": "2026-08-03T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3192",
+        "customer_id": "CUST-1107",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-23T12:43:15",
+        "resolved_date": "2026-05-25T05:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3193",
+        "customer_id": "CUST-1172",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-06T17:43:15",
+        "resolved_date": "2026-07-08T10:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3194",
+        "customer_id": "CUST-1127",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-06-09T04:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3195",
+        "customer_id": "CUST-1078",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-20T21:43:15",
+        "resolved_date": "2026-05-22T09:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3196",
+        "customer_id": "CUST-1191",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-15T10:43:15",
+        "resolved_date": "2026-05-16T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3197",
+        "customer_id": "CUST-1039",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-05-14T09:43:15",
+        "resolved_date": "2026-05-17T01:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3198",
+        "customer_id": "CUST-1106",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-05T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3199",
+        "customer_id": "CUST-1123",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-06-17T03:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3200",
+        "customer_id": "CUST-1100",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-11T08:43:15",
+        "resolved_date": "2026-07-13T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3201",
+        "customer_id": "CUST-1043",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-16T09:43:15",
+        "resolved_date": "2026-05-19T01:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3202",
+        "customer_id": "CUST-1143",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-05T06:43:15",
+        "resolved_date": "2026-05-05T23:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3203",
+        "customer_id": "CUST-1012",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-11T02:43:15",
+        "resolved_date": "2026-05-13T15:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3204",
+        "customer_id": "CUST-1093",
+        "subject": "Feature request",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-06-07T04:43:15",
+        "resolved_date": "2026-06-07T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3205",
+        "customer_id": "CUST-1001",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-17T20:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3206",
+        "customer_id": "CUST-1037",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-17T19:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3207",
+        "customer_id": "CUST-1148",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-03T11:43:15",
+        "resolved_date": "2026-05-04T15:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3208",
+        "customer_id": "CUST-1180",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-28T14:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3209",
+        "customer_id": "CUST-1027",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-08T16:43:15",
+        "resolved_date": "2026-05-10T01:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3210",
+        "customer_id": "CUST-1119",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-15T09:43:15",
+        "resolved_date": "2026-07-17T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3211",
+        "customer_id": "CUST-1198",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-09T22:43:15",
+        "resolved_date": "2026-06-11T03:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3212",
+        "customer_id": "CUST-1175",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-05-22T11:43:15",
+        "resolved_date": "2026-05-24T01:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3213",
+        "customer_id": "CUST-1090",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-07-05T02:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3214",
+        "customer_id": "CUST-1148",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-22T19:43:15",
+        "resolved_date": "2026-07-25T06:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3215",
+        "customer_id": "CUST-1165",
+        "subject": "Feature request",
+        "priority": "Critical",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-17T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3216",
+        "customer_id": "CUST-1098",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-03T13:43:15",
+        "resolved_date": "2026-07-05T23:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3217",
+        "customer_id": "CUST-1028",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-25T17:43:15",
+        "resolved_date": "2026-07-28T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3218",
+        "customer_id": "CUST-1138",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-22T16:43:15",
+        "resolved_date": "2026-06-23T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3219",
+        "customer_id": "CUST-1049",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-03T07:43:15",
+        "resolved_date": "2026-06-03T19:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3220",
+        "customer_id": "CUST-1138",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-27T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3221",
+        "customer_id": "CUST-1171",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-14T12:43:15",
+        "resolved_date": "2026-05-15T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3222",
+        "customer_id": "CUST-1149",
+        "subject": "Dashboard UI glitch",
+        "priority": "High",
+        "status": "Open",
+        "created_date": "2026-05-08T03:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3223",
+        "customer_id": "CUST-1149",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-31T21:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3224",
+        "customer_id": "CUST-1177",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-19T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3225",
+        "customer_id": "CUST-1130",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-24T04:43:15",
+        "resolved_date": "2026-07-25T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3226",
+        "customer_id": "CUST-1035",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-20T10:43:15",
+        "resolved_date": "2026-05-23T04:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3227",
+        "customer_id": "CUST-1007",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-06-26T01:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3228",
+        "customer_id": "CUST-1173",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-12T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3229",
+        "customer_id": "CUST-1180",
+        "subject": "Data export failing",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-06-06T21:43:15",
+        "resolved_date": "2026-06-08T00:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3230",
+        "customer_id": "CUST-1007",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-15T21:43:15",
+        "resolved_date": "2026-05-18T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3231",
+        "customer_id": "CUST-1063",
+        "subject": "API timeout issues",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-06-12T13:43:15",
+        "resolved_date": "2026-06-13T06:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3232",
+        "customer_id": "CUST-1107",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-25T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3233",
+        "customer_id": "CUST-1014",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-09T02:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3234",
+        "customer_id": "CUST-1150",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-26T04:43:15",
+        "resolved_date": "2026-06-28T12:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3235",
+        "customer_id": "CUST-1038",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-05-02T12:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3236",
+        "customer_id": "CUST-1085",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-01T08:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3237",
+        "customer_id": "CUST-1129",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-05-08T12:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3238",
+        "customer_id": "CUST-1098",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-28T06:43:15",
+        "resolved_date": "2026-05-29T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3239",
+        "customer_id": "CUST-1182",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-19T11:43:15",
+        "resolved_date": "2026-07-21T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3240",
+        "customer_id": "CUST-1114",
+        "subject": "Integration error",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-13T23:43:15",
+        "resolved_date": "2026-07-14T17:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3241",
+        "customer_id": "CUST-1012",
+        "subject": "Data export failing",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-20T21:43:15",
+        "resolved_date": "2026-07-22T12:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3242",
+        "customer_id": "CUST-1075",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-06T15:43:15",
+        "resolved_date": "2026-05-09T06:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3243",
+        "customer_id": "CUST-1038",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-27T20:43:15",
+        "resolved_date": "2026-04-30T03:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3244",
+        "customer_id": "CUST-1076",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-22T23:43:15",
+        "resolved_date": "2026-07-23T05:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3245",
+        "customer_id": "CUST-1076",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-12T08:43:15",
+        "resolved_date": "2026-06-13T09:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3246",
+        "customer_id": "CUST-1155",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-04T15:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3247",
+        "customer_id": "CUST-1184",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-14T06:43:15",
+        "resolved_date": "2026-07-16T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3248",
+        "customer_id": "CUST-1092",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-08-02T00:43:15",
+        "resolved_date": "2026-08-03T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3249",
+        "customer_id": "CUST-1131",
+        "subject": "Billing question",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-24T15:43:15",
+        "resolved_date": "2026-06-25T13:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3250",
+        "customer_id": "CUST-1163",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-16T16:43:15",
+        "resolved_date": "2026-06-18T22:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3251",
+        "customer_id": "CUST-1173",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-12T04:43:15",
+        "resolved_date": "2026-07-13T03:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3252",
+        "customer_id": "CUST-1015",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-27T07:43:15",
+        "resolved_date": "2026-06-29T20:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3253",
+        "customer_id": "CUST-1170",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-06T05:43:15",
+        "resolved_date": "2026-07-06T18:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3254",
+        "customer_id": "CUST-1142",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-16T04:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3255",
+        "customer_id": "CUST-1160",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-12T13:43:15",
+        "resolved_date": "2026-06-13T19:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3256",
+        "customer_id": "CUST-1097",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Open",
+        "created_date": "2026-08-04T00:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3257",
+        "customer_id": "CUST-1189",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-19T04:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3258",
+        "customer_id": "CUST-1094",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-03T17:43:15",
+        "resolved_date": "2026-06-05T12:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3259",
+        "customer_id": "CUST-1133",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-11T15:43:15",
+        "resolved_date": "2026-05-13T23:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3260",
+        "customer_id": "CUST-1114",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-01T17:43:15",
+        "resolved_date": "2026-06-03T18:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3261",
+        "customer_id": "CUST-1016",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-31T04:43:15",
+        "resolved_date": "2026-06-01T08:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3262",
+        "customer_id": "CUST-1176",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-31T06:43:15",
+        "resolved_date": "2026-06-03T02:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3263",
+        "customer_id": "CUST-1082",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-07T19:43:15",
+        "resolved_date": "2026-06-10T07:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3264",
+        "customer_id": "CUST-1047",
+        "subject": "Data export failing",
+        "priority": "Critical",
+        "status": "Open",
+        "created_date": "2026-06-10T11:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3265",
+        "customer_id": "CUST-1136",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-16T18:43:15",
+        "resolved_date": "2026-05-17T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3266",
+        "customer_id": "CUST-1151",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "In Progress",
+        "created_date": "2026-07-11T10:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3267",
+        "customer_id": "CUST-1151",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-07-16T04:43:15",
+        "resolved_date": "2026-07-18T23:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3268",
+        "customer_id": "CUST-1180",
+        "subject": "Integration error",
+        "priority": "Medium",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-21T09:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3269",
+        "customer_id": "CUST-1086",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-01T18:43:15",
+        "resolved_date": "2026-05-01T22:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3270",
+        "customer_id": "CUST-1115",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-08-01T15:43:15",
+        "resolved_date": "2026-08-03T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3271",
+        "customer_id": "CUST-1045",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-27T21:43:15",
+        "resolved_date": "2026-06-30T01:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3272",
+        "customer_id": "CUST-1195",
+        "subject": "Dashboard UI glitch",
+        "priority": "Critical",
+        "status": "Resolved",
+        "created_date": "2026-07-31T06:43:15",
+        "resolved_date": "2026-08-02T05:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3273",
+        "customer_id": "CUST-1039",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-11T04:43:15",
+        "resolved_date": "2026-05-13T23:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3274",
+        "customer_id": "CUST-1191",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-24T13:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3275",
+        "customer_id": "CUST-1101",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-06-28T12:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3276",
+        "customer_id": "CUST-1029",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-08-03T11:43:15",
+        "resolved_date": "2026-08-05T14:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3277",
+        "customer_id": "CUST-1191",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-06T23:43:15",
+        "resolved_date": "2026-05-09T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3278",
+        "customer_id": "CUST-1185",
+        "subject": "Billing question",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-05-03T03:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3279",
+        "customer_id": "CUST-1128",
+        "subject": "Feature request",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-04T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3280",
+        "customer_id": "CUST-1078",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-01T02:43:15",
+        "resolved_date": "2026-06-01T23:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3281",
+        "customer_id": "CUST-1016",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-05-17T04:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3282",
+        "customer_id": "CUST-1005",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-27T19:43:15",
+        "resolved_date": "2026-06-29T16:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3283",
+        "customer_id": "CUST-1012",
+        "subject": "Data export failing",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-04T21:43:15",
+        "resolved_date": "2026-06-06T00:43:15",
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3284",
+        "customer_id": "CUST-1048",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-06T06:43:15",
+        "resolved_date": "2026-06-08T16:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3285",
+        "customer_id": "CUST-1058",
+        "subject": "API timeout issues",
+        "priority": "Critical",
+        "status": "Awaiting Response",
+        "created_date": "2026-05-06T16:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3286",
+        "customer_id": "CUST-1127",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Open",
+        "created_date": "2026-07-21T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3287",
+        "customer_id": "CUST-1099",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-06-30T19:43:15",
+        "resolved_date": "2026-07-01T15:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3288",
+        "customer_id": "CUST-1064",
+        "subject": "Dashboard UI glitch",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-11T19:43:15",
+        "resolved_date": "2026-07-13T21:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3289",
+        "customer_id": "CUST-1067",
+        "subject": "Dashboard UI glitch",
+        "priority": "Low",
+        "status": "Awaiting Response",
+        "created_date": "2026-06-07T22:43:15",
+        "resolved_date": null,
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3290",
+        "customer_id": "CUST-1095",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-07-31T23:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3291",
+        "customer_id": "CUST-1044",
+        "subject": "API timeout issues",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-07-27T12:43:15",
+        "resolved_date": "2026-07-28T19:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3292",
+        "customer_id": "CUST-1113",
+        "subject": "Billing question",
+        "priority": "High",
+        "status": "Resolved",
+        "created_date": "2026-06-08T20:43:15",
+        "resolved_date": "2026-06-09T14:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3293",
+        "customer_id": "CUST-1196",
+        "subject": "Feature request",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-04-29T01:43:15",
+        "resolved_date": "2026-04-30T00:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3294",
+        "customer_id": "CUST-1014",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-07-31T13:43:15",
+        "resolved_date": "2026-08-01T07:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3295",
+        "customer_id": "CUST-1066",
+        "subject": "API timeout issues",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-05-13T06:43:15",
+        "resolved_date": "2026-05-15T21:43:15",
+        "sentiment": "Negative"
+    },
+    {
+        "ticket_id": "TKT-3296",
+        "customer_id": "CUST-1132",
+        "subject": "Feature request",
+        "priority": "High",
+        "status": "Awaiting Response",
+        "created_date": "2026-08-01T08:43:15",
+        "resolved_date": null,
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3297",
+        "customer_id": "CUST-1002",
+        "subject": "Data export failing",
+        "priority": "Medium",
+        "status": "Resolved",
+        "created_date": "2026-05-31T16:43:15",
+        "resolved_date": "2026-06-01T03:43:15",
+        "sentiment": "Neutral"
+    },
+    {
+        "ticket_id": "TKT-3298",
+        "customer_id": "CUST-1072",
+        "subject": "API timeout issues",
+        "priority": "Medium",
+        "status": "In Progress",
+        "created_date": "2026-04-29T18:43:15",
+        "resolved_date": null,
+        "sentiment": "Positive"
+    },
+    {
+        "ticket_id": "TKT-3299",
+        "customer_id": "CUST-1024",
+        "subject": "Integration error",
+        "priority": "Low",
+        "status": "Resolved",
+        "created_date": "2026-06-18T16:43:15",
+        "resolved_date": "2026-06-19T22:43:15",
+        "sentiment": "Neutral"
+    }
+]

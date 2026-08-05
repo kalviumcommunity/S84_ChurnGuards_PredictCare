@@ -251,6 +251,14 @@ def filter_customers_by_risk(df, risk_filter):
         return df
     return df[df['health_status'].isin(risk_filter)]
 
+# Function to export customer data to CSV
+def export_customer_data():
+    """Export customer data with risk metrics and health status"""
+    export_data = customers_df[['customer_id', 'company_name', 'risk_score', 'arr', 'health_status', 'sentiment']].copy()
+    export_data['last_activity'] = customers_df['last_activity'].dt.strftime('%Y-%m-%d')
+    csv = export_data.to_csv(index=False)
+    return csv
+
 # PAGE 1: EXECUTIVE DASHBOARD
 if page == "Executive Dashboard":
     # Header
@@ -859,16 +867,8 @@ elif page == "Ticket Workspace":
         
         st.markdown('</div>', unsafe_allow_html=True)
     
-    st.markdown('</div>', unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
 
-
-# Function to export customer data to CSV
-def export_customer_data():
-    """Export customer data with risk metrics and health status"""
-    export_data = customers_df[['customer_id', 'company_name', 'risk_score', 'arr', 'health_status', 'sentiment']].copy()
-    export_data['last_activity'] = customers_df['last_activity'].dt.strftime('%Y-%m-%d')
-    csv = export_data.to_csv(index=False)
-    return csv
 
 # PAGE 4: CUSTOMER DIRECTORY
 elif page == "Customer Directory":

@@ -23,17 +23,17 @@ st.markdown("""
     }
     
     .main {
-        background-color: #f5f5f5;
+        background-color: #f8fafc; /* Slate 50 */
         padding: 2rem;
     }
     
     .stApp {
-        background-color: #f5f5f5;
+        background-color: #f8fafc;
     }
     
     [data-testid="stSidebar"] {
         background-color: #ffffff;
-        border-right: 1px solid #e5e5e5;
+        border-right: 1px solid #e2e8f0; /* Slate 200 */
         padding-top: 1rem;
     }
     
@@ -48,42 +48,48 @@ st.markdown("""
     header {visibility: hidden;}
     
     h1 {
-        color: #1a1a1a !important;
+        color: #0F172A !important; /* Deep Navy */
         font-size: 32px !important;
-        font-weight: 600 !important;
+        font-weight: 700 !important;
         margin-bottom: 0.5rem !important;
     }
     
     h2 {
-        color: #1a1a1a !important;
+        color: #0F172A !important;
         font-size: 18px !important;
         font-weight: 600 !important;
         margin-bottom: 1rem !important;
     }
     
     h3 {
-        color: #1a1a1a !important;
+        color: #0F172A !important;
         font-size: 16px !important;
         font-weight: 600 !important;
     }
     
     p, span, label, div {
-        color: #525252 !important;
+        color: #475569 !important; /* Slate 600 */
     }
     
     .metric-card {
         background-color: #ffffff;
-        border: 1px solid #e5e5e5;
-        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
         padding: 20px;
         margin-bottom: 16px;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        box-shadow: 0px 4px 6px -1px rgba(15, 23, 42, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .metric-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0px 10px 15px -3px rgba(15, 23, 42, 0.1);
     }
     
     .metric-label {
         font-size: 12px;
-        color: #737373;
-        font-weight: 500;
+        color: #64748B; /* Slate 500 */
+        font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.5px;
         margin-bottom: 8px;
@@ -92,8 +98,9 @@ st.markdown("""
     .metric-value {
         font-size: 36px;
         font-weight: 700;
-        color: #1a1a1a;
+        color: #0F172A;
         line-height: 1;
+        font-variant-numeric: tabular-nums;
     }
     
     .metric-change {
@@ -102,34 +109,34 @@ st.markdown("""
         margin-top: 8px;
     }
     
-    .positive { color: #16a34a; }
-    .negative { color: #dc2626; }
+    .positive { color: #10B981; } /* Emerald */
+    .negative { color: #DC2626; } /* Crimson */
     
     .badge {
         display: inline-block;
         padding: 4px 12px;
-        border-radius: 6px;
+        border-radius: 4px;
         font-size: 12px;
         font-weight: 500;
     }
     
-    .badge-critical { background-color: #fee2e2; color: #991b1b; }
-    .badge-high { background-color: #fed7aa; color: #9a3412; }
-    .badge-medium { background-color: #fef3c7; color: #92400e; }
-    .badge-low { background-color: #dbeafe; color: #1e40af; }
-    .badge-negative { background-color: #fee2e2; color: #991b1b; }
+    .badge-critical { background-color: #fef2f2; color: #DC2626; border: 1px solid #fecaca; }
+    .badge-high { background-color: #fffbeb; color: #F59E0B; border: 1px solid #fde68a; }
+    .badge-medium { background-color: #f8fafc; color: #64748B; border: 1px solid #e2e8f0; }
+    .badge-low { background-color: #ecfdf5; color: #10B981; border: 1px solid #a7f3d0; }
+    .badge-negative { background-color: #fef2f2; color: #DC2626; border: 1px solid #fecaca; }
     
     .content-card {
         background-color: #ffffff;
-        border: 1px solid #e5e5e5;
+        border: 1px solid #e2e8f0;
         border-radius: 8px;
         padding: 24px;
         margin-bottom: 16px;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        box-shadow: 0px 4px 6px -1px rgba(15, 23, 42, 0.1);
     }
     
     .btn-primary {
-        background-color: #1a1a1a;
+        background-color: #0F172A;
         color: white;
         padding: 8px 16px;
         border-radius: 6px;
@@ -138,18 +145,28 @@ st.markdown("""
         font-size: 14px;
         text-decoration: none;
         display: inline-block;
+        transition: background-color 0.2s;
+    }
+    
+    .btn-primary:hover {
+        background-color: #1e293b; /* Slate 800 */
     }
     
     .btn-secondary {
         background-color: white;
-        color: #1a1a1a;
+        color: #0F172A;
         padding: 8px 16px;
         border-radius: 6px;
-        border: 1px solid #d4d4d4;
+        border: 1px solid #e2e8f0;
         font-weight: 500;
         font-size: 14px;
         text-decoration: none;
         display: inline-block;
+        transition: background-color 0.2s;
+    }
+    
+    .btn-secondary:hover {
+        background-color: #f1f5f9; /* Slate 100 */
     }
     
     .stRadio > div > label {
@@ -165,19 +182,20 @@ st.markdown("""
     .data-table th {
         text-align: left;
         padding: 12px;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 600;
-        color: #737373;
+        color: #64748B;
         text-transform: uppercase;
         letter-spacing: 0.5px;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e2e8f0;
     }
     
     .data-table td {
         padding: 16px 12px;
-        border-bottom: 1px solid #f5f5f5;
+        border-bottom: 1px solid #f8fafc;
         font-size: 14px;
-        color: #1a1a1a;
+        color: #0F172A;
+        font-variant-numeric: tabular-nums;
     }
 
 </style>
@@ -213,36 +231,18 @@ with st.sidebar:
 # Load or generate data
 @st.cache_data
 def load_data():
-    np.random.seed(42)
+    from scripts.data_ingestion import load_data as load_raw
+    from scripts.data_cleaning import clean_data
+    from scripts.feature_engineering import engineer_features
     
-    customers = pd.DataFrame({
-        'customer_id': range(1, 201),
-        'company_name': [f'Company {chr(65 + i % 26)}{i}' for i in range(1, 201)],
-        'risk_score': np.random.randint(20, 95, 200),
-        'arr': np.random.randint(50000, 5000000, 200),
-        'health_status': np.random.choice(['Low Risk', 'Medium', 'Critical'], 200, p=[0.71, 0.17, 0.12]),
-        'last_activity': [datetime.now() - timedelta(days=np.random.randint(1, 30)) for _ in range(200)],
-        'sentiment': np.random.choice(['Positive', 'Neutral', 'Negative'], 200, p=[0.3, 0.4, 0.3])
-    })
+    customers, tickets, interactions, churn_history = load_raw('data')
+    customers, tickets, interactions, churn_history = clean_data(customers, tickets, interactions, churn_history)
+    customers, tickets = engineer_features(customers, tickets, interactions)
     
-    subjects_list = ['Data export failing on Q3 Reports Dashboard', 'API timeout issues', 
-                     'Dashboard UI glitch', 'Integration error']
-    
-    tickets = pd.DataFrame({
-        'ticket_id': [f'TKT-{2800+i}' for i in range(50)],
-        'customer': ['Sarah Jenkins' if i % 3 == 0 else 'John Doe' if i % 3 == 1 else 'Jane Smith' for i in range(50)],
-        'company': ['Acme Corp' if i < 10 else 'TechFlow' if i < 20 else 'GlobalNet' for i in range(50)],
-        'subject': [subjects_list[i % 4] for i in range(50)],
-        'priority': np.random.choice(['Low', 'Medium', 'High', 'Critical'], 50, p=[0.2, 0.4, 0.3, 0.1]),
-        'status': np.random.choice(['Open', 'In Progress', 'Awaiting Response', 'Resolved'], 50),
-        'risk_score': np.random.randint(30, 95, 50),
-        'sentiment': np.random.choice(['Positive', 'Neutral', 'Negative'], 50),
-        'created': [datetime.now() - timedelta(hours=np.random.randint(1, 168)) for _ in range(50)]
-    })
-    
-    return customers, tickets
+    return customers, tickets, interactions, churn_history
 
-customers_df, tickets_df = load_data()
+
+customers_df, tickets_df, interactions_df, churn_history_df = load_data()
 
 # Function to filter customers by risk level
 def filter_customers_by_risk(df, risk_filter):
@@ -250,6 +250,14 @@ def filter_customers_by_risk(df, risk_filter):
     if "All Levels" in risk_filter:
         return df
     return df[df['health_status'].isin(risk_filter)]
+
+# Function to export customer data to CSV
+def export_customer_data():
+    """Export customer data with risk metrics and health status"""
+    export_data = customers_df[['customer_id', 'company_name', 'risk_score', 'arr', 'health_status', 'sentiment']].copy()
+    export_data['last_activity'] = customers_df['last_activity'].dt.strftime('%Y-%m-%d')
+    csv = export_data.to_csv(index=False)
+    return csv
 
 # PAGE 1: EXECUTIVE DASHBOARD
 if page == "Executive Dashboard":
@@ -286,7 +294,7 @@ if page == "Executive Dashboard":
     
     # Calculate dynamic metrics
     total_arr = filtered_customers['arr'].sum()
-    avg_risk = int(filtered_customers['risk_score'].mean())
+    avg_risk = int(filtered_customers['risk_score'].mean()) if not filtered_customers.empty else 0
     critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
     churn_rate = (critical_count / len(filtered_customers) * 100) if len(filtered_customers) > 0 else 0
     
@@ -353,38 +361,59 @@ if page == "Executive Dashboard":
         st.markdown('<div class="content-card">', unsafe_allow_html=True)
         st.markdown("### Churn Trend vs. Prevention Actions")
         
-        months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
-        churn_volume = [100, 95, 105, 110, 98, 92]
-        preventative = [20, 28, 32, 45, 58, 68]
+        # Aggregate churns by month
+        if not churn_history_df.empty:
+            churn_history_df['month'] = pd.to_datetime(churn_history_df['churn_date']).dt.strftime('%b')
+            churn_by_month = churn_history_df.groupby('month').size()
+        else:
+            churn_by_month = pd.Series()
+            
+        # Aggregate preventative actions (QBR, Support Call, Executive Review) by month
+        if not interactions_df.empty:
+            prev_actions = interactions_df[interactions_df['interaction_type'].isin(['QBR', 'Support Call', 'Executive Review'])].copy()
+            prev_actions['month'] = pd.to_datetime(prev_actions['timestamp']).dt.strftime('%b')
+            prev_by_month = prev_actions.groupby('month').size()
+        else:
+            prev_by_month = pd.Series()
+            
+        # Align months
+        all_months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        months = [m for m in all_months if m in churn_by_month.index or m in prev_by_month.index][-6:] # Last 6 active months
+        if not months:
+            months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+            
+        churn_volume = [churn_by_month.get(m, 0) for m in months]
+        preventative = [prev_by_month.get(m, 0) for m in months]
         
         fig = go.Figure()
         fig.add_trace(go.Bar(x=months, y=churn_volume, name='Churn Volume', 
-                            marker_color='#1a1a1a', text=churn_volume, textposition='inside'))
+                            marker_color='#0F172A', text=churn_volume, textposition='inside'))
         fig.add_trace(go.Bar(x=months, y=preventative, name='Preventative Actions', 
-                            marker_color='#e5e5e5', text=preventative, textposition='inside'))
+                            marker_color='#94A3B8', text=preventative, textposition='inside'))
         
         fig.update_layout(
             barmode='stack',
             plot_bgcolor='white',
             paper_bgcolor='white',
-            font=dict(color='#1a1a1a', family='Inter'),
+            font=dict(color='#0F172A', family='Inter'),
             height=300,
             showlegend=True,
             legend=dict(orientation="h", yanchor="top", y=1.1, xanchor="right", x=1),
             margin=dict(l=0, r=0, t=40, b=0),
             xaxis=dict(showgrid=False, showline=False),
-            yaxis=dict(showgrid=True, gridcolor='#f5f5f5', showline=False)
+            yaxis=dict(showgrid=True, gridcolor='#F1F5F9', showline=False)
         )
         st.plotly_chart(fig, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
     
     with col2:
         st.markdown('<div class="content-card">', unsafe_allow_html=True)
-        st.markdown("### Risk Distribution by Segment")
+        st.markdown("### Risk Distribution by Industry")
         
-        labels = ['Enterprise (High Risk)', 'Mid-Market', 'SMB']
-        values = [35, 28, 37]
-        colors = ['#dc2626', '#1a1a1a', '#d4d4d4']
+        industry_counts = filtered_customers['industry'].value_counts()
+        labels = industry_counts.index.tolist()
+        values = industry_counts.values.tolist()
+        colors = px.colors.qualitative.Pastel
         
         fig = go.Figure(data=[go.Pie(
             labels=labels, 
@@ -398,7 +427,7 @@ if page == "Executive Dashboard":
         fig.update_layout(
             plot_bgcolor='white',
             paper_bgcolor='white',
-            font=dict(color='#1a1a1a', family='Inter'),
+            font=dict(color='#0F172A', family='Inter'),
             height=300,
             showlegend=False,
             margin=dict(l=0, r=0, t=0, b=0)
@@ -408,25 +437,27 @@ if page == "Executive Dashboard":
     
     # Top Reasons for Dissatisfaction
     st.markdown('<div class="content-card">', unsafe_allow_html=True)
-    st.markdown("### Top Reasons for Dissatisfaction")
+    st.markdown("### Top Ticket Subjects")
     
     col1, col2 = st.columns([2, 1])
     with col1:
-        reasons = [
-            ('Support Latency', 45),
-            ('Feature Gap (Reporting)', 32),
-            ('Price / Value Perception', 18)
-        ]
-        
+        # Get top ticket subjects dynamically
+        if not tickets_df.empty:
+            top_subjects = tickets_df['subject'].value_counts().head(3)
+            total_tickets = len(tickets_df)
+            reasons = [(subj, int((count/total_tickets)*100)) for subj, count in top_subjects.items()]
+        else:
+            reasons = []
+            
         for reason, value in reasons:
             st.markdown(f"""
             <div style="margin-bottom: 20px;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
-                    <span style="color: #1a1a1a; font-weight: 500;">{reason}</span>
-                    <span style="color: #1a1a1a; font-weight: 600;">{value}%</span>
+                    <span style="color: #0F172A; font-weight: 500;">{reason}</span>
+                    <span style="color: #0F172A; font-weight: 600;">{value}%</span>
                 </div>
-                <div style="background: #f5f5f5; height: 8px; border-radius: 4px; overflow: hidden;">
-                    <div style="background: #1a1a1a; width: {value}%; height: 100%;"></div>
+                <div style="background: #e2e8f0; height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="background: #0F172A; width: {value}%; height: 100%;"></div>
                 </div>
             </div>
             """, unsafe_allow_html=True)
@@ -436,12 +467,27 @@ if page == "Executive Dashboard":
     st.markdown('<div class="content-card">', unsafe_allow_html=True)
     col1, col2 = st.columns([4, 1])
     with col1:
-        st.markdown("### Recent High-Value Escalations")
+        st.markdown("### High-Value Escalations")
     with col2:
         st.markdown('<div style="text-align: right;"><a href="#" class="btn-secondary">View All</a></div>', 
                    unsafe_allow_html=True)
     
-    st.markdown("""
+    # Dynamic table
+    top_critical = filtered_customers[filtered_customers['health_status'] == 'Critical'].sort_values('arr', ascending=False).head(5)
+    
+    table_rows = ""
+    for _, row in top_critical.iterrows():
+        table_rows += f"""
+            <tr>
+                <td><span style="color: #DC2626;">●</span> {row['company_name']}</td>
+                <td>${row['arr']/1000:,.0f}k / yr</td>
+                <td><span class="badge badge-critical">Critical</span></td>
+                <td>Support Escalation Active</td>
+                <td><a href="#" class="btn-secondary" style="padding: 6px 12px; font-size: 12px;">Intervene</a></td>
+            </tr>
+        """
+        
+    st.markdown(f"""
     <table class="data-table">
         <thead>
             <tr>
@@ -453,27 +499,7 @@ if page == "Executive Dashboard":
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><span style="color: #dc2626;">●</span> Global Tech Solutions</td>
-                <td>$1.2M / yr</td>
-                <td><span class="badge badge-critical">Critical</span></td>
-                <td>Pending Exec Review</td>
-                <td><a href="#" class="btn-secondary" style="padding: 6px 12px; font-size: 12px;">Intervene</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #f59e0b;">●</span> Apex Manufacturing</td>
-                <td>$850k / yr</td>
-                <td><span class="badge badge-high">High</span></td>
-                <td>Account Manager Assigned</td>
-                <td><a href="#" class="btn-secondary" style="padding: 6px 12px; font-size: 12px;">Review</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #dc2626;">●</span> Nexus Retail Group</td>
-                <td>$620k / yr</td>
-                <td><span class="badge badge-critical">Critical</span></td>
-                <td>Support Escalation Active</td>
-                <td><a href="#" class="btn-secondary" style="padding: 6px 12px; font-size: 12px;">Intervene</a></td>
-            </tr>
+            {table_rows}
         </tbody>
     </table>
     """, unsafe_allow_html=True)
@@ -500,25 +526,29 @@ elif page == "Risk Command Center":
         st.markdown('<div class="content-card">', unsafe_allow_html=True)
         st.markdown("### Health Score Summary")
         
+        low_count = len(customers_df[customers_df['health_status'] == 'Low Risk'])
+        med_count = len(customers_df[customers_df['health_status'] == 'Medium'])
+        crit_count = len(customers_df[customers_df['health_status'] == 'Critical'])
+        
         col_a, col_b, col_c = st.columns(3)
         with col_a:
-            st.markdown("""
+            st.markdown(f"""
             <div style="text-align: center;">
-                <div style="font-size: 32px; font-weight: 700; color: #16a34a;">142</div>
+                <div style="font-size: 32px; font-weight: 700; color: #16a34a;">{low_count}</div>
                 <div style="font-size: 11px; color: #737373; text-transform: uppercase;">LOW RISK</div>
             </div>
             """, unsafe_allow_html=True)
         with col_b:
-            st.markdown("""
+            st.markdown(f"""
             <div style="text-align: center;">
-                <div style="font-size: 32px; font-weight: 700; color: #f59e0b;">34</div>
+                <div style="font-size: 32px; font-weight: 700; color: #f59e0b;">{med_count}</div>
                 <div style="font-size: 11px; color: #737373; text-transform: uppercase;">MEDIUM</div>
             </div>
             """, unsafe_allow_html=True)
         with col_c:
-            st.markdown("""
+            st.markdown(f"""
             <div style="text-align: center;">
-                <div style="font-size: 32px; font-weight: 700; color: #dc2626;">12</div>
+                <div style="font-size: 32px; font-weight: 700; color: #dc2626;">{crit_count}</div>
                 <div style="font-size: 11px; color: #737373; text-transform: uppercase;">HIGH RISK</div>
             </div>
             """, unsafe_allow_html=True)
@@ -533,31 +563,20 @@ elif page == "Risk Command Center":
             st.markdown('<div style="text-align: right; font-size: 12px; color: #737373;">Live Feed</div>', 
                        unsafe_allow_html=True)
         
-        st.markdown("""
-        <div style="padding: 12px; background: #fef2f2; border-left: 3px solid #dc2626; border-radius: 6px; margin-bottom: 12px;">
-            <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">
-                📈 Acme Corp risk score jumped to 85.
+        # dynamic alerts based on top critical
+        alerts_html = ""
+        top_critical_alerts = customers_df[customers_df['health_status'] == 'Critical'].sort_values('risk_score', ascending=False).head(3)
+        for _, row in top_critical_alerts.iterrows():
+            alerts_html += f"""
+            <div style="padding: 12px; background: #fef2f2; border-left: 3px solid #dc2626; border-radius: 6px; margin-bottom: 12px;">
+                <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">
+                    📈 {row['company_name']} risk score is {int(row['risk_score'])}.
+                </div>
+                <div style="font-size: 13px; color: #737373;">Sentiment: {row['sentiment']}</div>
             </div>
-            <div style="font-size: 13px; color: #737373;">Support escalation + negative sentiment</div>
-            <div style="font-size: 12px; color: #a3a3a3; margin-top: 4px;">2 mins ago</div>
-        </div>
-        
-        <div style="padding: 12px; background: #fffbeb; border-left: 3px solid #f59e0b; border-radius: 6px; margin-bottom: 12px;">
-            <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">
-                👤 Key sponsor at TechFlow departed.
-            </div>
-            <div style="font-size: 13px; color: #737373;">Relationship risk detected</div>
-            <div style="font-size: 12px; color: #a3a3a3; margin-top: 4px;">15 mins ago</div>
-        </div>
-        
-        <div style="padding: 12px; background: #fef2f2; border-left: 3px solid #dc2626; border-radius: 6px;">
-            <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">
-                📉 Global Net renewal delayed. Expected MRR drop.
-            </div>
-            <div style="font-size: 13px; color: #737373;">Contract negotiation stalled</div>
-            <div style="font-size: 12px; color: #a3a3a3; margin-top: 4px;">1 hr ago</div>
-        </div>
-        """, unsafe_allow_html=True)
+            """
+            
+        st.markdown(alerts_html, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
@@ -565,6 +584,28 @@ elif page == "Risk Command Center":
     # High Risk Accounts Table
     st.markdown('<div class="content-card">', unsafe_allow_html=True)
     st.markdown("### High Risk Accounts")
+    
+    top_accounts = customers_df[customers_df['health_status'].isin(['Critical', 'Medium'])].sort_values('risk_score', ascending=False).head(5)
+    account_rows = ""
+    for _, row in top_accounts.iterrows():
+        color_hex = "#dc2626" if row['health_status'] == 'Critical' else "#f59e0b"
+        bg_hex = "#fee2e2" if row['health_status'] == 'Critical' else "#fef3c7"
+        text_hex = "#991b1b" if row['health_status'] == 'Critical' else "#92400e"
+        border_hex = "#dc2626" if row['health_status'] == 'Critical' else "#eab308"
+        action = "Intervene" if row['health_status'] == 'Critical' else "Review"
+        btn_class = "btn-primary" if row['health_status'] == 'Critical' else "btn-secondary"
+        
+        account_rows += f"""
+            <tr>
+                <td><span style="color: {color_hex};">●</span> {row['company_name']}</td>
+                <td><div style="display: inline-flex; align-items: center; justify-content: center; 
+                          width: 40px; height: 40px; border-radius: 50%; background: {bg_hex}; 
+                          color: {text_hex}; font-weight: 700; border: 2px solid {border_hex};">{int(row['risk_score'])}</div></td>
+                <td>${row['arr']/1000:,.0f}K</td>
+                <td>{pd.to_datetime(row['last_activity']).strftime('%b %d, %Y')}</td>
+                <td><a href="#" class="{btn_class}" style="padding: 6px 16px; font-size: 12px;">{action}</a></td>
+            </tr>
+        """
     
     st.markdown("""
     <table class="data-table">
@@ -578,33 +619,7 @@ elif page == "Risk Command Center":
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><span style="color: #dc2626;">●</span> Acme Corp</td>
-                <td><div style="display: inline-flex; align-items: center; justify-content: center; 
-                          width: 40px; height: 40px; border-radius: 50%; background: #fee2e2; 
-                          color: #991b1b; font-weight: 700; border: 2px solid #dc2626;">85</div></td>
-                <td>$1.2M</td>
-                <td>2 days ago</td>
-                <td><a href="#" class="btn-primary" style="padding: 6px 16px; font-size: 12px;">Intervene</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #dc2626;">●</span> Stark Industries</td>
-                <td><div style="display: inline-flex; align-items: center; justify-content: center; 
-                          width: 40px; height: 40px; border-radius: 50%; background: #fed7aa; 
-                          color: #9a3412; font-weight: 700; border: 2px solid #f97316;">78</div></td>
-                <td>$4.5M</td>
-                <td>5 days ago</td>
-                <td><a href="#" class="btn-primary" style="padding: 6px 16px; font-size: 12px;">Intervene</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #f59e0b;">●</span> Wayne Ent.</td>
-                <td><div style="display: inline-flex; align-items: center; justify-content: center; 
-                          width: 40px; height: 40px; border-radius: 50%; background: #fef3c7; 
-                          color: #92400e; font-weight: 700; border: 2px solid #eab308;">62</div></td>
-                <td>$800K</td>
-                <td>1 week ago</td>
-                <td><a href="#" class="btn-secondary" style="padding: 6px 16px; font-size: 12px;">Review</a></td>
-            </tr>
+            {account_rows}
         </tbody>
     </table>
     """, unsafe_allow_html=True)
@@ -618,257 +633,154 @@ elif page == "Ticket Workspace":
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns([3, 1, 1])
-    with col1:
-        st.text_input("🔍 Search tickets, accounts, or keywords...", label_visibility="collapsed", 
-                     placeholder="Search tickets, accounts, or keywords...")
-    with col2:
-        st.markdown('<br><a href="#" class="btn-secondary" style="padding: 10px 20px;">✓ Assign</a>', 
-                   unsafe_allow_html=True)
-    with col3:
-        st.markdown('<br><a href="#" class="btn-primary" style="padding: 10px 20px;">Resolve</a>', 
-                   unsafe_allow_html=True)
     
-    st.markdown("<br>", unsafe_allow_html=True)
-    
-    # Ticket Card
-    st.markdown('<div class="content-card">', unsafe_allow_html=True)
-    
-    # Ticket Header
-    col1, col2 = st.columns([3, 1])
-    with col1:
-        st.markdown("""
+    # Select an open ticket dynamically
+    open_tickets = tickets_df[tickets_df['status'] == 'Open']
+    if open_tickets.empty:
+        st.warning("No open tickets at the moment.")
+    else:
+        with col1:
+            ticket_options = open_tickets['ticket_id'].tolist()
+            ticket_display = {t_id: f"{t_id} - {open_tickets[open_tickets['ticket_id']==t_id].iloc[0]['subject']}" for t_id in ticket_options}
+            selected_ticket_id = st.selectbox("🔍 Select Open Ticket", ticket_options, format_func=lambda x: ticket_display[x], label_visibility="collapsed")
+            
+        selected_ticket = open_tickets[open_tickets['ticket_id'] == selected_ticket_id].iloc[0]
+        customer = customers_df[customers_df['customer_id'] == selected_ticket['customer_id']].iloc[0]
+        
+        with col2:
+            st.markdown('<br><a href="#" class="btn-secondary" style="padding: 10px 20px;">✓ Assign</a>', 
+                       unsafe_allow_html=True)
+        with col3:
+            st.markdown('<br><a href="#" class="btn-primary" style="padding: 10px 20px;">Resolve</a>', 
+                       unsafe_allow_html=True)
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Ticket Card
+        st.markdown('<div class="content-card">', unsafe_allow_html=True)
+        
+        # Ticket Header
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            st.markdown(f"""
+            <div style="margin-bottom: 16px;">
+                <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">{selected_ticket_id}</span>
+                <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ High Priority</span>
+            </div>
+            """, unsafe_allow_html=True)
+        with col2:
+            st.markdown(f'<div style="text-align: right;"><span class="badge badge-critical">{selected_ticket["category"]}</span></div>', 
+                       unsafe_allow_html=True)
+        
+        # Ticket Title
+        st.markdown(f"### {selected_ticket['subject']}")
+        created_time = pd.to_datetime(selected_ticket['created_at']).strftime('%H:%M %p')
+        st.markdown(f"""
         <div style="margin-bottom: 16px;">
-            <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">TKT-2842</span>
-            <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ SL A: 2h 14m</span>
-        </div>
-        """, unsafe_allow_html=True)
-    with col2:
-        st.markdown('<div style="text-align: right;"><span class="badge badge-critical">Bug / Data Export</span></div>', 
-                   unsafe_allow_html=True)
-    
-    # Ticket Title
-    st.markdown("### Data export failing on Q3 Reports Dashboard")
-    st.markdown("""
-    <div style="margin-bottom: 16px;">
-        <span style="color: #737373;">👤 Sarah Jenkins (Acme Corp)</span>
-        <span style="margin: 0 8px; color: #d4d4d4;">●</span>
-        <span style="color: #737373;">🕐 Created: 14:23 PM Today</span>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    st.markdown("<br>", unsafe_allow_html=True)
-    
-    # Conversation Thread
-    col1, col2 = st.columns([4, 1])
-    
-    with col1:
-        # Customer Message
-        st.markdown("""
-        <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
-            <div style="display: flex; gap: 12px;">
-                <div style="width: 36px; height: 36px; background: #dbeafe; border-radius: 50%; 
-                           display: flex; align-items: center; justify-content: center; color: #1e40af; 
-                           font-weight: 600; flex-shrink: 0;">SJ</div>
-                <div style="flex: 1;">
-                    <div style="font-weight: 600; margin-bottom: 8px;">Sarah Jenkins</div>
-                    <div style="color: #525252; line-height: 1.6;">
-                        Hi Support,<br><br>
-                        I'm trying to export the Q3 retention reports for our executive review tomorrow, but every 
-                        time I click the CSV download button, the system hangs and then gives a 504 Gateway 
-                        Timeout error.<br><br>
-                        This is extremely time-sensitive. We need this data for a board meeting.<br><br>
-                        Thanks,<br>
-                        Sarah
-                    </div>
-                    <div style="margin-top: 12px;">
-                        <span style="display: inline-block; padding: 8px 12px; background: white; 
-                                   border: 1px solid #d4d4d4; border-radius: 6px; font-size: 12px;">
-                            📎 error_screenshot.png
-                        </span>
-                    </div>
-                    <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">14:22 PM</div>
-                </div>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # System Note
-        st.markdown("""
-        <div style="background: #fafafa; padding: 16px; border-radius: 8px; border-left: 3px solid #737373; margin-bottom: 16px;">
-            <div style="display: flex; gap: 12px; align-items: start;">
-                <div>🤖</div>
-                <div>
-                    <div style="font-weight: 600; margin-bottom: 4px;">💬 Internal Note (System)</div>
-                    <div style="color: #525252; font-size: 13px;">
-                        <strong>Automated Risk Analysis:</strong> Customer sentiment is highly negative. 
-                        Account is in Renewal Phase (30 days remaining). Export functionality is a known issue 
-                        for large datasets on legacy infrastructure (Ticket #ENG-491).
-                    </div>
-                    <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">14:23 PM</div>
-                </div>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Agent Response Box
-        st.markdown("""
-        <div style="background: white; border: 1px solid #d4d4d4; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-            <div style="display: flex; gap: 12px; margin-bottom: 12px;">
-                <div style="width: 36px; height: 36px; background: #1a1a1a; border-radius: 50%; 
-                           display: flex; align-items: center; justify-content: center; color: white; 
-                           font-weight: 600; flex-shrink: 0;">You</div>
-                <div style="flex: 1;">
-                    <div style="font-weight: 600; margin-bottom: 4px;">You (Agent)</div>
-                    <div style="color: #a3a3a3; font-size: 12px;">14:45 PM</div>
-                </div>
-            </div>
-            <div style="color: #525252; line-height: 1.6; margin-bottom: 16px;">
-                Hi Sarah,<br><br>
-                I completely understand the urgency for your board meeting. I'm looking into this 
-                immediately. Our engineering team is currently investigating a known timeout issue with 
-                exceptionally large data exports.
-            </div>
-            <div style="border-top: 1px solid #e5e5e5; padding-top: 12px; display: flex; gap: 8px;">
-                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
-                              border-radius: 4px; cursor: pointer;">B</button>
-                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
-                              border-radius: 4px; cursor: pointer;">I</button>
-                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
-                              border-radius: 4px; cursor: pointer;">≡</button>
-                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
-                              border-radius: 4px; cursor: pointer;">📎</button>
-                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
-                              border-radius: 4px; cursor: pointer;">😊</button>
-            </div>
-        </div>
-        
-        <div style="margin-top: 16px;">
-            <input type="text" placeholder="Type your reply or add an internal note..." 
-                   style="width: 100%; padding: 12px; border: 1px solid #d4d4d4; border-radius: 6px; 
-                          font-size: 14px; font-family: Inter;">
-        </div>
-        
-        <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
-            <label style="font-size: 13px; color: #737373;">
-                <input type="checkbox"> Internal Note
-            </label>
-            <div style="display: flex; gap: 8px;">
-                <a href="#" class="btn-secondary">Save Draft</a>
-                <a href="#" class="btn-primary">Send ▶</a>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col2:
-        # Customer 360 Context Panel
-        st.markdown('<div class="content-card" style="position: sticky; top: 20px;">', unsafe_allow_html=True)
-        st.markdown("### Customer 360 Context")
-        
-        st.markdown("""
-        <div style="text-align: center; padding: 16px 0; border-bottom: 1px solid #e5e5e5;">
-            <div style="width: 48px; height: 48px; background: #f5f5f5; border-radius: 50%; 
-                       display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; 
-                       font-weight: 700; font-size: 18px; color: #1a1a1a;">AC</div>
-            <div style="font-weight: 600; color: #1a1a1a;">Acme Corp</div>
-            <div style="font-size: 12px; color: #737373;">Enterprise Tier • Tech</div>
-        </div>
-        
-        <div style="padding: 16px 0; border-bottom: 1px solid #e5e5e5;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-                <div style="text-align: center;">
-                    <div style="font-size: 11px; color: #737373; text-transform: uppercase; margin-bottom: 4px;">Risk Score</div>
-                    <div style="font-size: 28px; font-weight: 700; color: #dc2626;">72<span style="font-size: 16px;">/100</span></div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-size: 11px; color: #737373; text-transform: uppercase; margin-bottom: 4px;">ARR</div>
-                    <div style="font-size: 28px; font-weight: 700; color: #1a1a1a;">$145k</div>
-                </div>
-            </div>
-            <div style="margin-bottom: 12px;">
-                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">Sentiment</div>
-                <span class="badge badge-negative">😟 Negative</span>
-            </div>
-            <div>
-                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">Renewal Date</div>
-                <div style="font-size: 14px; color: #1a1a1a;">Oct 15 (28 days)</div>
-            </div>
-        </div>
-        
-        <div style="padding: 16px 0; background: #7f1d1d; margin: 0 -24px; padding: 16px 24px; color: white;">
-            <div style="font-weight: 600; margin-bottom: 8px;">⚠️ Active Escalation</div>
-            <div style="font-size: 13px; opacity: 0.9;">
-                Level 2 - Executive Review Required. Flagged due to repeated core feature failure.
-            </div>
-        </div>
-        
-        <div style="padding: 16px 0; background: #dbeafe; margin: 0 -24px; padding: 16px 24px;">
-            <div style="font-weight: 600; margin-bottom: 8px; color: #1e40af;">💡 AI RECOMMENDATION</div>
-            <div style="font-size: 13px; color: #1e40af;">
-                Offer a 1-on-1 strategy call with a Success Manager to address feature friction 
-                and bypass standard queue.
-            </div>
-            <div style="margin-top: 12px;">
-                <a href="#" class="btn-secondary" style="width: 100%; text-align: center; display: block;">
-                    Draft Invitation
-                </a>
-            </div>
+            <span style="color: #737373;">👤 Contact ({customer['company_name']})</span>
+            <span style="margin: 0 8px; color: #d4d4d4;">●</span>
+            <span style="color: #737373;">🕐 Created: {created_time} Today</span>
         </div>
         """, unsafe_allow_html=True)
         
         st.markdown("<br>", unsafe_allow_html=True)
-        st.markdown("### Recent Interactions")
         
-        st.markdown("""
-        <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e5e5;">
-            <div style="display: flex; gap: 8px;">
-                <div>📝</div>
-                <div style="flex: 1;">
-                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">NPS Survey Submitted</div>
-                    <div style="font-size: 12px; color: #737373;">Score: 4/10 (Detractor)</div>
-                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">2 days ago</div>
+        # Conversation Thread
+        col1, col2 = st.columns([4, 1])
+        
+        with col1:
+            # Customer Message
+            st.markdown(f"""
+            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+                <div style="display: flex; gap: 12px;">
+                    <div style="width: 36px; height: 36px; background: #dbeafe; border-radius: 50%; 
+                               display: flex; align-items: center; justify-content: center; color: #1e40af; 
+                               font-weight: 600; flex-shrink: 0;">CT</div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 600; margin-bottom: 8px;">Customer Contact</div>
+                        <div style="color: #475569; line-height: 1.6;">
+                            {selected_ticket['description']}
+                        </div>
+                        <div style="text-align: right; color: #94a3b8; font-size: 12px; margin-top: 8px;">{created_time}</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e5e5;">
-            <div style="display: flex; gap: 8px;">
-                <div>✅</div>
-                <div style="flex: 1;">
-                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">Ticket Resolved</div>
-                    <div style="font-size: 12px; color: #737373;">Dashboard UI Glitch</div>
-                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">5 days ago</div>
+            """, unsafe_allow_html=True)
+            
+            # System Note
+            st.markdown(f"""
+            <div style="background: #f1f5f9; padding: 16px; border-radius: 8px; border-left: 3px solid #64748b; margin-bottom: 16px;">
+                <div style="display: flex; gap: 12px; align-items: start;">
+                    <div>🤖</div>
+                    <div>
+                        <div style="font-weight: 600; margin-bottom: 4px;">💬 Internal Note (System)</div>
+                        <div style="color: #475569; font-size: 13px;">
+                            <strong>Automated Risk Analysis:</strong> Customer sentiment is <b>{selected_ticket['sentiment']}</b>. 
+                            Account health is {customer['health_status']}.
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div style="margin-bottom: 16px;">
-            <div style="display: flex; gap: 8px;">
-                <div>📋</div>
-                <div style="flex: 1;">
-                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">QBR Completed</div>
-                    <div style="font-size: 12px; color: #737373;">Attended by VP Eng</div>
-                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">3 weeks ago</div>
+            """, unsafe_allow_html=True)
+            
+            # Agent Response Box
+            st.markdown("""
+            <div style="background: white; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+                <div style="margin-top: 16px;">
+                    <input type="text" placeholder="Type your reply or add an internal note..." 
+                           style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; 
+                                  font-size: 14px; font-family: Inter;">
+                </div>
+                
+                <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+                    <label style="font-size: 13px; color: #64748b;">
+                        <input type="checkbox"> Internal Note
+                    </label>
+                    <div style="display: flex; gap: 8px;">
+                        <a href="#" class="btn-secondary">Save Draft</a>
+                        <a href="#" class="btn-primary">Send ▶</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            """, unsafe_allow_html=True)
         
-        <a href="#" style="font-size: 13px; color: #3b82f6; text-decoration: none; font-weight: 500;">
-            View Full History →
-        </a>
-        """, unsafe_allow_html=True)
-        
+        with col2:
+            # Customer 360 Context Panel
+            st.markdown('<div class="content-card" style="position: sticky; top: 20px;">', unsafe_allow_html=True)
+            st.markdown("### Customer 360 Context")
+            
+            st.markdown(f"""
+            <div style="text-align: center; padding: 16px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="font-weight: 600; color: #0F172A; font-size: 18px;">{customer['company_name']}</div>
+                <div style="font-size: 12px; color: #64748B;">{customer['industry']}</div>
+            </div>
+            
+            <div style="padding: 16px 0; border-bottom: 1px solid #e2e8f0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 11px; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">Risk Score</div>
+                        <div style="font-size: 28px; font-weight: 700; color: #DC2626;">{int(customer['risk_score'])}<span style="font-size: 16px;">/100</span></div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 11px; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">ARR</div>
+                        <div style="font-size: 28px; font-weight: 700; color: #0F172A;">${customer['arr']/1000:,.0f}k</div>
+                    </div>
+                </div>
+                <div style="margin-bottom: 12px;">
+                    <div style="font-size: 11px; color: #64748B; margin-bottom: 4px;">Sentiment</div>
+                    <span class="badge badge-negative">{customer['sentiment']}</span>
+                </div>
+                <div>
+                    <div style="font-size: 11px; color: #64748B; margin-bottom: 4px;">Renewal Date</div>
+                    <div style="font-size: 14px; color: #0F172A;">{pd.to_datetime(customer['last_activity']).strftime('%b %d, %Y')}</div>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.markdown('</div>', unsafe_allow_html=True)
+            
         st.markdown('</div>', unsafe_allow_html=True)
-    
-    st.markdown('</div>', unsafe_allow_html=True)
 
-
-# Function to export customer data to CSV
-def export_customer_data():
-    """Export customer data with risk metrics and health status"""
-    export_data = customers_df[['customer_id', 'company_name', 'risk_score', 'arr', 'health_status', 'sentiment']].copy()
-    export_data['last_activity'] = customers_df['last_activity'].dt.strftime('%Y-%m-%d')
-    csv = export_data.to_csv(index=False)
-    return csv
 
 # PAGE 4: CUSTOMER DIRECTORY
 elif page == "Customer Directory":

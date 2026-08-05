@@ -780,6 +780,8 @@ elif page == "Ticket Workspace":
             st.markdown('</div>', unsafe_allow_html=True)
             
         st.markdown('</div>', unsafe_allow_html=True)
+    
+        st.markdown('</div>', unsafe_allow_html=True)
 
 
 # PAGE 4: CUSTOMER DIRECTORY

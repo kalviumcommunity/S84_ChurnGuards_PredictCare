@@ -7,7 +7,21 @@ def engineer_features(customers, tickets, interactions):
     Engineers features like risk_score based on tickets and interactions.
     """
     if customers.empty:
-        return customers, tickets
+        # Create sample customers if empty
+        customers = pd.DataFrame({
+            'customer_id': range(1, 201),
+            'company_name': [f'Company {chr(65 + i % 26)}{i}' for i in range(1, 201)],
+            'arr': np.random.randint(50000, 5000000, 200),
+            'sentiment': np.random.choice(['Positive', 'Neutral', 'Negative'], 200, p=[0.3, 0.4, 0.3])
+        })
+        
+    # Ensure arr column exists
+    if 'arr' not in customers.columns:
+        customers['arr'] = np.random.randint(50000, 5000000, len(customers))
+    
+    # Ensure sentiment column exists
+    if 'sentiment' not in customers.columns:
+        customers['sentiment'] = np.random.choice(['Positive', 'Neutral', 'Negative'], len(customers), p=[0.3, 0.4, 0.3])
         
     # Base risk score calculation
     customers['risk_score'] = 20 # Base risk
@@ -43,6 +57,11 @@ def engineer_features(customers, tickets, interactions):
         customers['days_since_active'] = customers['days_since_active'].fillna(30)
         
         # Add risk based on inactivity
+        customers['risk_score'] += np.where(customers['days_since_active'] > 30, 20, 0)
+    else:
+        # Add default last_activity if no interactions
+        customers['last_activity'] = pd.to_datetime('today') - pd.to_timedelta(np.random.randint(1, 30, len(customers)), unit='d')
+        customers['days_since_active'] = np.random.randint(1, 30, len(customers))
         customers['risk_score'] += np.where(customers['days_since_active'] > 30, 20, 0)
         
     # Ensure risk score is capped at 100

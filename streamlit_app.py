@@ -251,6 +251,64 @@ def filter_customers_by_risk(df, risk_filter):
         return df
     return df[df['health_status'].isin(risk_filter)]
 
+# Function to calculate churn probability from risk score
+def calculate_churn_probability(risk_score):
+    """Convert risk score to churn probability percentage"""
+    if risk_score >= 80:
+        return "Very High (>70%)"
+    elif risk_score >= 60:
+        return "High (50-70%)"
+    elif risk_score >= 40:
+        return "Medium (30-50%)"
+    else:
+        return "Low (<30%)"
+
+# Function to generate risk alert summary
+def get_risk_alert_summary(customers_df):
+    """Generate real-time risk alert summary with priority classification"""
+    alerts = []
+    
+    for idx, customer in customers_df.iterrows():
+        # High risk score alert
+        if customer['risk_score'] >= 80:
+            alerts.append({
+                'severity': 'Critical',
+                'company': customer['company_name'],
+                'alert': f"Risk score jumped to {customer['risk_score']}",
+                'detail': 'Immediate intervention required',
+                'arr': customer['arr'],
+                'icon': '🚨'
+            })
+        
+        # Negative sentiment alert
+        if customer['sentiment'] == 'Negative' and customer['health_status'] == 'Critical':
+            alerts.append({
+                'severity': 'High',
+                'company': customer['company_name'],
+                'alert': 'Negative sentiment with critical health status',
+                'detail': 'Customer satisfaction at risk',
+                'arr': customer['arr'],
+                'icon': '😟'
+            })
+        
+        # Low activity alert
+        days_since_activity = (datetime.now() - customer['last_activity']).days
+        if days_since_activity > 14 and customer['risk_score'] > 60:
+            alerts.append({
+                'severity': 'Medium',
+                'company': customer['company_name'],
+                'alert': f"No activity for {days_since_activity} days",
+                'detail': 'Engagement drop detected',
+                'arr': customer['arr'],
+                'icon': '📉'
+            })
+    
+    # Sort by severity and ARR
+    severity_order = {'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3}
+    alerts_sorted = sorted(alerts, key=lambda x: (severity_order.get(x['severity'], 4), -x['arr']))
+    
+    return alerts_sorted[:10]  # Return top 10 alerts
+
 # Function to export customer data to CSV
 def export_customer_data():
     """Export customer data with risk metrics and health status"""
@@ -292,10 +350,19 @@ if page == "Executive Dashboard":
     # KPI Cards Row - Dynamic based on filter
     col1, col2, col3, col4 = st.columns(4)
     
-    # Calculate dynamic metrics
-    total_arr = filtered_customers['arr'].sum()
-    avg_risk = int(filtered_customers['risk_score'].mean()) if not filtered_customers.empty else 0
-    critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
+    # Calculate dynamic metrics with safety checks
+    if not filtered_customers.empty and 'arr' in filtered_customers.columns:
+        total_arr = filtered_customers['arr'].sum()
+    else:
+        total_arr = 0
+        
+    avg_risk = int(filtered_customers['risk_score'].mean()) if not filtered_customers.empty and 'risk_score' in filtered_customers.columns else 0
+    
+    if not filtered_customers.empty and 'health_status' in filtered_customers.columns:
+        critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
+    else:
+        critical_count = 0
+        
     churn_rate = (critical_count / len(filtered_customers) * 100) if len(filtered_customers) > 0 else 0
     
     with col1:
@@ -578,6 +645,102 @@ elif page == "Risk Command Center":
             
         st.markdown(alerts_html, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # NEW: Smart Alert Analysis Panel
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    col_header1, col_header2 = st.columns([3, 1])
+    with col_header1:
+        st.markdown("### 🔔 Smart Alert Analysis")
+    with col_header2:
+        if st.button("🔄 Refresh Alerts", key="refresh_alerts"):
+            st.rerun()
+    
+    # Generate dynamic alerts
+    alert_list = get_risk_alert_summary(customers_df)
+    
+    if alert_list:
+        # Display alert count by severity
+        col_stat1, col_stat2, col_stat3 = st.columns(3)
+        critical_count = sum(1 for a in alert_list if a['severity'] == 'Critical')
+        high_count = sum(1 for a in alert_list if a['severity'] == 'High')
+        medium_count = sum(1 for a in alert_list if a['severity'] == 'Medium')
+        
+        with col_stat1:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fee2e2; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #dc2626;">{critical_count}</div>
+                <div style="font-size: 12px; color: #991b1b; font-weight: 600;">Critical Alerts</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_stat2:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fed7aa; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #ea580c;">{high_count}</div>
+                <div style="font-size: 12px; color: #9a3412; font-weight: 600;">High Priority</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_stat3:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fef3c7; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #ca8a04;">{medium_count}</div>
+                <div style="font-size: 12px; color: #92400e; font-weight: 600;">Medium Priority</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Display alerts in a table format
+        alerts_table = ""
+        for alert in alert_list:
+            severity_badge = {
+                'Critical': '<span class="badge badge-critical">Critical</span>',
+                'High': '<span class="badge badge-high">High</span>',
+                'Medium': '<span class="badge badge-medium">Medium</span>',
+                'Low': '<span class="badge badge-low">Low</span>'
+            }
+            
+            arr_display = f"${alert['arr']/1000000:.1f}M" if alert['arr'] >= 1000000 else f"${alert['arr']/1000:.0f}K"
+            
+            alerts_table += f"""
+            <div style="padding: 16px; border: 1px solid #e5e5e5; border-radius: 8px; margin-bottom: 12px; 
+                        background: white; display: flex; justify-content: space-between; align-items: center;">
+                <div style="flex: 1;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <span style="font-size: 24px;">{alert['icon']}</span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px; color: #1a1a1a;">{alert['company']}</div>
+                            <div style="font-size: 12px; color: #737373;">ARR: {arr_display}</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 13px; color: #525252; margin-bottom: 4px;">
+                        <strong>{alert['alert']}</strong>
+                    </div>
+                    <div style="font-size: 12px; color: #737373;">{alert['detail']}</div>
+                </div>
+                <div style="text-align: right;">
+                    {severity_badge[alert['severity']]}
+                    <div style="margin-top: 8px;">
+                        <a href="#" class="btn-primary" style="padding: 6px 12px; font-size: 11px; text-decoration: none;">Take Action</a>
+                    </div>
+                </div>
+            </div>
+            """
+        
+        st.markdown(alerts_table, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="text-align: center; padding: 40px; color: #737373;">
+            <div style="font-size: 48px; margin-bottom: 16px;">✅</div>
+            <div style="font-size: 16px; font-weight: 600;">No Critical Alerts</div>
+            <div style="font-size: 14px; margin-top: 8px;">All customers are in good standing</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
     

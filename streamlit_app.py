@@ -251,6 +251,64 @@ def filter_customers_by_risk(df, risk_filter):
         return df
     return df[df['health_status'].isin(risk_filter)]
 
+# Function to calculate churn probability from risk score
+def calculate_churn_probability(risk_score):
+    """Convert risk score to churn probability percentage"""
+    if risk_score >= 80:
+        return "Very High (>70%)"
+    elif risk_score >= 60:
+        return "High (50-70%)"
+    elif risk_score >= 40:
+        return "Medium (30-50%)"
+    else:
+        return "Low (<30%)"
+
+# Function to generate risk alert summary
+def get_risk_alert_summary(customers_df):
+    """Generate real-time risk alert summary with priority classification"""
+    alerts = []
+    
+    for idx, customer in customers_df.iterrows():
+        # High risk score alert
+        if customer['risk_score'] >= 80:
+            alerts.append({
+                'severity': 'Critical',
+                'company': customer['company_name'],
+                'alert': f"Risk score jumped to {customer['risk_score']}",
+                'detail': 'Immediate intervention required',
+                'arr': customer['arr'],
+                'icon': '🚨'
+            })
+        
+        # Negative sentiment alert
+        if customer['sentiment'] == 'Negative' and customer['health_status'] == 'Critical':
+            alerts.append({
+                'severity': 'High',
+                'company': customer['company_name'],
+                'alert': 'Negative sentiment with critical health status',
+                'detail': 'Customer satisfaction at risk',
+                'arr': customer['arr'],
+                'icon': '😟'
+            })
+        
+        # Low activity alert
+        days_since_activity = (datetime.now() - customer['last_activity']).days
+        if days_since_activity > 14 and customer['risk_score'] > 60:
+            alerts.append({
+                'severity': 'Medium',
+                'company': customer['company_name'],
+                'alert': f"No activity for {days_since_activity} days",
+                'detail': 'Engagement drop detected',
+                'arr': customer['arr'],
+                'icon': '📉'
+            })
+    
+    # Sort by severity and ARR
+    severity_order = {'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3}
+    alerts_sorted = sorted(alerts, key=lambda x: (severity_order.get(x['severity'], 4), -x['arr']))
+    
+    return alerts_sorted[:10]  # Return top 10 alerts
+
 # Function to export customer data to CSV
 def export_customer_data():
     """Export customer data with risk metrics and health status"""
@@ -292,10 +350,19 @@ if page == "Executive Dashboard":
     # KPI Cards Row - Dynamic based on filter
     col1, col2, col3, col4 = st.columns(4)
     
-    # Calculate dynamic metrics
-    total_arr = filtered_customers['arr'].sum()
-    avg_risk = int(filtered_customers['risk_score'].mean()) if not filtered_customers.empty else 0
-    critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
+    # Calculate dynamic metrics with safety checks
+    if not filtered_customers.empty and 'arr' in filtered_customers.columns:
+        total_arr = filtered_customers['arr'].sum()
+    else:
+        total_arr = 0
+        
+    avg_risk = int(filtered_customers['risk_score'].mean()) if not filtered_customers.empty and 'risk_score' in filtered_customers.columns else 0
+    
+    if not filtered_customers.empty and 'health_status' in filtered_customers.columns:
+        critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
+    else:
+        critical_count = 0
+        
     churn_rate = (critical_count / len(filtered_customers) * 100) if len(filtered_customers) > 0 else 0
     
     with col1:
@@ -581,6 +648,102 @@ elif page == "Risk Command Center":
     
     st.markdown("<br>", unsafe_allow_html=True)
     
+    # NEW: Smart Alert Analysis Panel
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    col_header1, col_header2 = st.columns([3, 1])
+    with col_header1:
+        st.markdown("### 🔔 Smart Alert Analysis")
+    with col_header2:
+        if st.button("🔄 Refresh Alerts", key="refresh_alerts"):
+            st.rerun()
+    
+    # Generate dynamic alerts
+    alert_list = get_risk_alert_summary(customers_df)
+    
+    if alert_list:
+        # Display alert count by severity
+        col_stat1, col_stat2, col_stat3 = st.columns(3)
+        critical_count = sum(1 for a in alert_list if a['severity'] == 'Critical')
+        high_count = sum(1 for a in alert_list if a['severity'] == 'High')
+        medium_count = sum(1 for a in alert_list if a['severity'] == 'Medium')
+        
+        with col_stat1:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fee2e2; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #dc2626;">{critical_count}</div>
+                <div style="font-size: 12px; color: #991b1b; font-weight: 600;">Critical Alerts</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_stat2:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fed7aa; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #ea580c;">{high_count}</div>
+                <div style="font-size: 12px; color: #9a3412; font-weight: 600;">High Priority</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_stat3:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fef3c7; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #ca8a04;">{medium_count}</div>
+                <div style="font-size: 12px; color: #92400e; font-weight: 600;">Medium Priority</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Display alerts in a table format
+        alerts_table = ""
+        for alert in alert_list:
+            severity_badge = {
+                'Critical': '<span class="badge badge-critical">Critical</span>',
+                'High': '<span class="badge badge-high">High</span>',
+                'Medium': '<span class="badge badge-medium">Medium</span>',
+                'Low': '<span class="badge badge-low">Low</span>'
+            }
+            
+            arr_display = f"${alert['arr']/1000000:.1f}M" if alert['arr'] >= 1000000 else f"${alert['arr']/1000:.0f}K"
+            
+            alerts_table += f"""
+            <div style="padding: 16px; border: 1px solid #e5e5e5; border-radius: 8px; margin-bottom: 12px; 
+                        background: white; display: flex; justify-content: space-between; align-items: center;">
+                <div style="flex: 1;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <span style="font-size: 24px;">{alert['icon']}</span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px; color: #1a1a1a;">{alert['company']}</div>
+                            <div style="font-size: 12px; color: #737373;">ARR: {arr_display}</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 13px; color: #525252; margin-bottom: 4px;">
+                        <strong>{alert['alert']}</strong>
+                    </div>
+                    <div style="font-size: 12px; color: #737373;">{alert['detail']}</div>
+                </div>
+                <div style="text-align: right;">
+                    {severity_badge[alert['severity']]}
+                    <div style="margin-top: 8px;">
+                        <a href="#" class="btn-primary" style="padding: 6px 12px; font-size: 11px; text-decoration: none;">Take Action</a>
+                    </div>
+                </div>
+            </div>
+            """
+        
+        st.markdown(alerts_table, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="text-align: center; padding: 40px; color: #737373;">
+            <div style="font-size: 48px; margin-bottom: 16px;">✅</div>
+            <div style="font-size: 16px; font-weight: 600;">No Critical Alerts</div>
+            <div style="font-size: 14px; margin-top: 8px;">All customers are in good standing</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
     # High Risk Accounts Table
     st.markdown('<div class="content-card">', unsafe_allow_html=True)
     st.markdown("### High Risk Accounts")
@@ -633,155 +796,248 @@ elif page == "Ticket Workspace":
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns([3, 1, 1])
+    with col1:
+        st.text_input("🔍 Search tickets, accounts, or keywords...", label_visibility="collapsed", 
+                     placeholder="Search tickets, accounts, or keywords...")
+    with col2:
+        st.markdown('<br><a href="#" class="btn-secondary" style="padding: 10px 20px;">✓ Assign</a>', 
+                   unsafe_allow_html=True)
+    with col3:
+        st.markdown('<br><a href="#" class="btn-primary" style="padding: 10px 20px;">Resolve</a>', 
+                   unsafe_allow_html=True)
     
-    # Select an open ticket dynamically
-    open_tickets = tickets_df[tickets_df['status'] == 'Open']
-    if open_tickets.empty:
-        st.warning("No open tickets at the moment.")
-    else:
-        with col1:
-            ticket_options = open_tickets['ticket_id'].tolist()
-            ticket_display = {t_id: f"{t_id} - {open_tickets[open_tickets['ticket_id']==t_id].iloc[0]['subject']}" for t_id in ticket_options}
-            selected_ticket_id = st.selectbox("🔍 Select Open Ticket", ticket_options, format_func=lambda x: ticket_display[x], label_visibility="collapsed")
-            
-        selected_ticket = open_tickets[open_tickets['ticket_id'] == selected_ticket_id].iloc[0]
-        customer = customers_df[customers_df['customer_id'] == selected_ticket['customer_id']].iloc[0]
-        
-        with col2:
-            st.markdown('<br><a href="#" class="btn-secondary" style="padding: 10px 20px;">✓ Assign</a>', 
-                       unsafe_allow_html=True)
-        with col3:
-            st.markdown('<br><a href="#" class="btn-primary" style="padding: 10px 20px;">Resolve</a>', 
-                       unsafe_allow_html=True)
-        
-        st.markdown("<br>", unsafe_allow_html=True)
-        
-        # Ticket Card
-        st.markdown('<div class="content-card">', unsafe_allow_html=True)
-        
-        # Ticket Header
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            st.markdown(f"""
-            <div style="margin-bottom: 16px;">
-                <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">{selected_ticket_id}</span>
-                <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ High Priority</span>
-            </div>
-            """, unsafe_allow_html=True)
-        with col2:
-            st.markdown(f'<div style="text-align: right;"><span class="badge badge-critical">{selected_ticket["category"]}</span></div>', 
-                       unsafe_allow_html=True)
-        
-        # Ticket Title
-        st.markdown(f"### {selected_ticket['subject']}")
-        created_time = pd.to_datetime(selected_ticket['created_at']).strftime('%H:%M %p')
-        st.markdown(f"""
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Ticket Card
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    
+    # Ticket Header
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.markdown("""
         <div style="margin-bottom: 16px;">
-            <span style="color: #737373;">👤 Contact ({customer['company_name']})</span>
-            <span style="margin: 0 8px; color: #d4d4d4;">●</span>
-            <span style="color: #737373;">🕐 Created: {created_time} Today</span>
+            <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">TKT-2842</span>
+            <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ SL A: 2h 14m</span>
+        </div>
+        """, unsafe_allow_html=True)
+    with col2:
+        st.markdown('<div style="text-align: right;"><span class="badge badge-critical">Bug / Data Export</span></div>', 
+                   unsafe_allow_html=True)
+    
+    # Ticket Title
+    st.markdown("### Data export failing on Q3 Reports Dashboard")
+    st.markdown("""
+    <div style="margin-bottom: 16px;">
+        <span style="color: #737373;">👤 Sarah Jenkins (Acme Corp)</span>
+        <span style="margin: 0 8px; color: #d4d4d4;">●</span>
+        <span style="color: #737373;">🕐 Created: 14:23 PM Today</span>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Conversation Thread
+    col1, col2 = st.columns([4, 1])
+    
+    with col1:
+        # Customer Message
+        st.markdown("""
+        <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+            <div style="display: flex; gap: 12px;">
+                <div style="width: 36px; height: 36px; background: #dbeafe; border-radius: 50%; 
+                           display: flex; align-items: center; justify-content: center; color: #1e40af; 
+                           font-weight: 600; flex-shrink: 0;">SJ</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 600; margin-bottom: 8px;">Sarah Jenkins</div>
+                    <div style="color: #525252; line-height: 1.6;">
+                        Hi Support,<br><br>
+                        I'm trying to export the Q3 retention reports for our executive review tomorrow, but every 
+                        time I click the CSV download button, the system hangs and then gives a 504 Gateway 
+                        Timeout error.<br><br>
+                        This is extremely time-sensitive. We need this data for a board meeting.<br><br>
+                        Thanks,<br>
+                        Sarah
+                    </div>
+                    <div style="margin-top: 12px;">
+                        <span style="display: inline-block; padding: 8px 12px; background: white; 
+                                   border: 1px solid #d4d4d4; border-radius: 6px; font-size: 12px;">
+                            📎 error_screenshot.png
+                        </span>
+                    </div>
+                    <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">14:22 PM</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # System Note
+        st.markdown("""
+        <div style="background: #fafafa; padding: 16px; border-radius: 8px; border-left: 3px solid #737373; margin-bottom: 16px;">
+            <div style="display: flex; gap: 12px; align-items: start;">
+                <div>🤖</div>
+                <div>
+                    <div style="font-weight: 600; margin-bottom: 4px;">💬 Internal Note (System)</div>
+                    <div style="color: #525252; font-size: 13px;">
+                        <strong>Automated Risk Analysis:</strong> Customer sentiment is highly negative. 
+                        Account is in Renewal Phase (30 days remaining). Export functionality is a known issue 
+                        for large datasets on legacy infrastructure (Ticket #ENG-491).
+                    </div>
+                    <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">14:23 PM</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Agent Response Box
+        st.markdown("""
+        <div style="background: white; border: 1px solid #d4d4d4; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+            <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                <div style="width: 36px; height: 36px; background: #1a1a1a; border-radius: 50%; 
+                           display: flex; align-items: center; justify-content: center; color: white; 
+                           font-weight: 600; flex-shrink: 0;">You</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 600; margin-bottom: 4px;">You (Agent)</div>
+                    <div style="color: #a3a3a3; font-size: 12px;">14:45 PM</div>
+                </div>
+            </div>
+            <div style="color: #525252; line-height: 1.6; margin-bottom: 16px;">
+                Hi Sarah,<br><br>
+                I completely understand the urgency for your board meeting. I'm looking into this 
+                immediately. Our engineering team is currently investigating a known timeout issue with 
+                exceptionally large data exports.
+            </div>
+            <div style="border-top: 1px solid #e5e5e5; padding-top: 12px; display: flex; gap: 8px;">
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">B</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">I</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">≡</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">📎</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">😊</button>
+            </div>
+        </div>
+        
+        <div style="margin-top: 16px;">
+            <input type="text" placeholder="Type your reply or add an internal note..." 
+                   style="width: 100%; padding: 12px; border: 1px solid #d4d4d4; border-radius: 6px; 
+                          font-size: 14px; font-family: Inter;">
+        </div>
+        
+        <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <label style="font-size: 13px; color: #737373;">
+                <input type="checkbox"> Internal Note
+            </label>
+            <div style="display: flex; gap: 8px;">
+                <a href="#" class="btn-secondary">Save Draft</a>
+                <a href="#" class="btn-primary">Send ▶</a>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        # Customer 360 Context Panel
+        st.markdown('<div class="content-card" style="position: sticky; top: 20px;">', unsafe_allow_html=True)
+        st.markdown("### Customer 360 Context")
+        
+        st.markdown("""
+        <div style="text-align: center; padding: 16px 0; border-bottom: 1px solid #e5e5e5;">
+            <div style="width: 48px; height: 48px; background: #f5f5f5; border-radius: 50%; 
+                       display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; 
+                       font-weight: 700; font-size: 18px; color: #1a1a1a;">AC</div>
+            <div style="font-weight: 600; color: #1a1a1a;">Acme Corp</div>
+            <div style="font-size: 12px; color: #737373;">Enterprise Tier • Tech</div>
+        </div>
+        
+        <div style="padding: 16px 0; border-bottom: 1px solid #e5e5e5;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 11px; color: #737373; text-transform: uppercase; margin-bottom: 4px;">Risk Score</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #dc2626;">72<span style="font-size: 16px;">/100</span></div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 11px; color: #737373; text-transform: uppercase; margin-bottom: 4px;">ARR</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #1a1a1a;">$145k</div>
+                </div>
+            </div>
+            <div style="margin-bottom: 12px;">
+                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">Sentiment</div>
+                <span class="badge badge-negative">😟 Negative</span>
+            </div>
+            <div>
+                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">Renewal Date</div>
+                <div style="font-size: 14px; color: #1a1a1a;">Oct 15 (28 days)</div>
+            </div>
+        </div>
+        
+        <div style="padding: 16px 0; background: #7f1d1d; margin: 0 -24px; padding: 16px 24px; color: white;">
+            <div style="font-weight: 600; margin-bottom: 8px;">⚠️ Active Escalation</div>
+            <div style="font-size: 13px; opacity: 0.9;">
+                Level 2 - Executive Review Required. Flagged due to repeated core feature failure.
+            </div>
+        </div>
+        
+        <div style="padding: 16px 0; background: #dbeafe; margin: 0 -24px; padding: 16px 24px;">
+            <div style="font-weight: 600; margin-bottom: 8px; color: #1e40af;">💡 AI RECOMMENDATION</div>
+            <div style="font-size: 13px; color: #1e40af;">
+                Offer a 1-on-1 strategy call with a Success Manager to address feature friction 
+                and bypass standard queue.
+            </div>
+            <div style="margin-top: 12px;">
+                <a href="#" class="btn-secondary" style="width: 100%; text-align: center; display: block;">
+                    Draft Invitation
+                </a>
+            </div>
         </div>
         """, unsafe_allow_html=True)
         
         st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("### Recent Interactions")
         
-        # Conversation Thread
-        col1, col2 = st.columns([4, 1])
+        st.markdown("""
+        <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e5e5;">
+            <div style="display: flex; gap: 8px;">
+                <div>📝</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">NPS Survey Submitted</div>
+                    <div style="font-size: 12px; color: #737373;">Score: 4/10 (Detractor)</div>
+                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">2 days ago</div>
+                </div>
+            </div>
+        </div>
         
-        with col1:
-            # Customer Message
-            st.markdown(f"""
-            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
-                <div style="display: flex; gap: 12px;">
-                    <div style="width: 36px; height: 36px; background: #dbeafe; border-radius: 50%; 
-                               display: flex; align-items: center; justify-content: center; color: #1e40af; 
-                               font-weight: 600; flex-shrink: 0;">CT</div>
-                    <div style="flex: 1;">
-                        <div style="font-weight: 600; margin-bottom: 8px;">Customer Contact</div>
-                        <div style="color: #475569; line-height: 1.6;">
-                            {selected_ticket['description']}
-                        </div>
-                        <div style="text-align: right; color: #94a3b8; font-size: 12px; margin-top: 8px;">{created_time}</div>
-                    </div>
+        <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e5e5;">
+            <div style="display: flex; gap: 8px;">
+                <div>✅</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">Ticket Resolved</div>
+                    <div style="font-size: 12px; color: #737373;">Dashboard UI Glitch</div>
+                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">5 days ago</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
-            
-            # System Note
-            st.markdown(f"""
-            <div style="background: #f1f5f9; padding: 16px; border-radius: 8px; border-left: 3px solid #64748b; margin-bottom: 16px;">
-                <div style="display: flex; gap: 12px; align-items: start;">
-                    <div>🤖</div>
-                    <div>
-                        <div style="font-weight: 600; margin-bottom: 4px;">💬 Internal Note (System)</div>
-                        <div style="color: #475569; font-size: 13px;">
-                            <strong>Automated Risk Analysis:</strong> Customer sentiment is <b>{selected_ticket['sentiment']}</b>. 
-                            Account health is {customer['health_status']}.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            
-            # Agent Response Box
-            st.markdown("""
-            <div style="background: white; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-                <div style="margin-top: 16px;">
-                    <input type="text" placeholder="Type your reply or add an internal note..." 
-                           style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; 
-                                  font-size: 14px; font-family: Inter;">
-                </div>
-                
-                <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <label style="font-size: 13px; color: #64748b;">
-                        <input type="checkbox"> Internal Note
-                    </label>
-                    <div style="display: flex; gap: 8px;">
-                        <a href="#" class="btn-secondary">Save Draft</a>
-                        <a href="#" class="btn-primary">Send ▶</a>
-                    </div>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        </div>
         
-        with col2:
-            # Customer 360 Context Panel
-            st.markdown('<div class="content-card" style="position: sticky; top: 20px;">', unsafe_allow_html=True)
-            st.markdown("### Customer 360 Context")
-            
-            st.markdown(f"""
-            <div style="text-align: center; padding: 16px 0; border-bottom: 1px solid #e2e8f0;">
-                <div style="font-weight: 600; color: #0F172A; font-size: 18px;">{customer['company_name']}</div>
-                <div style="font-size: 12px; color: #64748B;">{customer['industry']}</div>
-            </div>
-            
-            <div style="padding: 16px 0; border-bottom: 1px solid #e2e8f0;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 11px; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">Risk Score</div>
-                        <div style="font-size: 28px; font-weight: 700; color: #DC2626;">{int(customer['risk_score'])}<span style="font-size: 16px;">/100</span></div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 11px; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">ARR</div>
-                        <div style="font-size: 28px; font-weight: 700; color: #0F172A;">${customer['arr']/1000:,.0f}k</div>
-                    </div>
-                </div>
-                <div style="margin-bottom: 12px;">
-                    <div style="font-size: 11px; color: #64748B; margin-bottom: 4px;">Sentiment</div>
-                    <span class="badge badge-negative">{customer['sentiment']}</span>
-                </div>
-                <div>
-                    <div style="font-size: 11px; color: #64748B; margin-bottom: 4px;">Renewal Date</div>
-                    <div style="font-size: 14px; color: #0F172A;">{pd.to_datetime(customer['last_activity']).strftime('%b %d, %Y')}</div>
+        <div style="margin-bottom: 16px;">
+            <div style="display: flex; gap: 8px;">
+                <div>📋</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">QBR Completed</div>
+                    <div style="font-size: 12px; color: #737373;">Attended by VP Eng</div>
+                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">3 weeks ago</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
-            
-            st.markdown('</div>', unsafe_allow_html=True)
-            
+        </div>
+        
+        <a href="#" style="font-size: 13px; color: #3b82f6; text-decoration: none; font-weight: 500;">
+            View Full History →
+        </a>
+        """, unsafe_allow_html=True)
+        
         st.markdown('</div>', unsafe_allow_html=True)
     
-        st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 # PAGE 4: CUSTOMER DIRECTORY

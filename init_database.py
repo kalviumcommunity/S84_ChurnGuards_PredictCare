@@ -26,12 +26,26 @@ def init_database():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     
-    # Read and execute schema
+    # Read and execute main schema
     with open(SCHEMA_FILE, 'r') as f:
         schema_sql = f.read()
     
     cursor.executescript(schema_sql)
     print(f"   ✓ Schema created from {SCHEMA_FILE}")
+    
+    # Execute triggers
+    if os.path.exists("database_triggers.sql"):
+        with open("database_triggers.sql", 'r') as f:
+            triggers_sql = f.read()
+        cursor.executescript(triggers_sql)
+        print(f"   ✓ Triggers created from database_triggers.sql")
+    
+    # Execute analytics schema
+    if os.path.exists("database_analytics.sql"):
+        with open("database_analytics.sql", 'r') as f:
+            analytics_sql = f.read()
+        cursor.executescript(analytics_sql)
+        print(f"   ✓ Analytics schema created from database_analytics.sql")
     
     conn.commit()
     return conn

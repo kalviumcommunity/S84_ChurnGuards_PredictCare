@@ -219,7 +219,7 @@ with st.sidebar:
     
     page = st.radio(
         "Navigation",
-        ["Executive Dashboard", "Risk Command Center", "Ticket Workspace", "Customer Directory"],
+        ["Executive Dashboard", "Risk Command Center", "Ticket Workspace", "Customer Directory", "📤 Data Upload"],
         label_visibility="collapsed"
     )
     
@@ -231,13 +231,46 @@ with st.sidebar:
 # Load or generate data
 @st.cache_data
 def load_data():
-    from scripts.data_ingestion import load_data as load_raw
-    from scripts.data_cleaning import clean_data
-    from scripts.feature_engineering import engineer_features
+    """
+    Load data from SQLite database instead of CSV files
+    This connects the database to the frontend!
+    """
+    from db_queries import ChurnGuardDB
     
-    customers, tickets, interactions, churn_history = load_raw('data')
-    customers, tickets, interactions, churn_history = clean_data(customers, tickets, interactions, churn_history)
-    customers, tickets = engineer_features(customers, tickets, interactions)
+    db = ChurnGuardDB('churnguard.db')
+    
+    # Load customers from database
+    customers = db.execute_query("SELECT * FROM customers")
+    
+    # Load tickets from database
+    tickets = db.execute_query("""
+        SELECT t.*, c.company_name, c.risk_score as customer_risk
+        FROM tickets t
+        JOIN customers c ON t.customer_id = c.customer_id
+    """)
+    
+    # Load interactions from database  
+    interactions = db.execute_query("""
+        SELECT i.*, c.company_name
+        FROM interactions i
+        JOIN customers c ON i.customer_id = c.customer_id
+    """)
+    
+    # Create empty churn_history (not in database yet)
+    churn_history = pd.DataFrame()
+    
+    # Add computed columns for compatibility with existing UI
+    if not customers.empty:
+        customers['arr'] = customers['arr'].astype(float)
+        customers['last_activity'] = pd.to_datetime(customers['last_activity'], errors='coerce')
+        customers['company_name'] = customers['company_name'].astype(str)
+        
+    if not tickets.empty:
+        tickets['customer'] = 'User ' + tickets['customer_id'].astype(str)
+        tickets['company'] = tickets['company_name']
+        tickets['risk_score'] = tickets['customer_risk']
+    
+    print(f"[SUCCESS] Loaded from database: {len(customers)} customers, {len(tickets)} tickets, {len(interactions)} interactions")
     
     return customers, tickets, interactions, churn_history
 
@@ -250,6 +283,65 @@ def filter_customers_by_risk(df, risk_filter):
     if "All Levels" in risk_filter:
         return df
     return df[df['health_status'].isin(risk_filter)]
+
+# Function to calculate churn probability from risk score
+def calculate_churn_probability(risk_score):
+    """Convert risk score to churn probability percentage"""
+    if risk_score >= 80:
+        return "Very High (>70%)"
+    elif risk_score >= 60:
+        return "High (50-70%)"
+    elif risk_score >= 40:
+        return "Medium (30-50%)"
+    else:
+        return "Low (<30%)"
+
+# Function to generate risk alert summary
+def get_risk_alert_summary(customers_df):
+    """Generate real-time risk alert summary with priority classification"""
+    alerts = []
+    
+    for idx, customer in customers_df.iterrows():
+        # High risk score alert
+        if customer['risk_score'] >= 80:
+            alerts.append({
+                'severity': 'Critical',
+                'company': customer['company_name'],
+                'alert': f"Risk score jumped to {customer['risk_score']}",
+                'detail': 'Immediate intervention required',
+                'arr': customer['arr'],
+                'icon': '🚨'
+            })
+        
+        # Negative sentiment alert
+        if customer['sentiment'] == 'Negative' and customer['health_status'] == 'Critical':
+            alerts.append({
+                'severity': 'High',
+                'company': customer['company_name'],
+                'alert': 'Negative sentiment with critical health status',
+                'detail': 'Customer satisfaction at risk',
+                'arr': customer['arr'],
+                'icon': '😟'
+            })
+        
+        # Low activity alert
+        if pd.notna(customer['last_activity']):
+            days_since_activity = (datetime.now() - customer['last_activity']).days
+            if days_since_activity > 14 and customer['risk_score'] > 60:
+                alerts.append({
+                    'severity': 'Medium',
+                    'company': customer['company_name'],
+                    'alert': f"No activity for {days_since_activity} days",
+                    'detail': 'Engagement drop detected',
+                    'arr': customer['arr'],
+                    'icon': '📉'
+                })
+    
+    # Sort by severity and ARR
+    severity_order = {'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3}
+    alerts_sorted = sorted(alerts, key=lambda x: (severity_order.get(x['severity'], 4), -x['arr']))
+    
+    return alerts_sorted[:10]  # Return top 10 alerts
 
 # Function to export customer data to CSV
 def export_customer_data():
@@ -292,10 +384,19 @@ if page == "Executive Dashboard":
     # KPI Cards Row - Dynamic based on filter
     col1, col2, col3, col4 = st.columns(4)
     
-    # Calculate dynamic metrics
-    total_arr = filtered_customers['arr'].sum()
-    avg_risk = int(filtered_customers['risk_score'].mean()) if not filtered_customers.empty else 0
-    critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
+    # Calculate dynamic metrics with safety checks
+    if not filtered_customers.empty and 'arr' in filtered_customers.columns:
+        total_arr = filtered_customers['arr'].sum()
+    else:
+        total_arr = 0
+        
+    avg_risk = int(filtered_customers['risk_score'].mean()) if not filtered_customers.empty and 'risk_score' in filtered_customers.columns else 0
+    
+    if not filtered_customers.empty and 'health_status' in filtered_customers.columns:
+        critical_count = len(filtered_customers[filtered_customers['health_status'] == 'Critical'])
+    else:
+        critical_count = 0
+        
     churn_rate = (critical_count / len(filtered_customers) * 100) if len(filtered_customers) > 0 else 0
     
     with col1:
@@ -581,7 +682,103 @@ elif page == "Risk Command Center":
     
     st.markdown("<br>", unsafe_allow_html=True)
     
-    # High Risk Accounts Table
+    # NEW: Smart Alert Analysis Panel
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    col_header1, col_header2 = st.columns([3, 1])
+    with col_header1:
+        st.markdown("### 🔔 Smart Alert Analysis")
+    with col_header2:
+        if st.button("🔄 Refresh Alerts", key="refresh_alerts"):
+            st.rerun()
+    
+    # Generate dynamic alerts
+    alert_list = get_risk_alert_summary(customers_df)
+    
+    if alert_list:
+        # Display alert count by severity
+        col_stat1, col_stat2, col_stat3 = st.columns(3)
+        critical_count = sum(1 for a in alert_list if a['severity'] == 'Critical')
+        high_count = sum(1 for a in alert_list if a['severity'] == 'High')
+        medium_count = sum(1 for a in alert_list if a['severity'] == 'Medium')
+        
+        with col_stat1:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fee2e2; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #dc2626;">{critical_count}</div>
+                <div style="font-size: 12px; color: #991b1b; font-weight: 600;">Critical Alerts</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_stat2:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fed7aa; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #ea580c;">{high_count}</div>
+                <div style="font-size: 12px; color: #9a3412; font-weight: 600;">High Priority</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col_stat3:
+            st.markdown(f"""
+            <div style="text-align: center; padding: 12px; background: #fef3c7; border-radius: 6px;">
+                <div style="font-size: 28px; font-weight: 700; color: #ca8a04;">{medium_count}</div>
+                <div style="font-size: 12px; color: #92400e; font-weight: 600;">Medium Priority</div>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("<br>", unsafe_allow_html=True)
+        
+        # Display alerts in a table format
+        alerts_table = ""
+        for alert in alert_list:
+            severity_badge = {
+                'Critical': '<span class="badge badge-critical">Critical</span>',
+                'High': '<span class="badge badge-high">High</span>',
+                'Medium': '<span class="badge badge-medium">Medium</span>',
+                'Low': '<span class="badge badge-low">Low</span>'
+            }
+            
+            arr_display = f"${alert['arr']/1000000:.1f}M" if alert['arr'] >= 1000000 else f"${alert['arr']/1000:.0f}K"
+            
+            alerts_table += f"""
+            <div style="padding: 16px; border: 1px solid #e5e5e5; border-radius: 8px; margin-bottom: 12px; 
+                        background: white; display: flex; justify-content: space-between; align-items: center;">
+                <div style="flex: 1;">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                        <span style="font-size: 24px;">{alert['icon']}</span>
+                        <div>
+                            <div style="font-weight: 600; font-size: 14px; color: #1a1a1a;">{alert['company']}</div>
+                            <div style="font-size: 12px; color: #737373;">ARR: {arr_display}</div>
+                        </div>
+                    </div>
+                    <div style="font-size: 13px; color: #525252; margin-bottom: 4px;">
+                        <strong>{alert['alert']}</strong>
+                    </div>
+                    <div style="font-size: 12px; color: #737373;">{alert['detail']}</div>
+                </div>
+                <div style="text-align: right;">
+                    {severity_badge[alert['severity']]}
+                    <div style="margin-top: 8px;">
+                        <a href="#" class="btn-primary" style="padding: 6px 12px; font-size: 11px; text-decoration: none;">Take Action</a>
+                    </div>
+                </div>
+            </div>
+            """
+        
+        st.markdown(alerts_table, unsafe_allow_html=True)
+    else:
+        st.markdown("""
+        <div style="text-align: center; padding: 40px; color: #737373;">
+            <div style="font-size: 48px; margin-bottom: 16px;">✅</div>
+            <div style="font-size: 16px; font-weight: 600;">No Critical Alerts</div>
+            <div style="font-size: 14px; margin-top: 8px;">All customers are in good standing</div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # High Risk Accounts TableLJ
     st.markdown('<div class="content-card">', unsafe_allow_html=True)
     st.markdown("### High Risk Accounts")
     
@@ -594,6 +791,7 @@ elif page == "Risk Command Center":
         border_hex = "#dc2626" if row['health_status'] == 'Critical' else "#eab308"
         action = "Intervene" if row['health_status'] == 'Critical' else "Review"
         btn_class = "btn-primary" if row['health_status'] == 'Critical' else "btn-secondary"
+        last_active_str = pd.to_datetime(row['last_activity']).strftime('%b %d, %Y') if pd.notna(row['last_activity']) else "No Activity"
         
         account_rows += f"""
             <tr>
@@ -602,7 +800,7 @@ elif page == "Risk Command Center":
                           width: 40px; height: 40px; border-radius: 50%; background: {bg_hex}; 
                           color: {text_hex}; font-weight: 700; border: 2px solid {border_hex};">{int(row['risk_score'])}</div></td>
                 <td>${row['arr']/1000:,.0f}K</td>
-                <td>{pd.to_datetime(row['last_activity']).strftime('%b %d, %Y')}</td>
+                <td>{last_active_str}</td>
                 <td><a href="#" class="{btn_class}" style="padding: 6px 16px; font-size: 12px;">{action}</a></td>
             </tr>
         """
@@ -633,153 +831,248 @@ elif page == "Ticket Workspace":
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns([3, 1, 1])
+    with col1:
+        st.text_input("🔍 Search tickets, accounts, or keywords...", label_visibility="collapsed", 
+                     placeholder="Search tickets, accounts, or keywords...")
+    with col2:
+        st.markdown('<br><a href="#" class="btn-secondary" style="padding: 10px 20px;">✓ Assign</a>', 
+                   unsafe_allow_html=True)
+    with col3:
+        st.markdown('<br><a href="#" class="btn-primary" style="padding: 10px 20px;">Resolve</a>', 
+                   unsafe_allow_html=True)
     
-    # Select an open ticket dynamically
-    open_tickets = tickets_df[tickets_df['status'] == 'Open']
-    if open_tickets.empty:
-        st.warning("No open tickets at the moment.")
-    else:
-        with col1:
-            ticket_options = open_tickets['ticket_id'].tolist()
-            ticket_display = {t_id: f"{t_id} - {open_tickets[open_tickets['ticket_id']==t_id].iloc[0]['subject']}" for t_id in ticket_options}
-            selected_ticket_id = st.selectbox("🔍 Select Open Ticket", ticket_options, format_func=lambda x: ticket_display[x], label_visibility="collapsed")
-            
-        selected_ticket = open_tickets[open_tickets['ticket_id'] == selected_ticket_id].iloc[0]
-        customer = customers_df[customers_df['customer_id'] == selected_ticket['customer_id']].iloc[0]
-        
-        with col2:
-            st.markdown('<br><a href="#" class="btn-secondary" style="padding: 10px 20px;">✓ Assign</a>', 
-                       unsafe_allow_html=True)
-        with col3:
-            st.markdown('<br><a href="#" class="btn-primary" style="padding: 10px 20px;">Resolve</a>', 
-                       unsafe_allow_html=True)
-        
-        st.markdown("<br>", unsafe_allow_html=True)
-        
-        # Ticket Card
-        st.markdown('<div class="content-card">', unsafe_allow_html=True)
-        
-        # Ticket Header
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            st.markdown(f"""
-            <div style="margin-bottom: 16px;">
-                <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">{selected_ticket_id}</span>
-                <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ High Priority</span>
-            </div>
-            """, unsafe_allow_html=True)
-        with col2:
-            st.markdown(f'<div style="text-align: right;"><span class="badge badge-critical">{selected_ticket["category"]}</span></div>', 
-                       unsafe_allow_html=True)
-        
-        # Ticket Title
-        st.markdown(f"### {selected_ticket['subject']}")
-        created_time = pd.to_datetime(selected_ticket['created_at']).strftime('%H:%M %p')
-        st.markdown(f"""
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Ticket Card
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    
+    # Ticket Header
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        st.markdown("""
         <div style="margin-bottom: 16px;">
-            <span style="color: #737373;">👤 Contact ({customer['company_name']})</span>
-            <span style="margin: 0 8px; color: #d4d4d4;">●</span>
-            <span style="color: #737373;">🕐 Created: {created_time} Today</span>
+            <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">TKT-2842</span>
+            <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ SL A: 2h 14m</span>
+        </div>
+        """, unsafe_allow_html=True)
+    with col2:
+        st.markdown('<div style="text-align: right;"><span class="badge badge-critical">Bug / Data Export</span></div>', 
+                   unsafe_allow_html=True)
+    
+    # Ticket Title
+    st.markdown("### Data export failing on Q3 Reports Dashboard")
+    st.markdown("""
+    <div style="margin-bottom: 16px;">
+        <span style="color: #737373;">👤 Sarah Jenkins (Acme Corp)</span>
+        <span style="margin: 0 8px; color: #d4d4d4;">●</span>
+        <span style="color: #737373;">🕐 Created: 14:23 PM Today</span>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Conversation Thread
+    col1, col2 = st.columns([4, 1])
+    
+    with col1:
+        # Customer Message
+        st.markdown("""
+        <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+            <div style="display: flex; gap: 12px;">
+                <div style="width: 36px; height: 36px; background: #dbeafe; border-radius: 50%; 
+                           display: flex; align-items: center; justify-content: center; color: #1e40af; 
+                           font-weight: 600; flex-shrink: 0;">SJ</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 600; margin-bottom: 8px;">Sarah Jenkins</div>
+                    <div style="color: #525252; line-height: 1.6;">
+                        Hi Support,<br><br>
+                        I'm trying to export the Q3 retention reports for our executive review tomorrow, but every 
+                        time I click the CSV download button, the system hangs and then gives a 504 Gateway 
+                        Timeout error.<br><br>
+                        This is extremely time-sensitive. We need this data for a board meeting.<br><br>
+                        Thanks,<br>
+                        Sarah
+                    </div>
+                    <div style="margin-top: 12px;">
+                        <span style="display: inline-block; padding: 8px 12px; background: white; 
+                                   border: 1px solid #d4d4d4; border-radius: 6px; font-size: 12px;">
+                            📎 error_screenshot.png
+                        </span>
+                    </div>
+                    <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">14:22 PM</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # System Note
+        st.markdown("""
+        <div style="background: #fafafa; padding: 16px; border-radius: 8px; border-left: 3px solid #737373; margin-bottom: 16px;">
+            <div style="display: flex; gap: 12px; align-items: start;">
+                <div>🤖</div>
+                <div>
+                    <div style="font-weight: 600; margin-bottom: 4px;">💬 Internal Note (System)</div>
+                    <div style="color: #525252; font-size: 13px;">
+                        <strong>Automated Risk Analysis:</strong> Customer sentiment is highly negative. 
+                        Account is in Renewal Phase (30 days remaining). Export functionality is a known issue 
+                        for large datasets on legacy infrastructure (Ticket #ENG-491).
+                    </div>
+                    <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">14:23 PM</div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Agent Response Box
+        st.markdown("""
+        <div style="background: white; border: 1px solid #d4d4d4; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
+            <div style="display: flex; gap: 12px; margin-bottom: 12px;">
+                <div style="width: 36px; height: 36px; background: #1a1a1a; border-radius: 50%; 
+                           display: flex; align-items: center; justify-content: center; color: white; 
+                           font-weight: 600; flex-shrink: 0;">You</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 600; margin-bottom: 4px;">You (Agent)</div>
+                    <div style="color: #a3a3a3; font-size: 12px;">14:45 PM</div>
+                </div>
+            </div>
+            <div style="color: #525252; line-height: 1.6; margin-bottom: 16px;">
+                Hi Sarah,<br><br>
+                I completely understand the urgency for your board meeting. I'm looking into this 
+                immediately. Our engineering team is currently investigating a known timeout issue with 
+                exceptionally large data exports.
+            </div>
+            <div style="border-top: 1px solid #e5e5e5; padding-top: 12px; display: flex; gap: 8px;">
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">B</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">I</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">≡</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">📎</button>
+                <button style="padding: 6px 12px; background: white; border: 1px solid #d4d4d4; 
+                              border-radius: 4px; cursor: pointer;">😊</button>
+            </div>
+        </div>
+        
+        <div style="margin-top: 16px;">
+            <input type="text" placeholder="Type your reply or add an internal note..." 
+                   style="width: 100%; padding: 12px; border: 1px solid #d4d4d4; border-radius: 6px; 
+                          font-size: 14px; font-family: Inter;">
+        </div>
+        
+        <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <label style="font-size: 13px; color: #737373;">
+                <input type="checkbox"> Internal Note
+            </label>
+            <div style="display: flex; gap: 8px;">
+                <a href="#" class="btn-secondary">Save Draft</a>
+                <a href="#" class="btn-primary">Send ▶</a>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        # Customer 360 Context Panel
+        st.markdown('<div class="content-card" style="position: sticky; top: 20px;">', unsafe_allow_html=True)
+        st.markdown("### Customer 360 Context")
+        
+        st.markdown("""
+        <div style="text-align: center; padding: 16px 0; border-bottom: 1px solid #e5e5e5;">
+            <div style="width: 48px; height: 48px; background: #f5f5f5; border-radius: 50%; 
+                       display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; 
+                       font-weight: 700; font-size: 18px; color: #1a1a1a;">AC</div>
+            <div style="font-weight: 600; color: #1a1a1a;">Acme Corp</div>
+            <div style="font-size: 12px; color: #737373;">Enterprise Tier • Tech</div>
+        </div>
+        
+        <div style="padding: 16px 0; border-bottom: 1px solid #e5e5e5;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 11px; color: #737373; text-transform: uppercase; margin-bottom: 4px;">Risk Score</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #dc2626;">72<span style="font-size: 16px;">/100</span></div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 11px; color: #737373; text-transform: uppercase; margin-bottom: 4px;">ARR</div>
+                    <div style="font-size: 28px; font-weight: 700; color: #1a1a1a;">$145k</div>
+                </div>
+            </div>
+            <div style="margin-bottom: 12px;">
+                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">Sentiment</div>
+                <span class="badge badge-negative">😟 Negative</span>
+            </div>
+            <div>
+                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">Renewal Date</div>
+                <div style="font-size: 14px; color: #1a1a1a;">Oct 15 (28 days)</div>
+            </div>
+        </div>
+        
+        <div style="padding: 16px 0; background: #7f1d1d; margin: 0 -24px; padding: 16px 24px; color: white;">
+            <div style="font-weight: 600; margin-bottom: 8px;">⚠️ Active Escalation</div>
+            <div style="font-size: 13px; opacity: 0.9;">
+                Level 2 - Executive Review Required. Flagged due to repeated core feature failure.
+            </div>
+        </div>
+        
+        <div style="padding: 16px 0; background: #dbeafe; margin: 0 -24px; padding: 16px 24px;">
+            <div style="font-weight: 600; margin-bottom: 8px; color: #1e40af;">💡 AI RECOMMENDATION</div>
+            <div style="font-size: 13px; color: #1e40af;">
+                Offer a 1-on-1 strategy call with a Success Manager to address feature friction 
+                and bypass standard queue.
+            </div>
+            <div style="margin-top: 12px;">
+                <a href="#" class="btn-secondary" style="width: 100%; text-align: center; display: block;">
+                    Draft Invitation
+                </a>
+            </div>
         </div>
         """, unsafe_allow_html=True)
         
         st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("### Recent Interactions")
         
-        # Conversation Thread
-        col1, col2 = st.columns([4, 1])
+        st.markdown("""
+        <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e5e5;">
+            <div style="display: flex; gap: 8px;">
+                <div>📝</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">NPS Survey Submitted</div>
+                    <div style="font-size: 12px; color: #737373;">Score: 4/10 (Detractor)</div>
+                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">2 days ago</div>
+                </div>
+            </div>
+        </div>
         
-        with col1:
-            # Customer Message
-            st.markdown(f"""
-            <div style="background: #f8fafc; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
-                <div style="display: flex; gap: 12px;">
-                    <div style="width: 36px; height: 36px; background: #dbeafe; border-radius: 50%; 
-                               display: flex; align-items: center; justify-content: center; color: #1e40af; 
-                               font-weight: 600; flex-shrink: 0;">CT</div>
-                    <div style="flex: 1;">
-                        <div style="font-weight: 600; margin-bottom: 8px;">Customer Contact</div>
-                        <div style="color: #475569; line-height: 1.6;">
-                            {selected_ticket['description']}
-                        </div>
-                        <div style="text-align: right; color: #94a3b8; font-size: 12px; margin-top: 8px;">{created_time}</div>
-                    </div>
+        <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #e5e5e5;">
+            <div style="display: flex; gap: 8px;">
+                <div>✅</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">Ticket Resolved</div>
+                    <div style="font-size: 12px; color: #737373;">Dashboard UI Glitch</div>
+                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">5 days ago</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
-            
-            # System Note
-            st.markdown(f"""
-            <div style="background: #f1f5f9; padding: 16px; border-radius: 8px; border-left: 3px solid #64748b; margin-bottom: 16px;">
-                <div style="display: flex; gap: 12px; align-items: start;">
-                    <div>🤖</div>
-                    <div>
-                        <div style="font-weight: 600; margin-bottom: 4px;">💬 Internal Note (System)</div>
-                        <div style="color: #475569; font-size: 13px;">
-                            <strong>Automated Risk Analysis:</strong> Customer sentiment is <b>{selected_ticket['sentiment']}</b>. 
-                            Account health is {customer['health_status']}.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
-            
-            # Agent Response Box
-            st.markdown("""
-            <div style="background: white; border: 1px solid #cbd5e1; border-radius: 8px; padding: 16px; margin-bottom: 16px;">
-                <div style="margin-top: 16px;">
-                    <input type="text" placeholder="Type your reply or add an internal note..." 
-                           style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 6px; 
-                                  font-size: 14px; font-family: Inter;">
-                </div>
-                
-                <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <label style="font-size: 13px; color: #64748b;">
-                        <input type="checkbox"> Internal Note
-                    </label>
-                    <div style="display: flex; gap: 8px;">
-                        <a href="#" class="btn-secondary">Save Draft</a>
-                        <a href="#" class="btn-primary">Send ▶</a>
-                    </div>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+        </div>
         
-        with col2:
-            # Customer 360 Context Panel
-            st.markdown('<div class="content-card" style="position: sticky; top: 20px;">', unsafe_allow_html=True)
-            st.markdown("### Customer 360 Context")
-            
-            st.markdown(f"""
-            <div style="text-align: center; padding: 16px 0; border-bottom: 1px solid #e2e8f0;">
-                <div style="font-weight: 600; color: #0F172A; font-size: 18px;">{customer['company_name']}</div>
-                <div style="font-size: 12px; color: #64748B;">{customer['industry']}</div>
-            </div>
-            
-            <div style="padding: 16px 0; border-bottom: 1px solid #e2e8f0;">
-                <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
-                    <div style="text-align: center;">
-                        <div style="font-size: 11px; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">Risk Score</div>
-                        <div style="font-size: 28px; font-weight: 700; color: #DC2626;">{int(customer['risk_score'])}<span style="font-size: 16px;">/100</span></div>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="font-size: 11px; color: #64748B; text-transform: uppercase; margin-bottom: 4px;">ARR</div>
-                        <div style="font-size: 28px; font-weight: 700; color: #0F172A;">${customer['arr']/1000:,.0f}k</div>
-                    </div>
-                </div>
-                <div style="margin-bottom: 12px;">
-                    <div style="font-size: 11px; color: #64748B; margin-bottom: 4px;">Sentiment</div>
-                    <span class="badge badge-negative">{customer['sentiment']}</span>
-                </div>
-                <div>
-                    <div style="font-size: 11px; color: #64748B; margin-bottom: 4px;">Renewal Date</div>
-                    <div style="font-size: 14px; color: #0F172A;">{pd.to_datetime(customer['last_activity']).strftime('%b %d, %Y')}</div>
+        <div style="margin-bottom: 16px;">
+            <div style="display: flex; gap: 8px;">
+                <div>📋</div>
+                <div style="flex: 1;">
+                    <div style="font-weight: 500; font-size: 13px; color: #1a1a1a;">QBR Completed</div>
+                    <div style="font-size: 12px; color: #737373;">Attended by VP Eng</div>
+                    <div style="font-size: 11px; color: #a3a3a3; margin-top: 4px;">3 weeks ago</div>
                 </div>
             </div>
-            """, unsafe_allow_html=True)
-            
-            st.markdown('</div>', unsafe_allow_html=True)
-            
+        </div>
+        
+        <a href="#" style="font-size: 13px; color: #3b82f6; text-decoration: none; font-weight: 500;">
+            View Full History →
+        </a>
+        """, unsafe_allow_html=True)
+        
         st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 # PAGE 4: CUSTOMER DIRECTORY
@@ -1045,3 +1338,315 @@ elif page == "Customer Directory":
         </div>
         """, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
+
+
+# PAGE 5: DATA UPLOAD
+elif page == "📤 Data Upload":
+    st.title("📤 Data Upload & Management")
+    st.markdown("Upload CSV files to automatically load customer, ticket, and interaction data into the database.")
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Instructions
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    st.markdown("### 📋 How to Upload Data")
+    st.markdown("""
+    **Step 1:** Prepare your CSV files with the correct format  
+    **Step 2:** Upload files using the file uploaders below  
+    **Step 3:** Preview the data to verify it looks correct  
+    **Step 4:** Click "Load to Database" to import the data  
+    
+    ---
+    
+    **Required CSV Formats:**
+    - **customers.csv**: customer_id, company_name, industry, arr, contract_type, renewal_date, csm_name
+    - **tickets.json**: ticket_id, customer_id, subject, priority, status, sentiment, created_date, resolved_date
+    - **interactions.csv**: interaction_id, customer_id, interaction_type, description, timestamp
+    """)
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # File uploaders
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown('<div class="content-card">', unsafe_allow_html=True)
+        st.markdown("### 📊 Upload Customers CSV")
+        customers_file = st.file_uploader("Choose customers CSV file", type=['csv'], key="customers_upload")
+        
+        if customers_file is not None:
+            import io
+            customers_uploaded = pd.read_csv(customers_file)
+            st.success(f"✅ Loaded {len(customers_uploaded)} customers")
+            st.dataframe(customers_uploaded.head(), use_container_width=True)
+            
+            if st.button("💾 Load Customers to Database", key="load_customers"):
+                from db_queries import ChurnGuardDB
+                import sqlite3
+                
+                conn = sqlite3.connect('churnguard.db')
+                cursor = conn.cursor()
+                
+                try:
+                    # Clear existing customers
+                    cursor.execute("DELETE FROM customers")
+                    
+                    # Insert new customers
+                    for _, row in customers_uploaded.iterrows():
+                        cursor.execute("""
+                            INSERT INTO customers (
+                                company_name, industry, arr, 
+                                renewal_date, health_status, risk_score, sentiment
+                            ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                        """, (
+                            row['company_name'],
+                            row['industry'],
+                            int(row['arr']),
+                            row['renewal_date'],
+                            'Low Risk',
+                            20,
+                            'Neutral'
+                        ))
+                    
+                    conn.commit()
+                    conn.close()
+                    
+                    st.success(f"🎉 Successfully loaded {len(customers_uploaded)} customers into database!")
+                    st.info("🔄 Refresh the page to see updated data in dashboards")
+                    
+                    # Clear cache to reload data
+                    st.cache_data.clear()
+                    
+                except Exception as e:
+                    st.error(f"❌ Error loading customers: {str(e)}")
+                    conn.close()
+        
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown('<div class="content-card">', unsafe_allow_html=True)
+        st.markdown("### 🎫 Upload Tickets JSON")
+        tickets_file = st.file_uploader("Choose tickets JSON file", type=['json'], key="tickets_upload")
+        
+        if tickets_file is not None:
+            import json
+            import io
+            tickets_uploaded = json.load(tickets_file)
+            tickets_df_uploaded = pd.DataFrame(tickets_uploaded)
+            st.success(f"✅ Loaded {len(tickets_df_uploaded)} tickets")
+            st.dataframe(tickets_df_uploaded.head(), use_container_width=True)
+            
+            if st.button("💾 Load Tickets to Database", key="load_tickets"):
+                from db_queries import ChurnGuardDB
+                import sqlite3
+                
+                conn = sqlite3.connect('churnguard.db')
+                cursor = conn.cursor()
+                
+                try:
+                    # Clear existing tickets
+                    cursor.execute("DELETE FROM tickets")
+                    
+                    # Insert tickets
+                    for ticket in tickets_uploaded:
+                        # Map customer_id
+                        cust_id_str = ticket['customer_id']
+                        if isinstance(cust_id_str, str) and 'CUST-' in cust_id_str:
+                            cust_id = int(cust_id_str.replace('CUST-', ''))
+                        else:
+                            cust_id = 1
+                        
+                        cursor.execute("""
+                            INSERT INTO tickets (
+                                ticket_id, customer_id, subject, description,
+                                priority, status, sentiment, category,
+                                created_at, resolved_at
+                            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        """, (
+                            ticket['ticket_id'],
+                            cust_id,
+                            ticket['subject'],
+                            ticket.get('subject', 'No description'),
+                            ticket['priority'],
+                            ticket['status'],
+                            ticket['sentiment'],
+                            'Support',
+                            ticket['created_date'],
+                            ticket.get('resolved_date')
+                        ))
+                    
+                    conn.commit()
+                    conn.close()
+                    
+                    st.success(f"🎉 Successfully loaded {len(tickets_uploaded)} tickets into database!")
+                    st.info("🔄 Refresh the page to see updated data in dashboards")
+                    
+                    # Clear cache
+                    st.cache_data.clear()
+                    
+                except Exception as e:
+                    st.error(f"❌ Error loading tickets: {str(e)}")
+                    conn.close()
+        
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Interactions upload (full width)
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    st.markdown("### 💬 Upload Interactions CSV")
+    interactions_file = st.file_uploader("Choose interactions CSV file", type=['csv'], key="interactions_upload")
+    
+    if interactions_file is not None:
+        interactions_uploaded = pd.read_csv(interactions_file)
+        st.success(f"✅ Loaded {len(interactions_uploaded)} interactions")
+        
+        col_preview, col_button = st.columns([3, 1])
+        with col_preview:
+            st.dataframe(interactions_uploaded.head(10), use_container_width=True)
+        
+        with col_button:
+            st.markdown("<br><br>", unsafe_allow_html=True)
+            if st.button("💾 Load Interactions to Database", key="load_interactions"):
+                from db_queries import ChurnGuardDB
+                import sqlite3
+                
+                conn = sqlite3.connect('churnguard.db')
+                cursor = conn.cursor()
+                
+                try:
+                    # Clear existing interactions
+                    cursor.execute("DELETE FROM interactions")
+                    
+                    # Insert interactions
+                    for _, row in interactions_uploaded.iterrows():
+                        # Map customer_id
+                        cust_id_str = row['customer_id']
+                        if isinstance(cust_id_str, str) and 'CUST-' in cust_id_str:
+                            cust_id = int(cust_id_str.replace('CUST-', ''))
+                        else:
+                            cust_id = 1
+                        
+                        # Map interaction types
+                        interaction_type = row['interaction_type']
+                        type_mapping = {
+                            'Login': 'Email',
+                            'Feature Usage': 'Training',
+                            'Support Call': 'Call',
+                            'QBR': 'QBR',
+                            'Email Sent': 'Email'
+                        }
+                        mapped_type = type_mapping.get(interaction_type, 'Email')
+                        
+                        cursor.execute("""
+                            INSERT INTO interactions (
+                                customer_id, interaction_type,
+                                interaction_date, notes
+                            ) VALUES (?, ?, ?, ?)
+                        """, (
+                            cust_id,
+                            mapped_type,
+                            row['timestamp'],
+                            row['description']
+                        ))
+                    
+                    conn.commit()
+                    conn.close()
+                    
+                    st.success(f"🎉 Successfully loaded {len(interactions_uploaded)} interactions into database!")
+                    st.info("🔄 Refresh the page to see updated data in dashboards")
+                    
+                    # Clear cache
+                    st.cache_data.clear()
+                    
+                except Exception as e:
+                    st.error(f"❌ Error loading interactions: {str(e)}")
+                    conn.close()
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Current database status
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    st.markdown("### 📊 Current Database Status")
+    
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        customer_count = db.execute_query("SELECT COUNT(*) as count FROM customers")['count'][0]
+        st.metric("Customers in Database", customer_count)
+    
+    with col2:
+        ticket_count = db.execute_query("SELECT COUNT(*) as count FROM tickets")['count'][0]
+        st.metric("Tickets in Database", ticket_count)
+    
+    with col3:
+        interaction_count = db.execute_query("SELECT COUNT(*) as count FROM interactions")['count'][0]
+        st.metric("Interactions in Database", interaction_count)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # Download sample templates
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    st.markdown("### 📥 Download Sample Templates")
+    st.markdown("Need help with the CSV format? Download these sample templates:")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        sample_customers = pd.DataFrame({
+            'customer_id': ['CUST-1001', 'CUST-1002'],
+            'company_name': ['Acme Corp', 'TechStart Inc'],
+            'industry': ['Tech', 'Finance'],
+            'arr': [250000, 150000],
+            'contract_type': ['Annual', 'Monthly'],
+            'renewal_date': ['2026-12-31', '2026-11-30'],
+            'csm_name': ['Alice', 'Bob']
+        })
+        csv_customers = sample_customers.to_csv(index=False)
+        st.download_button(
+            label="📄 Download customers.csv",
+            data=csv_customers,
+            file_name="sample_customers.csv",
+            mime="text/csv"
+        )
+    
+    with col2:
+        st.markdown("**tickets.json template**")
+        st.code('''[
+  {
+    "ticket_id": "TKT-001",
+    "customer_id": "CUST-1001",
+    "subject": "API timeout",
+    "priority": "High",
+    "status": "Open",
+    "sentiment": "Negative",
+    "created_date": "2026-08-01T10:00:00",
+    "resolved_date": null
+  }
+]''', language='json')
+    
+    with col3:
+        sample_interactions = pd.DataFrame({
+            'interaction_id': ['INT-5001', 'INT-5002'],
+            'customer_id': ['CUST-1001', 'CUST-1002'],
+            'interaction_type': ['QBR', 'Support Call'],
+            'description': ['Quarterly review', 'Technical support'],
+            'timestamp': ['2026-08-01 14:00:00', '2026-08-02 10:30:00']
+        })
+        csv_interactions = sample_interactions.to_csv(index=False)
+        st.download_button(
+            label="📄 Download interactions.csv",
+            data=csv_interactions,
+            file_name="sample_interactions.csv",
+            mime="text/csv"
+        )
+    
+    st.markdown('</div>', unsafe_allow_html=True)

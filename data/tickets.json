@@ -5,8 +5,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-11T01:43:15",
-        "resolved_date": "2026-07-11T08:43:15",
+        "created_date": "2026-07-12T05:15:31",
+        "resolved_date": "2026-07-12T12:15:31",
         "sentiment": "Positive"
     },
     {
@@ -15,7 +15,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-06-14T14:43:15",
+        "created_date": "2026-06-15T18:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -25,8 +25,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-17T01:43:15",
-        "resolved_date": "2026-06-18T05:43:15",
+        "created_date": "2026-06-18T05:15:31",
+        "resolved_date": "2026-06-19T09:15:31",
         "sentiment": "Negative"
     },
     {
@@ -35,8 +35,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-16T16:43:15",
-        "resolved_date": "2026-06-19T07:43:15",
+        "created_date": "2026-06-17T20:15:31",
+        "resolved_date": "2026-06-20T11:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -45,8 +45,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-02T13:43:15",
-        "resolved_date": "2026-05-04T21:43:15",
+        "created_date": "2026-05-03T17:15:31",
+        "resolved_date": "2026-05-06T01:15:31",
         "sentiment": "Positive"
     },
     {
@@ -55,8 +55,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-05T20:43:15",
-        "resolved_date": "2026-07-06T14:43:15",
+        "created_date": "2026-07-07T00:15:31",
+        "resolved_date": "2026-07-07T18:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -65,8 +65,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-04T19:43:15",
-        "resolved_date": "2026-05-06T09:43:15",
+        "created_date": "2026-05-05T23:15:31",
+        "resolved_date": "2026-05-07T13:15:31",
         "sentiment": "Negative"
     },
     {
@@ -75,7 +75,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-08-02T02:43:15",
+        "created_date": "2026-08-03T06:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -85,8 +85,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-04T18:43:15",
-        "resolved_date": "2026-05-05T02:43:15",
+        "created_date": "2026-05-05T22:15:31",
+        "resolved_date": "2026-05-06T06:15:31",
         "sentiment": "Positive"
     },
     {
@@ -95,7 +95,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-06-07T04:43:15",
+        "created_date": "2026-06-08T08:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -105,7 +105,7 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-07-02T09:43:15",
+        "created_date": "2026-07-03T13:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -115,7 +115,7 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-06-28T14:43:15",
+        "created_date": "2026-06-29T18:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -125,7 +125,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-12T15:43:15",
+        "created_date": "2026-07-13T19:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -135,8 +135,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-08-03T11:43:15",
-        "resolved_date": "2026-08-04T07:43:15",
+        "created_date": "2026-08-04T15:15:31",
+        "resolved_date": "2026-08-05T11:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -145,8 +145,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-23T16:43:15",
-        "resolved_date": "2026-07-25T06:43:15",
+        "created_date": "2026-07-24T20:15:31",
+        "resolved_date": "2026-07-26T10:15:31",
         "sentiment": "Positive"
     },
     {
@@ -155,7 +155,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "In Progress",
-        "created_date": "2026-05-11T00:43:15",
+        "created_date": "2026-05-12T04:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -165,7 +165,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-15T18:43:15",
+        "created_date": "2026-05-16T22:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -175,8 +175,8 @@
         "subject": "API timeout issues",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-05-23T14:43:15",
-        "resolved_date": "2026-05-23T18:43:15",
+        "created_date": "2026-05-24T18:15:31",
+        "resolved_date": "2026-05-24T22:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -185,8 +185,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-29T01:43:15",
-        "resolved_date": "2026-06-30T19:43:15",
+        "created_date": "2026-06-30T05:15:31",
+        "resolved_date": "2026-07-01T23:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -195,8 +195,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-11T06:43:15",
-        "resolved_date": "2026-07-12T09:43:15",
+        "created_date": "2026-07-12T10:15:31",
+        "resolved_date": "2026-07-13T13:15:31",
         "sentiment": "Positive"
     },
     {
@@ -205,8 +205,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-13T05:43:15",
-        "resolved_date": "2026-06-13T22:43:15",
+        "created_date": "2026-06-14T09:15:31",
+        "resolved_date": "2026-06-15T02:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -215,7 +215,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-06-02T10:43:15",
+        "created_date": "2026-06-03T14:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -225,8 +225,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-09T15:43:15",
-        "resolved_date": "2026-07-10T02:43:15",
+        "created_date": "2026-07-10T19:15:31",
+        "resolved_date": "2026-07-11T06:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -235,8 +235,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-12T10:43:15",
-        "resolved_date": "2026-06-13T10:43:15",
+        "created_date": "2026-06-13T14:15:31",
+        "resolved_date": "2026-06-14T14:15:31",
         "sentiment": "Positive"
     },
     {
@@ -245,8 +245,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-15T17:43:15",
-        "resolved_date": "2026-07-18T07:43:15",
+        "created_date": "2026-07-16T21:15:31",
+        "resolved_date": "2026-07-19T11:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -255,8 +255,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-24T03:43:15",
-        "resolved_date": "2026-05-24T04:43:15",
+        "created_date": "2026-05-25T07:15:31",
+        "resolved_date": "2026-05-25T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -265,7 +265,7 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Open",
-        "created_date": "2026-07-01T09:43:15",
+        "created_date": "2026-07-02T13:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -275,8 +275,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-23T17:43:15",
-        "resolved_date": "2026-07-26T04:43:15",
+        "created_date": "2026-07-24T21:15:31",
+        "resolved_date": "2026-07-27T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -285,8 +285,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-19T00:43:15",
-        "resolved_date": "2026-06-19T08:43:15",
+        "created_date": "2026-06-20T04:15:31",
+        "resolved_date": "2026-06-20T12:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -295,7 +295,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-05-27T04:43:15",
+        "created_date": "2026-05-28T08:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -305,7 +305,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-09T21:43:15",
+        "created_date": "2026-07-11T01:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -315,7 +315,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-07-28T22:43:15",
+        "created_date": "2026-07-30T02:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -325,8 +325,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-06T13:43:15",
-        "resolved_date": "2026-06-08T04:43:15",
+        "created_date": "2026-06-07T17:15:31",
+        "resolved_date": "2026-06-09T08:15:31",
         "sentiment": "Positive"
     },
     {
@@ -335,7 +335,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-07-04T12:43:15",
+        "created_date": "2026-07-05T16:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -345,8 +345,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-25T13:43:15",
-        "resolved_date": "2026-06-27T04:43:15",
+        "created_date": "2026-06-26T17:15:31",
+        "resolved_date": "2026-06-28T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -355,8 +355,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-22T18:43:15",
-        "resolved_date": "2026-07-24T12:43:15",
+        "created_date": "2026-07-23T22:15:31",
+        "resolved_date": "2026-07-25T16:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -365,7 +365,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-07-01T13:43:15",
+        "created_date": "2026-07-02T17:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -375,8 +375,8 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-06T19:43:15",
-        "resolved_date": "2026-07-09T04:43:15",
+        "created_date": "2026-07-07T23:15:31",
+        "resolved_date": "2026-07-10T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -385,8 +385,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-11T05:43:15",
-        "resolved_date": "2026-07-13T22:43:15",
+        "created_date": "2026-07-12T09:15:31",
+        "resolved_date": "2026-07-15T02:15:31",
         "sentiment": "Positive"
     },
     {
@@ -395,7 +395,7 @@
         "subject": "Data export failing",
         "priority": "Critical",
         "status": "Awaiting Response",
-        "created_date": "2026-05-28T18:43:15",
+        "created_date": "2026-05-29T22:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -405,8 +405,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-20T19:43:15",
-        "resolved_date": "2026-07-23T15:43:15",
+        "created_date": "2026-07-21T23:15:31",
+        "resolved_date": "2026-07-24T19:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -415,8 +415,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-06-23T06:43:15",
-        "resolved_date": "2026-06-25T21:43:15",
+        "created_date": "2026-06-24T10:15:31",
+        "resolved_date": "2026-06-27T01:15:31",
         "sentiment": "Negative"
     },
     {
@@ -425,7 +425,7 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-05-25T16:43:15",
+        "created_date": "2026-05-26T20:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -435,7 +435,7 @@
         "subject": "Data export failing",
         "priority": "Critical",
         "status": "In Progress",
-        "created_date": "2026-05-23T01:43:15",
+        "created_date": "2026-05-24T05:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -445,8 +445,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-31T07:43:15",
-        "resolved_date": "2026-08-02T08:43:15",
+        "created_date": "2026-08-01T11:15:31",
+        "resolved_date": "2026-08-03T12:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -455,8 +455,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-30T18:43:15",
-        "resolved_date": "2026-07-01T11:43:15",
+        "created_date": "2026-07-01T22:15:31",
+        "resolved_date": "2026-07-02T15:15:31",
         "sentiment": "Positive"
     },
     {
@@ -465,8 +465,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-08T03:43:15",
-        "resolved_date": "2026-05-08T14:43:15",
+        "created_date": "2026-05-09T07:15:31",
+        "resolved_date": "2026-05-09T18:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -475,8 +475,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-30T10:43:15",
-        "resolved_date": "2026-05-30T19:43:15",
+        "created_date": "2026-05-31T14:15:31",
+        "resolved_date": "2026-05-31T23:15:31",
         "sentiment": "Positive"
     },
     {
@@ -485,7 +485,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-08T21:43:15",
+        "created_date": "2026-05-10T01:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -495,8 +495,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-17T23:43:15",
-        "resolved_date": "2026-06-19T15:43:15",
+        "created_date": "2026-06-19T03:15:31",
+        "resolved_date": "2026-06-20T19:15:31",
         "sentiment": "Negative"
     },
     {
@@ -505,8 +505,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-10T04:43:15",
-        "resolved_date": "2026-06-11T13:43:15",
+        "created_date": "2026-06-11T08:15:31",
+        "resolved_date": "2026-06-12T17:15:31",
         "sentiment": "Positive"
     },
     {
@@ -515,8 +515,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-06T20:43:15",
-        "resolved_date": "2026-06-08T17:43:15",
+        "created_date": "2026-06-08T00:15:31",
+        "resolved_date": "2026-06-09T21:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -525,8 +525,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-28T05:43:15",
-        "resolved_date": "2026-06-30T02:43:15",
+        "created_date": "2026-06-29T09:15:31",
+        "resolved_date": "2026-07-01T06:15:31",
         "sentiment": "Negative"
     },
     {
@@ -535,7 +535,7 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-07-26T01:43:15",
+        "created_date": "2026-07-27T05:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -545,7 +545,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-04T00:43:15",
+        "created_date": "2026-05-05T04:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -555,8 +555,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-02T10:43:15",
-        "resolved_date": "2026-05-03T21:43:15",
+        "created_date": "2026-05-03T14:15:31",
+        "resolved_date": "2026-05-05T01:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -565,8 +565,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-01T10:43:15",
-        "resolved_date": "2026-05-03T22:43:15",
+        "created_date": "2026-05-02T14:15:31",
+        "resolved_date": "2026-05-05T02:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -575,7 +575,7 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-07-16T08:43:15",
+        "created_date": "2026-07-17T12:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -585,8 +585,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-31T14:43:15",
-        "resolved_date": "2026-06-02T16:43:15",
+        "created_date": "2026-06-01T18:15:31",
+        "resolved_date": "2026-06-03T20:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -595,7 +595,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-14T00:43:15",
+        "created_date": "2026-06-15T04:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -605,8 +605,8 @@
         "subject": "API timeout issues",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-06-15T01:43:15",
-        "resolved_date": "2026-06-16T03:43:15",
+        "created_date": "2026-06-16T05:15:31",
+        "resolved_date": "2026-06-17T07:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -615,7 +615,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-07-23T03:43:15",
+        "created_date": "2026-07-24T07:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -625,8 +625,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-08-02T21:43:15",
-        "resolved_date": "2026-08-03T19:43:15",
+        "created_date": "2026-08-04T01:15:31",
+        "resolved_date": "2026-08-04T23:15:31",
         "sentiment": "Positive"
     },
     {
@@ -635,8 +635,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-04T15:43:15",
-        "resolved_date": "2026-05-07T02:43:15",
+        "created_date": "2026-05-05T19:15:31",
+        "resolved_date": "2026-05-08T06:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -645,7 +645,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-08-04T06:43:15",
+        "created_date": "2026-08-05T10:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -655,8 +655,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-23T18:43:15",
-        "resolved_date": "2026-07-24T21:43:15",
+        "created_date": "2026-07-24T22:15:31",
+        "resolved_date": "2026-07-26T01:15:31",
         "sentiment": "Negative"
     },
     {
@@ -665,8 +665,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-13T04:43:15",
-        "resolved_date": "2026-06-15T02:43:15",
+        "created_date": "2026-06-14T08:15:31",
+        "resolved_date": "2026-06-16T06:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -675,8 +675,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-21T15:43:15",
-        "resolved_date": "2026-06-21T18:43:15",
+        "created_date": "2026-06-22T19:15:31",
+        "resolved_date": "2026-06-22T22:15:31",
         "sentiment": "Positive"
     },
     {
@@ -685,8 +685,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-25T19:43:15",
-        "resolved_date": "2026-05-26T04:43:15",
+        "created_date": "2026-05-26T23:15:31",
+        "resolved_date": "2026-05-27T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -695,8 +695,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-08-02T12:43:15",
-        "resolved_date": "2026-08-05T04:43:15",
+        "created_date": "2026-08-03T16:15:31",
+        "resolved_date": "2026-08-06T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -705,7 +705,7 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-05-02T06:43:15",
+        "created_date": "2026-05-03T10:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -715,8 +715,8 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-28T01:43:15",
-        "resolved_date": "2026-07-29T18:43:15",
+        "created_date": "2026-07-29T05:15:31",
+        "resolved_date": "2026-07-30T22:15:31",
         "sentiment": "Positive"
     },
     {
@@ -725,8 +725,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-16T14:43:15",
-        "resolved_date": "2026-05-17T10:43:15",
+        "created_date": "2026-05-17T18:15:31",
+        "resolved_date": "2026-05-18T14:15:31",
         "sentiment": "Negative"
     },
     {
@@ -735,8 +735,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-04-30T10:43:15",
-        "resolved_date": "2026-05-01T16:43:15",
+        "created_date": "2026-05-01T14:15:31",
+        "resolved_date": "2026-05-02T20:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -745,8 +745,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-31T06:43:15",
-        "resolved_date": "2026-06-02T04:43:15",
+        "created_date": "2026-06-01T10:15:31",
+        "resolved_date": "2026-06-03T08:15:31",
         "sentiment": "Positive"
     },
     {
@@ -755,8 +755,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-21T19:43:15",
-        "resolved_date": "2026-06-24T08:43:15",
+        "created_date": "2026-06-22T23:15:31",
+        "resolved_date": "2026-06-25T12:15:31",
         "sentiment": "Negative"
     },
     {
@@ -765,8 +765,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-02T03:43:15",
-        "resolved_date": "2026-05-02T11:43:15",
+        "created_date": "2026-05-03T07:15:31",
+        "resolved_date": "2026-05-03T15:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -775,8 +775,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-29T01:43:15",
-        "resolved_date": "2026-07-29T05:43:15",
+        "created_date": "2026-07-30T05:15:31",
+        "resolved_date": "2026-07-30T09:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -785,8 +785,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-25T02:43:15",
-        "resolved_date": "2026-06-25T14:43:15",
+        "created_date": "2026-06-26T06:15:31",
+        "resolved_date": "2026-06-26T18:15:31",
         "sentiment": "Negative"
     },
     {
@@ -795,8 +795,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-16T13:43:15",
-        "resolved_date": "2026-07-18T10:43:15",
+        "created_date": "2026-07-17T17:15:31",
+        "resolved_date": "2026-07-19T14:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -805,8 +805,8 @@
         "subject": "Billing question",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-06-15T00:43:15",
-        "resolved_date": "2026-06-15T18:43:15",
+        "created_date": "2026-06-16T04:15:31",
+        "resolved_date": "2026-06-16T22:15:31",
         "sentiment": "Negative"
     },
     {
@@ -815,8 +815,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-08-02T02:43:15",
-        "resolved_date": "2026-08-04T15:43:15",
+        "created_date": "2026-08-03T06:15:31",
+        "resolved_date": "2026-08-05T19:15:31",
         "sentiment": "Positive"
     },
     {
@@ -825,8 +825,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-20T19:43:15",
-        "resolved_date": "2026-05-22T02:43:15",
+        "created_date": "2026-05-21T23:15:31",
+        "resolved_date": "2026-05-23T06:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -835,8 +835,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-05T00:43:15",
-        "resolved_date": "2026-05-07T12:43:15",
+        "created_date": "2026-05-06T04:15:31",
+        "resolved_date": "2026-05-08T16:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -845,8 +845,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-29T15:43:15",
-        "resolved_date": "2026-07-02T09:43:15",
+        "created_date": "2026-06-30T19:15:31",
+        "resolved_date": "2026-07-03T13:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -855,8 +855,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-07T14:43:15",
-        "resolved_date": "2026-06-07T17:43:15",
+        "created_date": "2026-06-08T18:15:31",
+        "resolved_date": "2026-06-08T21:15:31",
         "sentiment": "Positive"
     },
     {
@@ -865,8 +865,8 @@
         "subject": "Feature request",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-28T08:43:15",
-        "resolved_date": "2026-07-30T02:43:15",
+        "created_date": "2026-07-29T12:15:31",
+        "resolved_date": "2026-07-31T06:15:31",
         "sentiment": "Positive"
     },
     {
@@ -875,8 +875,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-28T06:43:15",
-        "resolved_date": "2026-05-30T20:43:15",
+        "created_date": "2026-05-29T10:15:31",
+        "resolved_date": "2026-06-01T00:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -885,8 +885,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-07T16:43:15",
-        "resolved_date": "2026-05-10T14:43:15",
+        "created_date": "2026-05-08T20:15:31",
+        "resolved_date": "2026-05-11T18:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -895,7 +895,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-01T07:43:15",
+        "created_date": "2026-07-02T11:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -905,8 +905,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-19T01:43:15",
-        "resolved_date": "2026-06-19T15:43:15",
+        "created_date": "2026-06-20T05:15:31",
+        "resolved_date": "2026-06-20T19:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -915,7 +915,7 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-08-04T07:43:15",
+        "created_date": "2026-08-05T11:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -925,8 +925,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-13T01:43:15",
-        "resolved_date": "2026-05-14T14:43:15",
+        "created_date": "2026-05-14T05:15:31",
+        "resolved_date": "2026-05-15T18:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -935,7 +935,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-05-18T06:43:15",
+        "created_date": "2026-05-19T10:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -945,7 +945,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-28T16:43:15",
+        "created_date": "2026-06-29T20:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -955,8 +955,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-28T11:43:15",
-        "resolved_date": "2026-05-28T23:43:15",
+        "created_date": "2026-05-29T15:15:31",
+        "resolved_date": "2026-05-30T03:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -965,8 +965,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-28T18:43:15",
-        "resolved_date": "2026-04-30T09:43:15",
+        "created_date": "2026-04-29T22:15:31",
+        "resolved_date": "2026-05-01T13:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -975,7 +975,7 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-05-12T13:43:15",
+        "created_date": "2026-05-13T17:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -985,7 +985,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-07-27T18:43:15",
+        "created_date": "2026-07-28T22:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -995,8 +995,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-10T21:43:15",
-        "resolved_date": "2026-05-13T04:43:15",
+        "created_date": "2026-05-12T01:15:31",
+        "resolved_date": "2026-05-14T08:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1005,8 +1005,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-14T19:43:15",
-        "resolved_date": "2026-05-16T18:43:15",
+        "created_date": "2026-05-15T23:15:31",
+        "resolved_date": "2026-05-17T22:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1015,8 +1015,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-29T11:43:15",
-        "resolved_date": "2026-05-30T18:43:15",
+        "created_date": "2026-05-30T15:15:31",
+        "resolved_date": "2026-05-31T22:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1025,8 +1025,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-04T10:43:15",
-        "resolved_date": "2026-06-07T08:43:15",
+        "created_date": "2026-06-05T14:15:31",
+        "resolved_date": "2026-06-08T12:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1035,7 +1035,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-23T03:43:15",
+        "created_date": "2026-07-24T07:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1045,8 +1045,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-08-01T06:43:15",
-        "resolved_date": "2026-08-01T19:43:15",
+        "created_date": "2026-08-02T10:15:31",
+        "resolved_date": "2026-08-02T23:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1055,7 +1055,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-12T05:43:15",
+        "created_date": "2026-06-13T09:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1065,8 +1065,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-14T17:43:15",
-        "resolved_date": "2026-07-16T02:43:15",
+        "created_date": "2026-07-15T21:15:31",
+        "resolved_date": "2026-07-17T06:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1075,7 +1075,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-07-25T09:43:15",
+        "created_date": "2026-07-26T13:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1085,8 +1085,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-10T04:43:15",
-        "resolved_date": "2026-07-13T02:43:15",
+        "created_date": "2026-07-11T08:15:31",
+        "resolved_date": "2026-07-14T06:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1095,8 +1095,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-31T10:43:15",
-        "resolved_date": "2026-08-02T06:43:15",
+        "created_date": "2026-08-01T14:15:31",
+        "resolved_date": "2026-08-03T10:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1105,8 +1105,8 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-06-22T23:43:15",
-        "resolved_date": "2026-06-24T22:43:15",
+        "created_date": "2026-06-24T03:15:31",
+        "resolved_date": "2026-06-26T02:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1115,7 +1115,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-06-14T21:43:15",
+        "created_date": "2026-06-16T01:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1125,8 +1125,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-28T20:43:15",
-        "resolved_date": "2026-05-29T23:43:15",
+        "created_date": "2026-05-30T00:15:31",
+        "resolved_date": "2026-05-31T03:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1135,8 +1135,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-29T18:43:15",
-        "resolved_date": "2026-06-29T22:43:15",
+        "created_date": "2026-06-30T22:15:31",
+        "resolved_date": "2026-07-01T02:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1145,8 +1145,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-23T05:43:15",
-        "resolved_date": "2026-05-26T04:43:15",
+        "created_date": "2026-05-24T09:15:31",
+        "resolved_date": "2026-05-27T08:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1155,8 +1155,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-29T16:43:15",
-        "resolved_date": "2026-06-29T23:43:15",
+        "created_date": "2026-06-30T20:15:31",
+        "resolved_date": "2026-07-01T03:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1165,8 +1165,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-18T23:43:15",
-        "resolved_date": "2026-06-19T20:43:15",
+        "created_date": "2026-06-20T03:15:31",
+        "resolved_date": "2026-06-21T00:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1175,8 +1175,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-24T04:43:15",
-        "resolved_date": "2026-06-26T05:43:15",
+        "created_date": "2026-06-25T08:15:31",
+        "resolved_date": "2026-06-27T09:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1185,8 +1185,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-17T08:43:15",
-        "resolved_date": "2026-07-18T02:43:15",
+        "created_date": "2026-07-18T12:15:31",
+        "resolved_date": "2026-07-19T06:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1195,7 +1195,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-27T21:43:15",
+        "created_date": "2026-05-29T01:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1205,8 +1205,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-13T20:43:15",
-        "resolved_date": "2026-07-15T07:43:15",
+        "created_date": "2026-07-15T00:15:31",
+        "resolved_date": "2026-07-16T11:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1215,7 +1215,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-06-09T10:43:15",
+        "created_date": "2026-06-10T14:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1225,8 +1225,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-27T03:43:15",
-        "resolved_date": "2026-06-28T03:43:15",
+        "created_date": "2026-06-28T07:15:31",
+        "resolved_date": "2026-06-29T07:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1235,8 +1235,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-24T05:43:15",
-        "resolved_date": "2026-06-25T17:43:15",
+        "created_date": "2026-06-25T09:15:31",
+        "resolved_date": "2026-06-26T21:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1245,8 +1245,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-27T03:43:15",
-        "resolved_date": "2026-05-27T16:43:15",
+        "created_date": "2026-05-28T07:15:31",
+        "resolved_date": "2026-05-28T20:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1255,7 +1255,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-07-08T15:43:15",
+        "created_date": "2026-07-09T19:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1265,7 +1265,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-06-08T09:43:15",
+        "created_date": "2026-06-09T13:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1275,8 +1275,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-04-28T13:43:15",
-        "resolved_date": "2026-04-28T21:43:15",
+        "created_date": "2026-04-29T17:15:31",
+        "resolved_date": "2026-04-30T01:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1285,7 +1285,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-03T21:43:15",
+        "created_date": "2026-05-05T01:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -1295,8 +1295,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-23T19:43:15",
-        "resolved_date": "2026-07-24T03:43:15",
+        "created_date": "2026-07-24T23:15:31",
+        "resolved_date": "2026-07-25T07:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1305,8 +1305,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-30T16:43:15",
-        "resolved_date": "2026-08-02T09:43:15",
+        "created_date": "2026-07-31T20:15:31",
+        "resolved_date": "2026-08-03T13:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1315,8 +1315,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-15T04:43:15",
-        "resolved_date": "2026-05-16T13:43:15",
+        "created_date": "2026-05-16T08:15:31",
+        "resolved_date": "2026-05-17T17:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1325,8 +1325,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-22T08:43:15",
-        "resolved_date": "2026-07-25T02:43:15",
+        "created_date": "2026-07-23T12:15:31",
+        "resolved_date": "2026-07-26T06:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1335,8 +1335,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-01T01:43:15",
-        "resolved_date": "2026-06-03T15:43:15",
+        "created_date": "2026-06-02T05:15:31",
+        "resolved_date": "2026-06-04T19:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1345,8 +1345,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-30T14:43:15",
-        "resolved_date": "2026-07-03T02:43:15",
+        "created_date": "2026-07-01T18:15:31",
+        "resolved_date": "2026-07-04T06:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1355,8 +1355,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-24T06:43:15",
-        "resolved_date": "2026-06-25T17:43:15",
+        "created_date": "2026-06-25T10:15:31",
+        "resolved_date": "2026-06-26T21:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1365,8 +1365,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-17T05:43:15",
-        "resolved_date": "2026-05-17T20:43:15",
+        "created_date": "2026-05-18T09:15:31",
+        "resolved_date": "2026-05-19T00:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1375,8 +1375,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-14T22:43:15",
-        "resolved_date": "2026-05-15T08:43:15",
+        "created_date": "2026-05-16T02:15:31",
+        "resolved_date": "2026-05-16T12:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1385,7 +1385,7 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "In Progress",
-        "created_date": "2026-06-29T22:43:15",
+        "created_date": "2026-07-01T02:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1395,8 +1395,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-04-28T03:43:15",
-        "resolved_date": "2026-04-28T16:43:15",
+        "created_date": "2026-04-29T07:15:31",
+        "resolved_date": "2026-04-29T20:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1405,8 +1405,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-10T21:43:15",
-        "resolved_date": "2026-07-13T09:43:15",
+        "created_date": "2026-07-12T01:15:31",
+        "resolved_date": "2026-07-14T13:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1415,7 +1415,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-18T06:43:15",
+        "created_date": "2026-07-19T10:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1425,8 +1425,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-04T17:43:15",
-        "resolved_date": "2026-07-06T03:43:15",
+        "created_date": "2026-07-05T21:15:31",
+        "resolved_date": "2026-07-07T07:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1435,7 +1435,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-07-04T12:43:15",
+        "created_date": "2026-07-05T16:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1445,7 +1445,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-06-03T22:43:15",
+        "created_date": "2026-06-05T02:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1455,7 +1455,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-06-25T19:43:15",
+        "created_date": "2026-06-26T23:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1465,8 +1465,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-28T05:43:15",
-        "resolved_date": "2026-06-30T20:43:15",
+        "created_date": "2026-06-29T09:15:31",
+        "resolved_date": "2026-07-02T00:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1475,7 +1475,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-05-10T22:43:15",
+        "created_date": "2026-05-12T02:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1485,7 +1485,7 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-05-05T15:43:15",
+        "created_date": "2026-05-06T19:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1495,7 +1495,7 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-06-27T07:43:15",
+        "created_date": "2026-06-28T11:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1505,7 +1505,7 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-05-16T09:43:15",
+        "created_date": "2026-05-17T13:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1515,8 +1515,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-10T08:43:15",
-        "resolved_date": "2026-07-12T12:43:15",
+        "created_date": "2026-07-11T12:15:31",
+        "resolved_date": "2026-07-13T16:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1525,8 +1525,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-01T19:43:15",
-        "resolved_date": "2026-06-03T12:43:15",
+        "created_date": "2026-06-02T23:15:31",
+        "resolved_date": "2026-06-04T16:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1535,7 +1535,7 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-07-25T18:43:15",
+        "created_date": "2026-07-26T22:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1545,8 +1545,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-27T14:43:15",
-        "resolved_date": "2026-07-28T07:43:15",
+        "created_date": "2026-07-28T18:15:31",
+        "resolved_date": "2026-07-29T11:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1555,8 +1555,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-31T13:43:15",
-        "resolved_date": "2026-06-02T08:43:15",
+        "created_date": "2026-06-01T17:15:31",
+        "resolved_date": "2026-06-03T12:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1565,8 +1565,8 @@
         "subject": "Feature request",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-19T07:43:15",
-        "resolved_date": "2026-07-21T17:43:15",
+        "created_date": "2026-07-20T11:15:31",
+        "resolved_date": "2026-07-22T21:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1575,8 +1575,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-14T05:43:15",
-        "resolved_date": "2026-05-16T08:43:15",
+        "created_date": "2026-05-15T09:15:31",
+        "resolved_date": "2026-05-17T12:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1585,7 +1585,7 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-07-28T02:43:15",
+        "created_date": "2026-07-29T06:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1595,8 +1595,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-11T03:43:15",
-        "resolved_date": "2026-07-13T05:43:15",
+        "created_date": "2026-07-12T07:15:31",
+        "resolved_date": "2026-07-14T09:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1605,7 +1605,7 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-06-24T13:43:15",
+        "created_date": "2026-06-25T17:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1615,8 +1615,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-08-02T14:43:15",
-        "resolved_date": "2026-08-03T22:43:15",
+        "created_date": "2026-08-03T18:15:31",
+        "resolved_date": "2026-08-05T02:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1625,8 +1625,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-19T04:43:15",
-        "resolved_date": "2026-07-20T05:43:15",
+        "created_date": "2026-07-20T08:15:31",
+        "resolved_date": "2026-07-21T09:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1635,7 +1635,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-07-13T16:43:15",
+        "created_date": "2026-07-14T20:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1645,8 +1645,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-27T13:43:15",
-        "resolved_date": "2026-04-28T01:43:15",
+        "created_date": "2026-04-28T17:15:31",
+        "resolved_date": "2026-04-29T05:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1655,8 +1655,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-27T22:43:15",
-        "resolved_date": "2026-07-28T05:43:15",
+        "created_date": "2026-07-29T02:15:31",
+        "resolved_date": "2026-07-29T09:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1665,7 +1665,7 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-07-14T01:43:15",
+        "created_date": "2026-07-15T05:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1675,7 +1675,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-05-11T21:43:15",
+        "created_date": "2026-05-13T01:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1685,8 +1685,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-14T01:43:15",
-        "resolved_date": "2026-07-16T09:43:15",
+        "created_date": "2026-07-15T05:15:31",
+        "resolved_date": "2026-07-17T13:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1695,8 +1695,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-27T00:43:15",
-        "resolved_date": "2026-06-27T08:43:15",
+        "created_date": "2026-06-28T04:15:31",
+        "resolved_date": "2026-06-28T12:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1705,8 +1705,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-31T09:43:15",
-        "resolved_date": "2026-08-03T01:43:15",
+        "created_date": "2026-08-01T13:15:31",
+        "resolved_date": "2026-08-04T05:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1715,8 +1715,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-20T05:43:15",
-        "resolved_date": "2026-06-22T23:43:15",
+        "created_date": "2026-06-21T09:15:31",
+        "resolved_date": "2026-06-24T03:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1725,8 +1725,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-06T14:43:15",
-        "resolved_date": "2026-05-07T04:43:15",
+        "created_date": "2026-05-07T18:15:31",
+        "resolved_date": "2026-05-08T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1735,8 +1735,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-19T17:43:15",
-        "resolved_date": "2026-07-22T15:43:15",
+        "created_date": "2026-07-20T21:15:31",
+        "resolved_date": "2026-07-23T19:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1745,8 +1745,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-31T16:43:15",
-        "resolved_date": "2026-08-01T18:43:15",
+        "created_date": "2026-08-01T20:15:31",
+        "resolved_date": "2026-08-02T22:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1755,8 +1755,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-15T02:43:15",
-        "resolved_date": "2026-07-15T06:43:15",
+        "created_date": "2026-07-16T06:15:31",
+        "resolved_date": "2026-07-16T10:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1765,8 +1765,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-26T08:43:15",
-        "resolved_date": "2026-05-26T11:43:15",
+        "created_date": "2026-05-27T12:15:31",
+        "resolved_date": "2026-05-27T15:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1775,8 +1775,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-12T10:43:15",
-        "resolved_date": "2026-07-13T05:43:15",
+        "created_date": "2026-07-13T14:15:31",
+        "resolved_date": "2026-07-14T09:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1785,8 +1785,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-13T14:43:15",
-        "resolved_date": "2026-05-14T20:43:15",
+        "created_date": "2026-05-14T18:15:31",
+        "resolved_date": "2026-05-16T00:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1795,8 +1795,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-16T20:43:15",
-        "resolved_date": "2026-07-19T03:43:15",
+        "created_date": "2026-07-18T00:15:31",
+        "resolved_date": "2026-07-20T07:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1805,8 +1805,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-04T21:43:15",
-        "resolved_date": "2026-05-06T18:43:15",
+        "created_date": "2026-05-06T01:15:31",
+        "resolved_date": "2026-05-07T22:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1815,8 +1815,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-18T21:43:15",
-        "resolved_date": "2026-06-19T06:43:15",
+        "created_date": "2026-06-20T01:15:31",
+        "resolved_date": "2026-06-20T10:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1825,7 +1825,7 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-06-16T09:43:15",
+        "created_date": "2026-06-17T13:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1835,8 +1835,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-15T23:43:15",
-        "resolved_date": "2026-05-16T18:43:15",
+        "created_date": "2026-05-17T03:15:31",
+        "resolved_date": "2026-05-17T22:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1845,8 +1845,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-04T07:43:15",
-        "resolved_date": "2026-05-05T04:43:15",
+        "created_date": "2026-05-05T11:15:31",
+        "resolved_date": "2026-05-06T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1855,8 +1855,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-26T18:43:15",
-        "resolved_date": "2026-06-27T18:43:15",
+        "created_date": "2026-06-27T22:15:31",
+        "resolved_date": "2026-06-28T22:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1865,7 +1865,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-06-06T00:43:15",
+        "created_date": "2026-06-07T04:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -1875,7 +1875,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-05T12:43:15",
+        "created_date": "2026-07-06T16:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -1885,7 +1885,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-04T22:43:15",
+        "created_date": "2026-05-06T02:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -1895,7 +1895,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-05-27T00:43:15",
+        "created_date": "2026-05-28T04:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -1905,8 +1905,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-08T15:43:15",
-        "resolved_date": "2026-06-10T00:43:15",
+        "created_date": "2026-06-09T19:15:31",
+        "resolved_date": "2026-06-11T04:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1915,7 +1915,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-05-21T16:43:15",
+        "created_date": "2026-05-22T20:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1925,8 +1925,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-22T07:43:15",
-        "resolved_date": "2026-07-25T04:43:15",
+        "created_date": "2026-07-23T11:15:31",
+        "resolved_date": "2026-07-26T08:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1935,8 +1935,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-07T15:43:15",
-        "resolved_date": "2026-05-10T04:43:15",
+        "created_date": "2026-05-08T19:15:31",
+        "resolved_date": "2026-05-11T08:15:31",
         "sentiment": "Positive"
     },
     {
@@ -1945,8 +1945,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-25T14:43:15",
-        "resolved_date": "2026-05-26T14:43:15",
+        "created_date": "2026-05-26T18:15:31",
+        "resolved_date": "2026-05-27T18:15:31",
         "sentiment": "Neutral"
     },
     {
@@ -1955,8 +1955,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-25T05:43:15",
-        "resolved_date": "2026-06-25T22:43:15",
+        "created_date": "2026-06-26T09:15:31",
+        "resolved_date": "2026-06-27T02:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1965,7 +1965,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-05-22T15:43:15",
+        "created_date": "2026-05-23T19:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1975,8 +1975,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-15T05:43:15",
-        "resolved_date": "2026-06-16T21:43:15",
+        "created_date": "2026-06-16T09:15:31",
+        "resolved_date": "2026-06-18T01:15:31",
         "sentiment": "Negative"
     },
     {
@@ -1985,7 +1985,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-06-02T19:43:15",
+        "created_date": "2026-06-03T23:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -1995,7 +1995,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-05-10T21:43:15",
+        "created_date": "2026-05-12T01:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2005,7 +2005,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-25T19:43:15",
+        "created_date": "2026-06-26T23:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2015,8 +2015,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-23T16:43:15",
-        "resolved_date": "2026-06-25T07:43:15",
+        "created_date": "2026-06-24T20:15:31",
+        "resolved_date": "2026-06-26T11:15:31",
         "sentiment": "Positive"
     },
     {
@@ -2025,7 +2025,7 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-05-27T17:43:15",
+        "created_date": "2026-05-28T21:15:31",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2035,7 +2035,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-06-25T08:43:15",
+        "created_date": "2026-06-26T12:15:31",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2045,8 +2045,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-15T02:43:15",
-        "resolved_date": "2026-05-18T00:43:15",
+        "created_date": "2026-05-16T06:15:31",
+        "resolved_date": "2026-05-19T04:15:31",
         "sentiment": "Negative"
     },
     {
@@ -2055,7 +2055,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-08-01T18:43:15",
+        "created_date": "2026-08-02T22:15:31",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2065,7 +2065,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-07-03T20:43:15",
+        "created_date": "2026-07-05T00:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2075,8 +2075,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-04T03:43:15",
-        "resolved_date": "2026-07-06T01:43:15",
+        "created_date": "2026-07-05T07:15:32",
+        "resolved_date": "2026-07-07T05:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2085,8 +2085,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-14T23:43:15",
-        "resolved_date": "2026-07-16T03:43:15",
+        "created_date": "2026-07-16T03:15:32",
+        "resolved_date": "2026-07-17T07:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2095,8 +2095,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-09T07:43:15",
-        "resolved_date": "2026-07-12T03:43:15",
+        "created_date": "2026-07-10T11:15:32",
+        "resolved_date": "2026-07-13T07:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2105,7 +2105,7 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "In Progress",
-        "created_date": "2026-07-31T09:43:15",
+        "created_date": "2026-08-01T13:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2115,8 +2115,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-06T00:43:15",
-        "resolved_date": "2026-06-08T18:43:15",
+        "created_date": "2026-06-07T04:15:32",
+        "resolved_date": "2026-06-09T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2125,8 +2125,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-04-28T14:43:15",
-        "resolved_date": "2026-04-29T20:43:15",
+        "created_date": "2026-04-29T18:15:32",
+        "resolved_date": "2026-05-01T00:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2135,7 +2135,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-05-12T09:43:15",
+        "created_date": "2026-05-13T13:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2145,8 +2145,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-08T13:43:15",
-        "resolved_date": "2026-06-09T11:43:15",
+        "created_date": "2026-06-09T17:15:32",
+        "resolved_date": "2026-06-10T15:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2155,7 +2155,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-06T09:43:15",
+        "created_date": "2026-05-07T13:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2165,7 +2165,7 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "In Progress",
-        "created_date": "2026-07-07T21:43:15",
+        "created_date": "2026-07-09T01:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2175,8 +2175,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-03T09:43:15",
-        "resolved_date": "2026-06-04T10:43:15",
+        "created_date": "2026-06-04T13:15:32",
+        "resolved_date": "2026-06-05T14:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2185,8 +2185,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-08T15:43:15",
-        "resolved_date": "2026-06-09T05:43:15",
+        "created_date": "2026-06-09T19:15:32",
+        "resolved_date": "2026-06-10T09:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2195,8 +2195,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-14T17:43:15",
-        "resolved_date": "2026-05-15T16:43:15",
+        "created_date": "2026-05-15T21:15:32",
+        "resolved_date": "2026-05-16T20:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2205,8 +2205,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-22T08:43:15",
-        "resolved_date": "2026-07-24T22:43:15",
+        "created_date": "2026-07-23T12:15:32",
+        "resolved_date": "2026-07-26T02:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2215,7 +2215,7 @@
         "subject": "Feature request",
         "priority": "Critical",
         "status": "Open",
-        "created_date": "2026-05-12T19:43:15",
+        "created_date": "2026-05-13T23:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2225,8 +2225,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-17T17:43:15",
-        "resolved_date": "2026-06-17T20:43:15",
+        "created_date": "2026-06-18T21:15:32",
+        "resolved_date": "2026-06-19T00:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2235,8 +2235,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-25T22:43:15",
-        "resolved_date": "2026-05-26T17:43:15",
+        "created_date": "2026-05-27T02:15:32",
+        "resolved_date": "2026-05-27T21:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2245,7 +2245,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-06-05T08:43:15",
+        "created_date": "2026-06-06T12:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2255,8 +2255,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-07T22:43:15",
-        "resolved_date": "2026-05-10T09:43:15",
+        "created_date": "2026-05-09T02:15:32",
+        "resolved_date": "2026-05-11T13:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2265,8 +2265,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-05T04:43:15",
-        "resolved_date": "2026-05-06T21:43:15",
+        "created_date": "2026-05-06T08:15:32",
+        "resolved_date": "2026-05-08T01:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2275,7 +2275,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-07-24T09:43:15",
+        "created_date": "2026-07-25T13:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2285,8 +2285,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-16T07:43:15",
-        "resolved_date": "2026-07-17T16:43:15",
+        "created_date": "2026-07-17T11:15:32",
+        "resolved_date": "2026-07-18T20:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2295,7 +2295,7 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Open",
-        "created_date": "2026-05-09T11:43:15",
+        "created_date": "2026-05-10T15:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2305,8 +2305,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-21T03:43:15",
-        "resolved_date": "2026-07-23T07:43:15",
+        "created_date": "2026-07-22T07:15:32",
+        "resolved_date": "2026-07-24T11:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2315,7 +2315,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-07-15T17:43:15",
+        "created_date": "2026-07-16T21:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2325,8 +2325,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-21T09:43:15",
-        "resolved_date": "2026-06-24T03:43:15",
+        "created_date": "2026-06-22T13:15:32",
+        "resolved_date": "2026-06-25T07:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2335,7 +2335,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-10T06:43:15",
+        "created_date": "2026-05-11T10:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2345,7 +2345,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-07T04:43:15",
+        "created_date": "2026-05-08T08:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2355,8 +2355,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-28T04:43:15",
-        "resolved_date": "2026-04-30T04:43:15",
+        "created_date": "2026-04-29T08:15:32",
+        "resolved_date": "2026-05-01T08:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2365,7 +2365,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-06-19T19:43:15",
+        "created_date": "2026-06-20T23:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2375,8 +2375,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-11T15:43:15",
-        "resolved_date": "2026-05-14T05:43:15",
+        "created_date": "2026-05-12T19:15:32",
+        "resolved_date": "2026-05-15T09:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2385,7 +2385,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-09T07:43:15",
+        "created_date": "2026-05-10T11:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2395,8 +2395,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-25T05:43:15",
-        "resolved_date": "2026-06-25T16:43:15",
+        "created_date": "2026-06-26T09:15:32",
+        "resolved_date": "2026-06-26T20:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2405,8 +2405,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-08-04T04:43:15",
-        "resolved_date": "2026-08-06T17:43:15",
+        "created_date": "2026-08-05T08:15:32",
+        "resolved_date": "2026-08-07T21:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2415,8 +2415,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-07T05:43:15",
-        "resolved_date": "2026-05-10T02:43:15",
+        "created_date": "2026-05-08T09:15:32",
+        "resolved_date": "2026-05-11T06:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2425,7 +2425,7 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-06-18T13:43:15",
+        "created_date": "2026-06-19T17:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2435,8 +2435,8 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-03T08:43:15",
-        "resolved_date": "2026-07-04T03:43:15",
+        "created_date": "2026-07-04T12:15:32",
+        "resolved_date": "2026-07-05T07:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2445,8 +2445,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-21T03:43:15",
-        "resolved_date": "2026-07-23T18:43:15",
+        "created_date": "2026-07-22T07:15:32",
+        "resolved_date": "2026-07-24T22:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2455,8 +2455,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-20T02:43:15",
-        "resolved_date": "2026-05-22T05:43:15",
+        "created_date": "2026-05-21T06:15:32",
+        "resolved_date": "2026-05-23T09:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2465,7 +2465,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-05-13T06:43:15",
+        "created_date": "2026-05-14T10:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2475,7 +2475,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-26T10:43:15",
+        "created_date": "2026-06-27T14:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2485,7 +2485,7 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "In Progress",
-        "created_date": "2026-05-18T07:43:15",
+        "created_date": "2026-05-19T11:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2495,8 +2495,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-07T15:43:15",
-        "resolved_date": "2026-07-08T09:43:15",
+        "created_date": "2026-07-08T19:15:32",
+        "resolved_date": "2026-07-09T13:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2505,8 +2505,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-06T00:43:15",
-        "resolved_date": "2026-07-08T19:43:15",
+        "created_date": "2026-07-07T04:15:32",
+        "resolved_date": "2026-07-09T23:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2515,8 +2515,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-13T04:43:15",
-        "resolved_date": "2026-07-14T12:43:15",
+        "created_date": "2026-07-14T08:15:32",
+        "resolved_date": "2026-07-15T16:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2525,7 +2525,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-06-27T10:43:15",
+        "created_date": "2026-06-28T14:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2535,8 +2535,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-18T16:43:15",
-        "resolved_date": "2026-06-21T04:43:15",
+        "created_date": "2026-06-19T20:15:32",
+        "resolved_date": "2026-06-22T08:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2545,8 +2545,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-06T01:43:15",
-        "resolved_date": "2026-05-07T15:43:15",
+        "created_date": "2026-05-07T05:15:32",
+        "resolved_date": "2026-05-08T19:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2555,8 +2555,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-10T00:43:15",
-        "resolved_date": "2026-06-11T07:43:15",
+        "created_date": "2026-06-11T04:15:32",
+        "resolved_date": "2026-06-12T11:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2565,8 +2565,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-09T09:43:15",
-        "resolved_date": "2026-05-09T13:43:15",
+        "created_date": "2026-05-10T13:15:32",
+        "resolved_date": "2026-05-10T17:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2575,8 +2575,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-06T02:43:15",
-        "resolved_date": "2026-05-06T08:43:15",
+        "created_date": "2026-05-07T06:15:32",
+        "resolved_date": "2026-05-07T12:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2585,8 +2585,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-29T02:43:15",
-        "resolved_date": "2026-06-30T13:43:15",
+        "created_date": "2026-06-30T06:15:32",
+        "resolved_date": "2026-07-01T17:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2595,8 +2595,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-06T23:43:15",
-        "resolved_date": "2026-07-07T16:43:15",
+        "created_date": "2026-07-08T03:15:32",
+        "resolved_date": "2026-07-08T20:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2605,8 +2605,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-16T23:43:15",
-        "resolved_date": "2026-06-19T04:43:15",
+        "created_date": "2026-06-18T03:15:32",
+        "resolved_date": "2026-06-20T08:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2615,8 +2615,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-14T19:43:15",
-        "resolved_date": "2026-06-15T16:43:15",
+        "created_date": "2026-06-15T23:15:32",
+        "resolved_date": "2026-06-16T20:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2625,8 +2625,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-04T12:43:15",
-        "resolved_date": "2026-05-05T01:43:15",
+        "created_date": "2026-05-05T16:15:32",
+        "resolved_date": "2026-05-06T05:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2635,8 +2635,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-19T09:43:15",
-        "resolved_date": "2026-07-20T09:43:15",
+        "created_date": "2026-07-20T13:15:32",
+        "resolved_date": "2026-07-21T13:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2645,8 +2645,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-30T19:43:15",
-        "resolved_date": "2026-07-31T14:43:15",
+        "created_date": "2026-07-31T23:15:32",
+        "resolved_date": "2026-08-01T18:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2655,8 +2655,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-20T21:43:15",
-        "resolved_date": "2026-06-21T18:43:15",
+        "created_date": "2026-06-22T01:15:32",
+        "resolved_date": "2026-06-22T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2665,7 +2665,7 @@
         "subject": "Data export failing",
         "priority": "Critical",
         "status": "Open",
-        "created_date": "2026-06-24T22:43:15",
+        "created_date": "2026-06-26T02:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2675,8 +2675,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-14T06:43:15",
-        "resolved_date": "2026-06-15T15:43:15",
+        "created_date": "2026-06-15T10:15:32",
+        "resolved_date": "2026-06-16T19:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2685,8 +2685,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-15T17:43:15",
-        "resolved_date": "2026-05-17T20:43:15",
+        "created_date": "2026-05-16T21:15:32",
+        "resolved_date": "2026-05-19T00:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2695,8 +2695,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-24T04:43:15",
-        "resolved_date": "2026-05-24T23:43:15",
+        "created_date": "2026-05-25T08:15:32",
+        "resolved_date": "2026-05-26T03:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2705,7 +2705,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-06-18T22:43:15",
+        "created_date": "2026-06-20T02:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2715,7 +2715,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-06-12T02:43:15",
+        "created_date": "2026-06-13T06:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2725,7 +2725,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-07-12T09:43:15",
+        "created_date": "2026-07-13T13:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2735,7 +2735,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-07-27T19:43:15",
+        "created_date": "2026-07-28T23:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2745,7 +2745,7 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "In Progress",
-        "created_date": "2026-08-03T21:43:15",
+        "created_date": "2026-08-05T01:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2755,8 +2755,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-08-04T08:43:15",
-        "resolved_date": "2026-08-06T23:43:15",
+        "created_date": "2026-08-05T12:15:32",
+        "resolved_date": "2026-08-08T03:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2765,8 +2765,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-08-01T06:43:15",
-        "resolved_date": "2026-08-01T09:43:15",
+        "created_date": "2026-08-02T10:15:32",
+        "resolved_date": "2026-08-02T13:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2775,8 +2775,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-20T17:43:15",
-        "resolved_date": "2026-06-21T09:43:15",
+        "created_date": "2026-06-21T21:15:32",
+        "resolved_date": "2026-06-22T13:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2785,7 +2785,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-20T06:43:15",
+        "created_date": "2026-07-21T10:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -2795,8 +2795,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-02T05:43:15",
-        "resolved_date": "2026-07-04T12:43:15",
+        "created_date": "2026-07-03T09:15:32",
+        "resolved_date": "2026-07-05T16:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2805,8 +2805,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-31T19:43:15",
-        "resolved_date": "2026-06-03T00:43:15",
+        "created_date": "2026-06-01T23:15:32",
+        "resolved_date": "2026-06-04T04:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2815,7 +2815,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-07-10T14:43:15",
+        "created_date": "2026-07-11T18:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2825,8 +2825,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-11T16:43:15",
-        "resolved_date": "2026-06-12T06:43:15",
+        "created_date": "2026-06-12T20:15:32",
+        "resolved_date": "2026-06-13T10:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2835,8 +2835,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-17T14:43:15",
-        "resolved_date": "2026-05-17T18:43:15",
+        "created_date": "2026-05-18T18:15:32",
+        "resolved_date": "2026-05-18T22:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2845,8 +2845,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-01T18:43:15",
-        "resolved_date": "2026-07-03T19:43:15",
+        "created_date": "2026-07-02T22:15:32",
+        "resolved_date": "2026-07-04T23:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2855,7 +2855,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-07-09T18:43:15",
+        "created_date": "2026-07-10T22:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2865,7 +2865,7 @@
         "subject": "Billing question",
         "priority": "Critical",
         "status": "Awaiting Response",
-        "created_date": "2026-06-25T06:43:15",
+        "created_date": "2026-06-26T10:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -2875,8 +2875,8 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-17T03:43:15",
-        "resolved_date": "2026-07-18T23:43:15",
+        "created_date": "2026-07-18T07:15:32",
+        "resolved_date": "2026-07-20T03:15:32",
         "sentiment": "Negative"
     },
     {
@@ -2885,8 +2885,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-13T19:43:15",
-        "resolved_date": "2026-05-16T03:43:15",
+        "created_date": "2026-05-14T23:15:32",
+        "resolved_date": "2026-05-17T07:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2895,8 +2895,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-07T11:43:15",
-        "resolved_date": "2026-07-09T18:43:15",
+        "created_date": "2026-07-08T15:15:32",
+        "resolved_date": "2026-07-10T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2905,8 +2905,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-02T12:43:15",
-        "resolved_date": "2026-07-03T05:43:15",
+        "created_date": "2026-07-03T16:15:32",
+        "resolved_date": "2026-07-04T09:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2915,8 +2915,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-13T17:43:15",
-        "resolved_date": "2026-05-15T11:43:15",
+        "created_date": "2026-05-14T21:15:32",
+        "resolved_date": "2026-05-16T15:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2925,8 +2925,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-25T09:43:15",
-        "resolved_date": "2026-06-26T03:43:15",
+        "created_date": "2026-06-26T13:15:32",
+        "resolved_date": "2026-06-27T07:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2935,8 +2935,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-23T08:43:15",
-        "resolved_date": "2026-07-24T00:43:15",
+        "created_date": "2026-07-24T12:15:32",
+        "resolved_date": "2026-07-25T04:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2945,8 +2945,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-11T11:43:15",
-        "resolved_date": "2026-05-13T08:43:15",
+        "created_date": "2026-05-12T15:15:32",
+        "resolved_date": "2026-05-14T12:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2955,8 +2955,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-18T09:43:15",
-        "resolved_date": "2026-07-20T05:43:15",
+        "created_date": "2026-07-19T13:15:32",
+        "resolved_date": "2026-07-21T09:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2965,8 +2965,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-15T01:43:15",
-        "resolved_date": "2026-07-17T10:43:15",
+        "created_date": "2026-07-16T05:15:32",
+        "resolved_date": "2026-07-18T14:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -2975,8 +2975,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-18T15:43:15",
-        "resolved_date": "2026-06-19T04:43:15",
+        "created_date": "2026-06-19T19:15:32",
+        "resolved_date": "2026-06-20T08:15:32",
         "sentiment": "Positive"
     },
     {
@@ -2985,7 +2985,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-22T02:43:15",
+        "created_date": "2026-07-23T06:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -2995,8 +2995,8 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-12T01:43:15",
-        "resolved_date": "2026-07-14T13:43:15",
+        "created_date": "2026-07-13T05:15:32",
+        "resolved_date": "2026-07-15T17:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3005,7 +3005,7 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-07-19T21:43:15",
+        "created_date": "2026-07-21T01:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3015,8 +3015,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-23T21:43:15",
-        "resolved_date": "2026-06-25T07:43:15",
+        "created_date": "2026-06-25T01:15:32",
+        "resolved_date": "2026-06-26T11:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3025,8 +3025,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-11T11:43:15",
-        "resolved_date": "2026-07-11T18:43:15",
+        "created_date": "2026-07-12T15:15:32",
+        "resolved_date": "2026-07-12T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3035,8 +3035,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-20T05:43:15",
-        "resolved_date": "2026-05-22T08:43:15",
+        "created_date": "2026-05-21T09:15:32",
+        "resolved_date": "2026-05-23T12:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3045,8 +3045,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-24T23:43:15",
-        "resolved_date": "2026-05-25T03:43:15",
+        "created_date": "2026-05-26T03:15:32",
+        "resolved_date": "2026-05-26T07:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3055,8 +3055,8 @@
         "subject": "API timeout issues",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-04-28T23:43:15",
-        "resolved_date": "2026-04-30T19:43:15",
+        "created_date": "2026-04-30T03:15:32",
+        "resolved_date": "2026-05-01T23:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3065,8 +3065,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-09T16:43:15",
-        "resolved_date": "2026-06-10T07:43:15",
+        "created_date": "2026-06-10T20:15:32",
+        "resolved_date": "2026-06-11T11:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3075,8 +3075,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-07T00:43:15",
-        "resolved_date": "2026-05-09T09:43:15",
+        "created_date": "2026-05-08T04:15:32",
+        "resolved_date": "2026-05-10T13:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3085,8 +3085,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-24T23:43:15",
-        "resolved_date": "2026-07-27T19:43:15",
+        "created_date": "2026-07-26T03:15:32",
+        "resolved_date": "2026-07-28T23:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3095,8 +3095,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-18T16:43:15",
-        "resolved_date": "2026-06-20T22:43:15",
+        "created_date": "2026-06-19T20:15:32",
+        "resolved_date": "2026-06-22T02:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3105,8 +3105,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-09T19:43:15",
-        "resolved_date": "2026-07-11T23:43:15",
+        "created_date": "2026-07-10T23:15:32",
+        "resolved_date": "2026-07-13T03:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3115,7 +3115,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-06-28T10:43:15",
+        "created_date": "2026-06-29T14:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3125,8 +3125,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-27T14:43:15",
-        "resolved_date": "2026-06-29T12:43:15",
+        "created_date": "2026-06-28T18:15:32",
+        "resolved_date": "2026-06-30T16:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3135,8 +3135,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-28T00:43:15",
-        "resolved_date": "2026-07-29T09:43:15",
+        "created_date": "2026-07-29T04:15:32",
+        "resolved_date": "2026-07-30T13:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3145,7 +3145,7 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "In Progress",
-        "created_date": "2026-05-27T03:43:15",
+        "created_date": "2026-05-28T07:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3155,7 +3155,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-07T00:43:15",
+        "created_date": "2026-05-08T04:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3165,7 +3165,7 @@
         "subject": "Billing question",
         "priority": "Critical",
         "status": "In Progress",
-        "created_date": "2026-05-15T06:43:15",
+        "created_date": "2026-05-16T10:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3175,8 +3175,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-22T15:43:15",
-        "resolved_date": "2026-06-24T01:43:15",
+        "created_date": "2026-06-23T19:15:32",
+        "resolved_date": "2026-06-25T05:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3185,8 +3185,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-03T11:43:15",
-        "resolved_date": "2026-05-05T22:43:15",
+        "created_date": "2026-05-04T15:15:32",
+        "resolved_date": "2026-05-07T02:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3195,7 +3195,7 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Open",
-        "created_date": "2026-07-27T07:43:15",
+        "created_date": "2026-07-28T11:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3205,7 +3205,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-06-22T15:43:15",
+        "created_date": "2026-06-23T19:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3215,7 +3215,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-07-14T07:43:15",
+        "created_date": "2026-07-15T11:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3225,8 +3225,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-26T14:43:15",
-        "resolved_date": "2026-07-27T17:43:15",
+        "created_date": "2026-07-27T18:15:32",
+        "resolved_date": "2026-07-28T21:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3235,8 +3235,8 @@
         "subject": "Feature request",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-05-25T19:43:15",
-        "resolved_date": "2026-05-26T15:43:15",
+        "created_date": "2026-05-26T23:15:32",
+        "resolved_date": "2026-05-27T19:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3245,8 +3245,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-05T22:43:15",
-        "resolved_date": "2026-05-07T19:43:15",
+        "created_date": "2026-05-07T02:15:32",
+        "resolved_date": "2026-05-08T23:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3255,7 +3255,7 @@
         "subject": "API timeout issues",
         "priority": "Critical",
         "status": "Awaiting Response",
-        "created_date": "2026-05-29T11:43:15",
+        "created_date": "2026-05-30T15:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3265,8 +3265,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-26T01:43:15",
-        "resolved_date": "2026-07-26T06:43:15",
+        "created_date": "2026-07-27T05:15:32",
+        "resolved_date": "2026-07-27T10:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3275,8 +3275,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-25T08:43:15",
-        "resolved_date": "2026-06-25T19:43:15",
+        "created_date": "2026-06-26T12:15:32",
+        "resolved_date": "2026-06-26T23:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3285,8 +3285,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-16T23:43:15",
-        "resolved_date": "2026-07-18T22:43:15",
+        "created_date": "2026-07-18T03:15:32",
+        "resolved_date": "2026-07-20T02:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3295,8 +3295,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-31T13:43:15",
-        "resolved_date": "2026-08-01T04:43:15",
+        "created_date": "2026-08-01T17:15:32",
+        "resolved_date": "2026-08-02T08:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3305,8 +3305,8 @@
         "subject": "API timeout issues",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-16T20:43:15",
-        "resolved_date": "2026-07-18T00:43:15",
+        "created_date": "2026-07-18T00:15:32",
+        "resolved_date": "2026-07-19T04:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3315,8 +3315,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-29T21:43:15",
-        "resolved_date": "2026-05-31T13:43:15",
+        "created_date": "2026-05-31T01:15:32",
+        "resolved_date": "2026-06-01T17:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3325,8 +3325,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-12T02:43:15",
-        "resolved_date": "2026-07-13T12:43:15",
+        "created_date": "2026-07-13T06:15:32",
+        "resolved_date": "2026-07-14T16:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3335,7 +3335,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-12T23:43:15",
+        "created_date": "2026-07-14T03:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3345,8 +3345,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-05T14:43:15",
-        "resolved_date": "2026-06-07T23:43:15",
+        "created_date": "2026-06-06T18:15:32",
+        "resolved_date": "2026-06-09T03:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3355,8 +3355,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-14T14:43:15",
-        "resolved_date": "2026-06-16T04:43:15",
+        "created_date": "2026-06-15T18:15:32",
+        "resolved_date": "2026-06-17T08:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3365,8 +3365,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-16T07:43:15",
-        "resolved_date": "2026-06-17T10:43:15",
+        "created_date": "2026-06-17T11:15:32",
+        "resolved_date": "2026-06-18T14:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3375,8 +3375,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-18T14:43:15",
-        "resolved_date": "2026-06-19T06:43:15",
+        "created_date": "2026-06-19T18:15:32",
+        "resolved_date": "2026-06-20T10:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3385,8 +3385,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-19T13:43:15",
-        "resolved_date": "2026-07-20T21:43:15",
+        "created_date": "2026-07-20T17:15:32",
+        "resolved_date": "2026-07-22T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3395,8 +3395,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-25T02:43:15",
-        "resolved_date": "2026-07-25T19:43:15",
+        "created_date": "2026-07-26T06:15:32",
+        "resolved_date": "2026-07-26T23:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3405,8 +3405,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-31T17:43:15",
-        "resolved_date": "2026-06-03T11:43:15",
+        "created_date": "2026-06-01T21:15:32",
+        "resolved_date": "2026-06-04T15:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3415,7 +3415,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-06-26T19:43:15",
+        "created_date": "2026-06-27T23:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3425,7 +3425,7 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "In Progress",
-        "created_date": "2026-05-12T16:43:15",
+        "created_date": "2026-05-13T20:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3435,8 +3435,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-11T11:43:15",
-        "resolved_date": "2026-06-12T02:43:15",
+        "created_date": "2026-06-12T15:15:32",
+        "resolved_date": "2026-06-13T06:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3445,8 +3445,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-01T04:43:15",
-        "resolved_date": "2026-07-02T13:43:15",
+        "created_date": "2026-07-02T08:15:32",
+        "resolved_date": "2026-07-03T17:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3455,8 +3455,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-06T17:43:15",
-        "resolved_date": "2026-06-08T18:43:15",
+        "created_date": "2026-06-07T21:15:32",
+        "resolved_date": "2026-06-09T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3465,7 +3465,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-05-17T06:43:15",
+        "created_date": "2026-05-18T10:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3475,8 +3475,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-23T02:43:15",
-        "resolved_date": "2026-06-25T22:43:15",
+        "created_date": "2026-06-24T06:15:32",
+        "resolved_date": "2026-06-27T02:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3485,8 +3485,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-25T05:43:15",
-        "resolved_date": "2026-05-28T00:43:15",
+        "created_date": "2026-05-26T09:15:32",
+        "resolved_date": "2026-05-29T04:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3495,8 +3495,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-25T11:43:15",
-        "resolved_date": "2026-05-27T16:43:15",
+        "created_date": "2026-05-26T15:15:32",
+        "resolved_date": "2026-05-28T20:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3505,8 +3505,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-30T07:43:15",
-        "resolved_date": "2026-05-03T04:43:15",
+        "created_date": "2026-05-01T11:15:32",
+        "resolved_date": "2026-05-04T08:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3515,8 +3515,8 @@
         "subject": "Integration error",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-16T14:43:15",
-        "resolved_date": "2026-07-19T08:43:15",
+        "created_date": "2026-07-17T18:15:32",
+        "resolved_date": "2026-07-20T12:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3525,7 +3525,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-07-28T21:43:15",
+        "created_date": "2026-07-30T01:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3535,8 +3535,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-11T18:43:15",
-        "resolved_date": "2026-07-14T03:43:15",
+        "created_date": "2026-07-12T22:15:32",
+        "resolved_date": "2026-07-15T07:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3545,8 +3545,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-31T06:43:15",
-        "resolved_date": "2026-06-01T10:43:15",
+        "created_date": "2026-06-01T10:15:32",
+        "resolved_date": "2026-06-02T14:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3555,8 +3555,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-24T19:43:15",
-        "resolved_date": "2026-06-27T18:43:15",
+        "created_date": "2026-06-25T23:15:32",
+        "resolved_date": "2026-06-28T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3565,8 +3565,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-08-02T12:43:15",
-        "resolved_date": "2026-08-03T10:43:15",
+        "created_date": "2026-08-03T16:15:32",
+        "resolved_date": "2026-08-04T14:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3575,7 +3575,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-16T03:43:15",
+        "created_date": "2026-07-17T07:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3585,7 +3585,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-05T15:43:15",
+        "created_date": "2026-07-06T19:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3595,8 +3595,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-29T20:43:15",
-        "resolved_date": "2026-05-02T07:43:15",
+        "created_date": "2026-05-01T00:15:32",
+        "resolved_date": "2026-05-03T11:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3605,7 +3605,7 @@
         "subject": "Billing question",
         "priority": "Critical",
         "status": "In Progress",
-        "created_date": "2026-05-31T17:43:15",
+        "created_date": "2026-06-01T21:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3615,7 +3615,7 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-06-17T15:43:15",
+        "created_date": "2026-06-18T19:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3625,7 +3625,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-08T11:43:15",
+        "created_date": "2026-07-09T15:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3635,8 +3635,8 @@
         "subject": "Feature request",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-26T08:43:15",
-        "resolved_date": "2026-07-28T06:43:15",
+        "created_date": "2026-07-27T12:15:32",
+        "resolved_date": "2026-07-29T10:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3645,8 +3645,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-08T14:43:15",
-        "resolved_date": "2026-07-09T15:43:15",
+        "created_date": "2026-07-09T18:15:32",
+        "resolved_date": "2026-07-10T19:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3655,8 +3655,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-09T17:43:15",
-        "resolved_date": "2026-07-10T10:43:15",
+        "created_date": "2026-07-10T21:15:32",
+        "resolved_date": "2026-07-11T14:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3665,7 +3665,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-06-26T05:43:15",
+        "created_date": "2026-06-27T09:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3675,7 +3675,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-28T01:43:15",
+        "created_date": "2026-05-29T05:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3685,8 +3685,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-08T11:43:15",
-        "resolved_date": "2026-06-10T11:43:15",
+        "created_date": "2026-06-09T15:15:32",
+        "resolved_date": "2026-06-11T15:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3695,8 +3695,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-06T23:43:15",
-        "resolved_date": "2026-06-07T02:43:15",
+        "created_date": "2026-06-08T03:15:32",
+        "resolved_date": "2026-06-08T06:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3705,8 +3705,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-27T17:43:15",
-        "resolved_date": "2026-07-27T23:43:15",
+        "created_date": "2026-07-28T21:15:32",
+        "resolved_date": "2026-07-29T03:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3715,8 +3715,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-29T14:43:15",
-        "resolved_date": "2026-05-01T22:43:15",
+        "created_date": "2026-04-30T18:15:32",
+        "resolved_date": "2026-05-03T02:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3725,8 +3725,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-06T06:43:15",
-        "resolved_date": "2026-06-07T18:43:15",
+        "created_date": "2026-06-07T10:15:32",
+        "resolved_date": "2026-06-08T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3735,8 +3735,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-18T10:43:15",
-        "resolved_date": "2026-07-18T21:43:15",
+        "created_date": "2026-07-19T14:15:32",
+        "resolved_date": "2026-07-20T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3745,8 +3745,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-29T01:43:15",
-        "resolved_date": "2026-07-31T21:43:15",
+        "created_date": "2026-07-30T05:15:32",
+        "resolved_date": "2026-08-02T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3755,7 +3755,7 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "In Progress",
-        "created_date": "2026-08-04T06:43:15",
+        "created_date": "2026-08-05T10:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3765,8 +3765,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-26T09:43:15",
-        "resolved_date": "2026-05-27T20:43:15",
+        "created_date": "2026-05-27T13:15:32",
+        "resolved_date": "2026-05-29T00:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3775,8 +3775,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-08T12:43:15",
-        "resolved_date": "2026-07-09T13:43:15",
+        "created_date": "2026-07-09T16:15:32",
+        "resolved_date": "2026-07-10T17:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3785,8 +3785,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-10T23:43:15",
-        "resolved_date": "2026-07-12T07:43:15",
+        "created_date": "2026-07-12T03:15:32",
+        "resolved_date": "2026-07-13T11:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3795,7 +3795,7 @@
         "subject": "Billing question",
         "priority": "Critical",
         "status": "Awaiting Response",
-        "created_date": "2026-06-08T05:43:15",
+        "created_date": "2026-06-09T09:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3805,7 +3805,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-07-01T05:43:15",
+        "created_date": "2026-07-02T09:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3815,8 +3815,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-09T20:43:15",
-        "resolved_date": "2026-05-12T05:43:15",
+        "created_date": "2026-05-11T00:15:32",
+        "resolved_date": "2026-05-13T09:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3825,8 +3825,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-09T23:43:15",
-        "resolved_date": "2026-05-10T22:43:15",
+        "created_date": "2026-05-11T03:15:32",
+        "resolved_date": "2026-05-12T02:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3835,8 +3835,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-30T00:43:15",
-        "resolved_date": "2026-07-30T22:43:15",
+        "created_date": "2026-07-31T04:15:32",
+        "resolved_date": "2026-08-01T02:15:32",
         "sentiment": "Positive"
     },
     {
@@ -3845,7 +3845,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-06-23T17:43:15",
+        "created_date": "2026-06-24T21:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -3855,7 +3855,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-07-08T01:43:15",
+        "created_date": "2026-07-09T05:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -3865,8 +3865,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-07T12:43:15",
-        "resolved_date": "2026-07-07T21:43:15",
+        "created_date": "2026-07-08T16:15:32",
+        "resolved_date": "2026-07-09T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3875,8 +3875,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-23T04:43:15",
-        "resolved_date": "2026-05-25T21:43:15",
+        "created_date": "2026-05-24T08:15:32",
+        "resolved_date": "2026-05-27T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3885,7 +3885,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-08-04T10:43:15",
+        "created_date": "2026-08-05T14:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3895,8 +3895,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-26T12:43:15",
-        "resolved_date": "2026-06-29T11:43:15",
+        "created_date": "2026-06-27T16:15:32",
+        "resolved_date": "2026-06-30T15:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3905,8 +3905,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-07T19:43:15",
-        "resolved_date": "2026-06-10T12:43:15",
+        "created_date": "2026-06-08T23:15:32",
+        "resolved_date": "2026-06-11T16:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3915,8 +3915,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-08-01T21:43:15",
-        "resolved_date": "2026-08-03T05:43:15",
+        "created_date": "2026-08-03T01:15:32",
+        "resolved_date": "2026-08-04T09:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3925,8 +3925,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-23T12:43:15",
-        "resolved_date": "2026-05-25T05:43:15",
+        "created_date": "2026-05-24T16:15:32",
+        "resolved_date": "2026-05-26T09:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3935,8 +3935,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-06T17:43:15",
-        "resolved_date": "2026-07-08T10:43:15",
+        "created_date": "2026-07-07T21:15:32",
+        "resolved_date": "2026-07-09T14:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3945,7 +3945,7 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-06-09T04:43:15",
+        "created_date": "2026-06-10T08:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3955,8 +3955,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-20T21:43:15",
-        "resolved_date": "2026-05-22T09:43:15",
+        "created_date": "2026-05-22T01:15:32",
+        "resolved_date": "2026-05-23T13:15:32",
         "sentiment": "Negative"
     },
     {
@@ -3965,8 +3965,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-15T10:43:15",
-        "resolved_date": "2026-05-16T06:43:15",
+        "created_date": "2026-05-16T14:15:32",
+        "resolved_date": "2026-05-17T10:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3975,8 +3975,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-05-14T09:43:15",
-        "resolved_date": "2026-05-17T01:43:15",
+        "created_date": "2026-05-15T13:15:32",
+        "resolved_date": "2026-05-18T05:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -3985,7 +3985,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-05T16:43:15",
+        "created_date": "2026-06-06T20:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -3995,7 +3995,7 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-06-17T03:43:15",
+        "created_date": "2026-06-18T07:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4005,8 +4005,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-11T08:43:15",
-        "resolved_date": "2026-07-13T18:43:15",
+        "created_date": "2026-07-12T12:15:32",
+        "resolved_date": "2026-07-14T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4015,8 +4015,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-16T09:43:15",
-        "resolved_date": "2026-05-19T01:43:15",
+        "created_date": "2026-05-17T13:15:32",
+        "resolved_date": "2026-05-20T05:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4025,8 +4025,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-05T06:43:15",
-        "resolved_date": "2026-05-05T23:43:15",
+        "created_date": "2026-05-06T10:15:32",
+        "resolved_date": "2026-05-07T03:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4035,8 +4035,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-11T02:43:15",
-        "resolved_date": "2026-05-13T15:43:15",
+        "created_date": "2026-05-12T06:15:32",
+        "resolved_date": "2026-05-14T19:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4045,8 +4045,8 @@
         "subject": "Feature request",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-06-07T04:43:15",
-        "resolved_date": "2026-06-07T06:43:15",
+        "created_date": "2026-06-08T08:15:32",
+        "resolved_date": "2026-06-08T10:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4055,7 +4055,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-17T20:43:15",
+        "created_date": "2026-05-19T00:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4065,7 +4065,7 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-07-17T19:43:15",
+        "created_date": "2026-07-18T23:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4075,8 +4075,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-03T11:43:15",
-        "resolved_date": "2026-05-04T15:43:15",
+        "created_date": "2026-05-04T15:15:32",
+        "resolved_date": "2026-05-05T19:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4085,7 +4085,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-28T14:43:15",
+        "created_date": "2026-07-29T18:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4095,8 +4095,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-08T16:43:15",
-        "resolved_date": "2026-05-10T01:43:15",
+        "created_date": "2026-05-09T20:15:32",
+        "resolved_date": "2026-05-11T05:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4105,8 +4105,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-15T09:43:15",
-        "resolved_date": "2026-07-17T21:43:15",
+        "created_date": "2026-07-16T13:15:32",
+        "resolved_date": "2026-07-19T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4115,8 +4115,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-09T22:43:15",
-        "resolved_date": "2026-06-11T03:43:15",
+        "created_date": "2026-06-11T02:15:32",
+        "resolved_date": "2026-06-12T07:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4125,8 +4125,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-05-22T11:43:15",
-        "resolved_date": "2026-05-24T01:43:15",
+        "created_date": "2026-05-23T15:15:32",
+        "resolved_date": "2026-05-25T05:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4135,7 +4135,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-07-05T02:43:15",
+        "created_date": "2026-07-06T06:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4145,8 +4145,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-22T19:43:15",
-        "resolved_date": "2026-07-25T06:43:15",
+        "created_date": "2026-07-23T23:15:32",
+        "resolved_date": "2026-07-26T10:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4155,7 +4155,7 @@
         "subject": "Feature request",
         "priority": "Critical",
         "status": "Awaiting Response",
-        "created_date": "2026-06-17T15:43:15",
+        "created_date": "2026-06-18T19:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4165,8 +4165,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-03T13:43:15",
-        "resolved_date": "2026-07-05T23:43:15",
+        "created_date": "2026-07-04T17:15:32",
+        "resolved_date": "2026-07-07T03:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4175,8 +4175,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-25T17:43:15",
-        "resolved_date": "2026-07-28T06:43:15",
+        "created_date": "2026-07-26T21:15:32",
+        "resolved_date": "2026-07-29T10:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4185,8 +4185,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-22T16:43:15",
-        "resolved_date": "2026-06-23T16:43:15",
+        "created_date": "2026-06-23T20:15:32",
+        "resolved_date": "2026-06-24T20:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4195,8 +4195,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-03T07:43:15",
-        "resolved_date": "2026-06-03T19:43:15",
+        "created_date": "2026-06-04T11:15:32",
+        "resolved_date": "2026-06-04T23:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4205,7 +4205,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-27T22:43:15",
+        "created_date": "2026-06-29T02:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4215,8 +4215,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-14T12:43:15",
-        "resolved_date": "2026-05-15T09:43:15",
+        "created_date": "2026-05-15T16:15:32",
+        "resolved_date": "2026-05-16T13:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4225,7 +4225,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "High",
         "status": "Open",
-        "created_date": "2026-05-08T03:43:15",
+        "created_date": "2026-05-09T07:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4235,7 +4235,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-31T21:43:15",
+        "created_date": "2026-06-02T01:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4245,7 +4245,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-19T22:43:15",
+        "created_date": "2026-06-21T02:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4255,8 +4255,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-24T04:43:15",
-        "resolved_date": "2026-07-25T18:43:15",
+        "created_date": "2026-07-25T08:15:32",
+        "resolved_date": "2026-07-26T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4265,8 +4265,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-20T10:43:15",
-        "resolved_date": "2026-05-23T04:43:15",
+        "created_date": "2026-05-21T14:15:32",
+        "resolved_date": "2026-05-24T08:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4275,7 +4275,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-06-26T01:43:15",
+        "created_date": "2026-06-27T05:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -4285,7 +4285,7 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-12T16:43:15",
+        "created_date": "2026-05-13T20:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4295,8 +4295,8 @@
         "subject": "Data export failing",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-06-06T21:43:15",
-        "resolved_date": "2026-06-08T00:43:15",
+        "created_date": "2026-06-08T01:15:32",
+        "resolved_date": "2026-06-09T04:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4305,8 +4305,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-15T21:43:15",
-        "resolved_date": "2026-05-18T06:43:15",
+        "created_date": "2026-05-17T01:15:32",
+        "resolved_date": "2026-05-19T10:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4315,8 +4315,8 @@
         "subject": "API timeout issues",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-06-12T13:43:15",
-        "resolved_date": "2026-06-13T06:43:15",
+        "created_date": "2026-06-13T17:15:32",
+        "resolved_date": "2026-06-14T10:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4325,7 +4325,7 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-25T10:43:15",
+        "created_date": "2026-07-26T14:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4335,7 +4335,7 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-09T02:43:15",
+        "created_date": "2026-05-10T06:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4345,8 +4345,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-26T04:43:15",
-        "resolved_date": "2026-06-28T12:43:15",
+        "created_date": "2026-06-27T08:15:32",
+        "resolved_date": "2026-06-29T16:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4355,7 +4355,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-05-02T12:43:15",
+        "created_date": "2026-05-03T16:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4365,7 +4365,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-05-01T08:43:15",
+        "created_date": "2026-05-02T12:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4375,7 +4375,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-05-08T12:43:15",
+        "created_date": "2026-05-09T16:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4385,8 +4385,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-28T06:43:15",
-        "resolved_date": "2026-05-29T06:43:15",
+        "created_date": "2026-05-29T10:15:32",
+        "resolved_date": "2026-05-30T10:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4395,8 +4395,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-19T11:43:15",
-        "resolved_date": "2026-07-21T20:43:15",
+        "created_date": "2026-07-20T15:15:32",
+        "resolved_date": "2026-07-23T00:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4405,8 +4405,8 @@
         "subject": "Integration error",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-13T23:43:15",
-        "resolved_date": "2026-07-14T17:43:15",
+        "created_date": "2026-07-15T03:15:32",
+        "resolved_date": "2026-07-15T21:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4415,8 +4415,8 @@
         "subject": "Data export failing",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-20T21:43:15",
-        "resolved_date": "2026-07-22T12:43:15",
+        "created_date": "2026-07-22T01:15:32",
+        "resolved_date": "2026-07-23T16:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4425,8 +4425,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-06T15:43:15",
-        "resolved_date": "2026-05-09T06:43:15",
+        "created_date": "2026-05-07T19:15:32",
+        "resolved_date": "2026-05-10T10:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4435,8 +4435,8 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-27T20:43:15",
-        "resolved_date": "2026-04-30T03:43:15",
+        "created_date": "2026-04-29T00:15:32",
+        "resolved_date": "2026-05-01T07:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4445,8 +4445,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-22T23:43:15",
-        "resolved_date": "2026-07-23T05:43:15",
+        "created_date": "2026-07-24T03:15:32",
+        "resolved_date": "2026-07-24T09:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4455,8 +4455,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-12T08:43:15",
-        "resolved_date": "2026-06-13T09:43:15",
+        "created_date": "2026-06-13T12:15:32",
+        "resolved_date": "2026-06-14T13:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4465,7 +4465,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-05-04T15:43:15",
+        "created_date": "2026-05-05T19:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4475,8 +4475,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-14T06:43:15",
-        "resolved_date": "2026-07-16T20:43:15",
+        "created_date": "2026-07-15T10:15:32",
+        "resolved_date": "2026-07-18T00:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4485,8 +4485,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-08-02T00:43:15",
-        "resolved_date": "2026-08-03T07:43:15",
+        "created_date": "2026-08-03T04:15:32",
+        "resolved_date": "2026-08-04T11:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4495,8 +4495,8 @@
         "subject": "Billing question",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-24T15:43:15",
-        "resolved_date": "2026-06-25T13:43:15",
+        "created_date": "2026-06-25T19:15:32",
+        "resolved_date": "2026-06-26T17:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4505,8 +4505,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-16T16:43:15",
-        "resolved_date": "2026-06-18T22:43:15",
+        "created_date": "2026-06-17T20:15:32",
+        "resolved_date": "2026-06-20T02:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4515,8 +4515,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-12T04:43:15",
-        "resolved_date": "2026-07-13T03:43:15",
+        "created_date": "2026-07-13T08:15:32",
+        "resolved_date": "2026-07-14T07:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4525,8 +4525,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-27T07:43:15",
-        "resolved_date": "2026-06-29T20:43:15",
+        "created_date": "2026-06-28T11:15:32",
+        "resolved_date": "2026-07-01T00:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4535,8 +4535,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-06T05:43:15",
-        "resolved_date": "2026-07-06T18:43:15",
+        "created_date": "2026-07-07T09:15:32",
+        "resolved_date": "2026-07-07T22:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4545,7 +4545,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-16T04:43:15",
+        "created_date": "2026-05-17T08:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4555,8 +4555,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-12T13:43:15",
-        "resolved_date": "2026-06-13T19:43:15",
+        "created_date": "2026-06-13T17:15:32",
+        "resolved_date": "2026-06-14T23:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4565,7 +4565,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Open",
-        "created_date": "2026-08-04T00:43:15",
+        "created_date": "2026-08-05T04:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4575,7 +4575,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-05-19T04:43:15",
+        "created_date": "2026-05-20T08:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4585,8 +4585,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-03T17:43:15",
-        "resolved_date": "2026-06-05T12:43:15",
+        "created_date": "2026-06-04T21:15:32",
+        "resolved_date": "2026-06-06T16:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4595,8 +4595,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-11T15:43:15",
-        "resolved_date": "2026-05-13T23:43:15",
+        "created_date": "2026-05-12T19:15:32",
+        "resolved_date": "2026-05-15T03:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4605,8 +4605,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-01T17:43:15",
-        "resolved_date": "2026-06-03T18:43:15",
+        "created_date": "2026-06-02T21:15:32",
+        "resolved_date": "2026-06-04T22:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4615,8 +4615,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-31T04:43:15",
-        "resolved_date": "2026-06-01T08:43:15",
+        "created_date": "2026-06-01T08:15:32",
+        "resolved_date": "2026-06-02T12:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4625,8 +4625,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-31T06:43:15",
-        "resolved_date": "2026-06-03T02:43:15",
+        "created_date": "2026-06-01T10:15:32",
+        "resolved_date": "2026-06-04T06:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4635,8 +4635,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-07T19:43:15",
-        "resolved_date": "2026-06-10T07:43:15",
+        "created_date": "2026-06-08T23:15:32",
+        "resolved_date": "2026-06-11T11:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4645,7 +4645,7 @@
         "subject": "Data export failing",
         "priority": "Critical",
         "status": "Open",
-        "created_date": "2026-06-10T11:43:15",
+        "created_date": "2026-06-11T15:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -4655,8 +4655,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-16T18:43:15",
-        "resolved_date": "2026-05-17T21:43:15",
+        "created_date": "2026-05-17T22:15:32",
+        "resolved_date": "2026-05-19T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4665,7 +4665,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "In Progress",
-        "created_date": "2026-07-11T10:43:15",
+        "created_date": "2026-07-12T14:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4675,8 +4675,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-07-16T04:43:15",
-        "resolved_date": "2026-07-18T23:43:15",
+        "created_date": "2026-07-17T08:15:32",
+        "resolved_date": "2026-07-20T03:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4685,7 +4685,7 @@
         "subject": "Integration error",
         "priority": "Medium",
         "status": "Awaiting Response",
-        "created_date": "2026-07-21T09:43:15",
+        "created_date": "2026-07-22T13:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4695,8 +4695,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-01T18:43:15",
-        "resolved_date": "2026-05-01T22:43:15",
+        "created_date": "2026-05-02T22:15:32",
+        "resolved_date": "2026-05-03T02:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4705,8 +4705,8 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-08-01T15:43:15",
-        "resolved_date": "2026-08-03T16:43:15",
+        "created_date": "2026-08-02T19:15:32",
+        "resolved_date": "2026-08-04T20:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4715,8 +4715,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-27T21:43:15",
-        "resolved_date": "2026-06-30T01:43:15",
+        "created_date": "2026-06-29T01:15:32",
+        "resolved_date": "2026-07-01T05:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4725,8 +4725,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Critical",
         "status": "Resolved",
-        "created_date": "2026-07-31T06:43:15",
-        "resolved_date": "2026-08-02T05:43:15",
+        "created_date": "2026-08-01T10:15:32",
+        "resolved_date": "2026-08-03T09:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4735,8 +4735,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-11T04:43:15",
-        "resolved_date": "2026-05-13T23:43:15",
+        "created_date": "2026-05-12T08:15:32",
+        "resolved_date": "2026-05-15T03:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4745,7 +4745,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-05-24T13:43:15",
+        "created_date": "2026-05-25T17:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -4755,7 +4755,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-06-28T12:43:15",
+        "created_date": "2026-06-29T16:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4765,8 +4765,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-08-03T11:43:15",
-        "resolved_date": "2026-08-05T14:43:15",
+        "created_date": "2026-08-04T15:15:32",
+        "resolved_date": "2026-08-06T18:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4775,8 +4775,8 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-06T23:43:15",
-        "resolved_date": "2026-05-09T14:43:15",
+        "created_date": "2026-05-08T03:15:32",
+        "resolved_date": "2026-05-10T18:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4785,7 +4785,7 @@
         "subject": "Billing question",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-05-03T03:43:15",
+        "created_date": "2026-05-04T07:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -4795,7 +4795,7 @@
         "subject": "Feature request",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-04T16:43:15",
+        "created_date": "2026-07-05T20:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4805,8 +4805,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-01T02:43:15",
-        "resolved_date": "2026-06-01T23:43:15",
+        "created_date": "2026-06-02T06:15:32",
+        "resolved_date": "2026-06-03T03:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4815,7 +4815,7 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-05-17T04:43:15",
+        "created_date": "2026-05-18T08:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -4825,8 +4825,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-27T19:43:15",
-        "resolved_date": "2026-06-29T16:43:15",
+        "created_date": "2026-06-28T23:15:32",
+        "resolved_date": "2026-06-30T20:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4835,8 +4835,8 @@
         "subject": "Data export failing",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-04T21:43:15",
-        "resolved_date": "2026-06-06T00:43:15",
+        "created_date": "2026-06-06T01:15:32",
+        "resolved_date": "2026-06-07T04:15:32",
         "sentiment": "Positive"
     },
     {
@@ -4845,8 +4845,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-06T06:43:15",
-        "resolved_date": "2026-06-08T16:43:15",
+        "created_date": "2026-06-07T10:15:32",
+        "resolved_date": "2026-06-09T20:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4855,7 +4855,7 @@
         "subject": "API timeout issues",
         "priority": "Critical",
         "status": "Awaiting Response",
-        "created_date": "2026-05-06T16:43:15",
+        "created_date": "2026-05-07T20:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4865,7 +4865,7 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Open",
-        "created_date": "2026-07-21T22:43:15",
+        "created_date": "2026-07-23T02:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4875,8 +4875,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-06-30T19:43:15",
-        "resolved_date": "2026-07-01T15:43:15",
+        "created_date": "2026-07-01T23:15:32",
+        "resolved_date": "2026-07-02T19:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4885,8 +4885,8 @@
         "subject": "Dashboard UI glitch",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-11T19:43:15",
-        "resolved_date": "2026-07-13T21:43:15",
+        "created_date": "2026-07-12T23:15:32",
+        "resolved_date": "2026-07-15T01:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4895,7 +4895,7 @@
         "subject": "Dashboard UI glitch",
         "priority": "Low",
         "status": "Awaiting Response",
-        "created_date": "2026-06-07T22:43:15",
+        "created_date": "2026-06-09T02:15:32",
         "resolved_date": null,
         "sentiment": "Negative"
     },
@@ -4905,7 +4905,7 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-07-31T23:43:15",
+        "created_date": "2026-08-02T03:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -4915,8 +4915,8 @@
         "subject": "API timeout issues",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-07-27T12:43:15",
-        "resolved_date": "2026-07-28T19:43:15",
+        "created_date": "2026-07-28T16:15:32",
+        "resolved_date": "2026-07-29T23:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4925,8 +4925,8 @@
         "subject": "Billing question",
         "priority": "High",
         "status": "Resolved",
-        "created_date": "2026-06-08T20:43:15",
-        "resolved_date": "2026-06-09T14:43:15",
+        "created_date": "2026-06-10T00:15:32",
+        "resolved_date": "2026-06-10T18:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4935,8 +4935,8 @@
         "subject": "Feature request",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-04-29T01:43:15",
-        "resolved_date": "2026-04-30T00:43:15",
+        "created_date": "2026-04-30T05:15:32",
+        "resolved_date": "2026-05-01T04:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4945,8 +4945,8 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-07-31T13:43:15",
-        "resolved_date": "2026-08-01T07:43:15",
+        "created_date": "2026-08-01T17:15:32",
+        "resolved_date": "2026-08-02T11:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4955,8 +4955,8 @@
         "subject": "API timeout issues",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-05-13T06:43:15",
-        "resolved_date": "2026-05-15T21:43:15",
+        "created_date": "2026-05-14T10:15:32",
+        "resolved_date": "2026-05-17T01:15:32",
         "sentiment": "Negative"
     },
     {
@@ -4965,7 +4965,7 @@
         "subject": "Feature request",
         "priority": "High",
         "status": "Awaiting Response",
-        "created_date": "2026-08-01T08:43:15",
+        "created_date": "2026-08-02T12:15:32",
         "resolved_date": null,
         "sentiment": "Neutral"
     },
@@ -4975,8 +4975,8 @@
         "subject": "Data export failing",
         "priority": "Medium",
         "status": "Resolved",
-        "created_date": "2026-05-31T16:43:15",
-        "resolved_date": "2026-06-01T03:43:15",
+        "created_date": "2026-06-01T20:15:32",
+        "resolved_date": "2026-06-02T07:15:32",
         "sentiment": "Neutral"
     },
     {
@@ -4985,7 +4985,7 @@
         "subject": "API timeout issues",
         "priority": "Medium",
         "status": "In Progress",
-        "created_date": "2026-04-29T18:43:15",
+        "created_date": "2026-04-30T22:15:32",
         "resolved_date": null,
         "sentiment": "Positive"
     },
@@ -4995,8 +4995,8 @@
         "subject": "Integration error",
         "priority": "Low",
         "status": "Resolved",
-        "created_date": "2026-06-18T16:43:15",
-        "resolved_date": "2026-06-19T22:43:15",
+        "created_date": "2026-06-19T20:15:32",
+        "resolved_date": "2026-06-21T02:15:32",
         "sentiment": "Neutral"
     }
 ]

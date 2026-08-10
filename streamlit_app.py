@@ -270,7 +270,7 @@ def load_data():
         tickets['company'] = tickets['company_name']
         tickets['risk_score'] = tickets['customer_risk']
     
-    print(f"✅ Loaded from database: {len(customers)} customers, {len(tickets)} tickets, {len(interactions)} interactions")
+    print(f"[SUCCESS] Loaded from database: {len(customers)} customers, {len(tickets)} tickets, {len(interactions)} interactions")
     
     return customers, tickets, interactions, churn_history
 
@@ -1075,12 +1075,37 @@ elif page == "Ticket Workspace":
 
 # PAGE 4: CUSTOMER DIRECTORY
 elif page == "Customer Directory":
+    # Dynamic Customer Profile Selection
+    if not customers_df.empty:
+        # Get the top critical customer
+        critical_customers = customers_df[customers_df['health_status'] == 'Critical'].sort_values('risk_score', ascending=False)
+        if not critical_customers.empty:
+            cust = critical_customers.iloc[0]
+        else:
+            cust = customers_df.iloc[0]
+            
+        cust_name = cust['company_name']
+        cust_risk = int(cust['risk_score'])
+        cust_arr = cust['arr']
+        cust_renewal = pd.to_datetime(cust['renewal_date']).strftime('%b %d') if pd.notna(cust['renewal_date']) else "Unknown"
+        cust_industry = cust.get('industry', 'Technology')
+        cust_size = cust.get('company_size', 'Enterprise')
+    else:
+        cust_name = "GlobalTech Inc."
+        cust_risk = 88
+        cust_arr = 1200000
+        cust_renewal = "Oct 15"
+        cust_industry = "Financial Technology"
+        cust_size = "5,000+ Employees"
+        
+    arr_display = f"${cust_arr/1000000:.1f}M" if cust_arr >= 1000000 else f"${cust_arr/1000:,.0f}K"
+    risk_badge = f'<span class="badge" style="background: #dc2626; color: white; font-size: 14px;">⚠️ Churn Risk: High ({cust_risk})</span>' if cust_risk >= 75 else f'<span class="badge" style="background: #f59e0b; color: white; font-size: 14px;">Medium Risk ({cust_risk})</span>'
+
     # Header
     col1, col2 = st.columns([2, 1])
     with col1:
-        st.title("GlobalTech Inc.")
-        st.markdown('<span class="badge" style="background: #dc2626; color: white; font-size: 14px;">⚠️ Churn Risk: High (88)</span>', 
-                   unsafe_allow_html=True)
+        st.title(cust_name)
+        st.markdown(risk_badge, unsafe_allow_html=True)
     with col2:
         st.markdown('<br>', unsafe_allow_html=True)
         csv_data = export_customer_data()
@@ -1097,7 +1122,7 @@ elif page == "Customer Directory":
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Company Info Header
-    st.markdown("""
+    st.markdown(f"""
     <div class="content-card">
         <div style="display: flex; gap: 16px; align-items: start;">
             <div style="width: 64px; height: 64px; background: #dbeafe; border-radius: 8px; 
@@ -1107,13 +1132,13 @@ elif page == "Customer Directory":
             <div style="flex: 1;">
                 <div style="display: flex; gap: 24px; flex-wrap: wrap;">
                     <div>
-                        <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">🏭 Enterprise SaaS</div>
+                        <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">🏭 {cust_industry}</div>
                     </div>
                     <div>
-                        <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">💰 ARR: $1.2M</div>
+                        <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">💰 ARR: {arr_display}</div>
                     </div>
                     <div>
-                        <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">📅 Renewal: Oct 15</div>
+                        <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">📅 Renewal: {cust_renewal}</div>
                     </div>
                 </div>
             </div>
@@ -1131,25 +1156,25 @@ elif page == "Customer Directory":
         st.markdown('<div class="content-card">', unsafe_allow_html=True)
         st.markdown("### Customer Profile")
         
-        st.markdown("""
+        st.markdown(f"""
         <div style="margin-bottom: 16px;">
             <div style="font-size: 11px; color: #737373; text-transform: uppercase; font-weight: 600; margin-bottom: 4px;">INDUSTRY</div>
-            <div style="color: #1a1a1a;">Financial Technology</div>
+            <div style="color: #1a1a1a;">{cust_industry}</div>
         </div>
         
         <div style="margin-bottom: 16px;">
             <div style="font-size: 11px; color: #737373; text-transform: uppercase; font-weight: 600; margin-bottom: 4px;">COMPANY SIZE</div>
-            <div style="color: #1a1a1a;">5,000+ Employees</div>
+            <div style="color: #1a1a1a;">{cust_size if pd.notna(cust_size) else "Unknown"}</div>
         </div>
         
         <div style="margin-bottom: 16px;">
             <div style="font-size: 11px; color: #737373; text-transform: uppercase; font-weight: 600; margin-bottom: 4px;">TENURE</div>
-            <div style="color: #1a1a1a;">3 Years, 4 Months</div>
+            <div style="color: #1a1a1a;">Active Account</div>
         </div>
         
         <div style="margin-bottom: 16px;">
             <div style="font-size: 11px; color: #737373; text-transform: uppercase; font-weight: 600; margin-bottom: 4px;">KEY STAKEHOLDER</div>
-            <div style="color: #1a1a1a;">👤 Elena Jenkins, VP Ops</div>
+            <div style="color: #1a1a1a;">👤 Key Contact (VP Ops)</div>
         </div>
         """, unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)

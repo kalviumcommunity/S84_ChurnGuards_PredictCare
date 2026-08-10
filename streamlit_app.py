@@ -846,26 +846,49 @@ elif page == "Ticket Workspace":
     # Ticket Card
     st.markdown('<div class="content-card">', unsafe_allow_html=True)
     
+    # Dynamic Ticket Selection
+    if not tickets_df.empty:
+        # Get an open ticket, preferably high/critical priority
+        open_tickets = tickets_df[tickets_df['status'].isin(['Open', 'In Progress'])]
+        if not open_tickets.empty:
+            ticket = open_tickets.sort_values('risk_score', ascending=False).iloc[0]
+        else:
+            ticket = tickets_df.iloc[0]
+            
+        tkt_id = ticket['ticket_id']
+        tkt_subject = ticket['subject']
+        tkt_customer = ticket.get('company', f"Customer {ticket['customer_id']}")
+        tkt_priority = ticket['priority']
+        tkt_created = pd.to_datetime(ticket['created_at']).strftime('%H:%M %p Today') if pd.notna(ticket['created_at']) else "Unknown"
+    else:
+        tkt_id = "TKT-2842"
+        tkt_subject = "Data export failing on Q3 Reports Dashboard"
+        tkt_customer = "Acme Corp"
+        tkt_priority = "Critical"
+        tkt_created = "14:23 PM Today"
+        
+    priority_badge_class = "badge-critical" if tkt_priority in ['Critical', 'High'] else "badge-medium"
+        
     # Ticket Header
     col1, col2 = st.columns([3, 1])
     with col1:
-        st.markdown("""
+        st.markdown(f"""
         <div style="margin-bottom: 16px;">
-            <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">TKT-2842</span>
-            <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ SL A: 2h 14m</span>
+            <span style="color: #3b82f6; font-weight: 600; font-size: 14px;">{tkt_id}</span>
+            <span class="badge" style="background: #fee2e2; color: #991b1b; margin-left: 8px;">⚠ SLA: 2h 14m</span>
         </div>
         """, unsafe_allow_html=True)
     with col2:
-        st.markdown('<div style="text-align: right;"><span class="badge badge-critical">Bug / Data Export</span></div>', 
+        st.markdown(f'<div style="text-align: right;"><span class="badge {priority_badge_class}">{tkt_priority}</span></div>', 
                    unsafe_allow_html=True)
     
     # Ticket Title
-    st.markdown("### Data export failing on Q3 Reports Dashboard")
-    st.markdown("""
+    st.markdown(f"### {tkt_subject}")
+    st.markdown(f"""
     <div style="margin-bottom: 16px;">
-        <span style="color: #737373;">👤 Sarah Jenkins (Acme Corp)</span>
+        <span style="color: #737373;">👤 User ({tkt_customer})</span>
         <span style="margin: 0 8px; color: #d4d4d4;">●</span>
-        <span style="color: #737373;">🕐 Created: 14:23 PM Today</span>
+        <span style="color: #737373;">🕐 Created: {tkt_created}</span>
     </div>
     """, unsafe_allow_html=True)
     

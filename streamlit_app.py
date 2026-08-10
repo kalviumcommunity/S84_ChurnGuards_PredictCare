@@ -270,7 +270,7 @@ def load_data():
         tickets['company'] = tickets['company_name']
         tickets['risk_score'] = tickets['customer_risk']
     
-    print(f"✅ Loaded from database: {len(customers)} customers, {len(tickets)} tickets, {len(interactions)} interactions")
+    print(f"[SUCCESS] Loaded from database: {len(customers)} customers, {len(tickets)} tickets, {len(interactions)} interactions")
     
     return customers, tickets, interactions, churn_history
 
@@ -471,7 +471,7 @@ if page == "Executive Dashboard":
         # Aggregate preventative actions (QBR, Support Call, Executive Review) by month
         if not interactions_df.empty:
             prev_actions = interactions_df[interactions_df['interaction_type'].isin(['QBR', 'Support Call', 'Executive Review'])].copy()
-            prev_actions['month'] = pd.to_datetime(prev_actions['timestamp']).dt.strftime('%b')
+            prev_actions['month'] = pd.to_datetime(prev_actions['interaction_date']).dt.strftime('%b')
             prev_by_month = prev_actions.groupby('month').size()
         else:
             prev_by_month = pd.Series()

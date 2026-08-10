@@ -325,16 +325,17 @@ def get_risk_alert_summary(customers_df):
             })
         
         # Low activity alert
-        days_since_activity = (datetime.now() - customer['last_activity']).days
-        if days_since_activity > 14 and customer['risk_score'] > 60:
-            alerts.append({
-                'severity': 'Medium',
-                'company': customer['company_name'],
-                'alert': f"No activity for {days_since_activity} days",
-                'detail': 'Engagement drop detected',
-                'arr': customer['arr'],
-                'icon': '📉'
-            })
+        if pd.notna(customer['last_activity']):
+            days_since_activity = (datetime.now() - customer['last_activity']).days
+            if days_since_activity > 14 and customer['risk_score'] > 60:
+                alerts.append({
+                    'severity': 'Medium',
+                    'company': customer['company_name'],
+                    'alert': f"No activity for {days_since_activity} days",
+                    'detail': 'Engagement drop detected',
+                    'arr': customer['arr'],
+                    'icon': '📉'
+                })
     
     # Sort by severity and ARR
     severity_order = {'Critical': 0, 'High': 1, 'Medium': 2, 'Low': 3}
@@ -790,6 +791,7 @@ elif page == "Risk Command Center":
         border_hex = "#dc2626" if row['health_status'] == 'Critical' else "#eab308"
         action = "Intervene" if row['health_status'] == 'Critical' else "Review"
         btn_class = "btn-primary" if row['health_status'] == 'Critical' else "btn-secondary"
+        last_active_str = pd.to_datetime(row['last_activity']).strftime('%b %d, %Y') if pd.notna(row['last_activity']) else "No Activity"
         
         account_rows += f"""
             <tr>
@@ -798,7 +800,7 @@ elif page == "Risk Command Center":
                           width: 40px; height: 40px; border-radius: 50%; background: {bg_hex}; 
                           color: {text_hex}; font-weight: 700; border: 2px solid {border_hex};">{int(row['risk_score'])}</div></td>
                 <td>${row['arr']/1000:,.0f}K</td>
-                <td>{pd.to_datetime(row['last_activity']).strftime('%b %d, %Y')}</td>
+                <td>{last_active_str}</td>
                 <td><a href="#" class="{btn_class}" style="padding: 6px 16px; font-size: 12px;">{action}</a></td>
             </tr>
         """

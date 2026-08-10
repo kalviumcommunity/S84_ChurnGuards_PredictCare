@@ -294,7 +294,8 @@ def seed_contracts(conn):
     
     contract_data = []
     for customer_id, arr, renewal_date, tenure_months in customers:
-        start_date = datetime.now() - timedelta(days=tenure_months * 30)
+        tenure = tenure_months if tenure_months is not None else 12
+        start_date = datetime.now() - timedelta(days=tenure * 30)
         
         contract_data.append((
             customer_id,

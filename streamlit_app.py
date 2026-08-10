@@ -10,7 +10,12 @@ st.set_page_config(
     page_title="ChurnGuard AI - Enterprise Analytics",
     page_icon="📊",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': "ChurnGuard AI - Customer Churn Prevention System"
+    }
 )
 
 # Custom CSS matching the exact design screenshots
@@ -217,11 +222,23 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
     
+    st.write("### Navigation Menu")
+    
+    # Sync with session state
+    if 'page' not in st.session_state:
+        st.session_state.page = "Executive Dashboard"
+    
+    current_index = ["Executive Dashboard", "Risk Command Center", "Ticket Workspace", "Customer Directory", "📤 Data Upload"].index(st.session_state.page) if st.session_state.page in ["Executive Dashboard", "Risk Command Center", "Ticket Workspace", "Customer Directory", "📤 Data Upload"] else 0
+    
     page = st.radio(
-        "Navigation",
+        "Choose a page:",
         ["Executive Dashboard", "Risk Command Center", "Ticket Workspace", "Customer Directory", "📤 Data Upload"],
-        label_visibility="collapsed"
+        index=current_index,
+        key="sidebar_radio"
     )
+    
+    # Update session state when sidebar changes
+    st.session_state.page = page
     
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown("---")
@@ -242,19 +259,15 @@ def load_data():
     # Load customers from database
     customers = db.execute_query("SELECT * FROM customers")
     
-    # Load tickets from database
-    tickets = db.execute_query("""
-        SELECT t.*, c.company_name, c.risk_score as customer_risk
-        FROM tickets t
-        JOIN customers c ON t.customer_id = c.customer_id
-    """)
+    # Load tickets from database (no JOIN for now, IDs don't match)
+    tickets = db.execute_query("SELECT * FROM tickets")
     
     # Load interactions from database  
-    interactions = db.execute_query("""
-        SELECT i.*, c.company_name
-        FROM interactions i
-        JOIN customers c ON i.customer_id = c.customer_id
-    """)
+    interactions = db.execute_query("SELECT * FROM interactions")
+    
+    # Rename columns to match expected format
+    if not interactions.empty and 'interaction_date' in interactions.columns:
+        interactions['timestamp'] = interactions['interaction_date']
     
     # Create empty churn_history (not in database yet)
     churn_history = pd.DataFrame()
@@ -267,8 +280,8 @@ def load_data():
         
     if not tickets.empty:
         tickets['customer'] = 'User ' + tickets['customer_id'].astype(str)
-        tickets['company'] = tickets['company_name']
-        tickets['risk_score'] = tickets['customer_risk']
+        tickets['company'] = 'Company ' + tickets['customer_id'].astype(str)
+        tickets['risk_score'] = tickets.get('risk_score', 50)
     
     print(f"[SUCCESS] Loaded from database: {len(customers)} customers, {len(tickets)} tickets, {len(interactions)} interactions")
     
@@ -276,6 +289,38 @@ def load_data():
 
 
 customers_df, tickets_df, interactions_df, churn_history_df = load_data()
+
+# Add page selector in main area if sidebar is not visible
+st.markdown("### 📍 Quick Navigation")
+page_col1, page_col2, page_col3, page_col4, page_col5 = st.columns(5)
+
+with page_col1:
+    if st.button("📊 Executive Dashboard", use_container_width=True):
+        st.session_state.page = "Executive Dashboard"
+with page_col2:
+    if st.button("🚨 Risk Command Center", use_container_width=True):
+        st.session_state.page = "Risk Command Center"
+with page_col3:
+    if st.button("🎫 Ticket Workspace", use_container_width=True):
+        st.session_state.page = "Ticket Workspace"
+with page_col4:
+    if st.button("👤 Customer Directory", use_container_width=True):
+        st.session_state.page = "Customer Directory"
+with page_col5:
+    if st.button("📤 Data Upload", use_container_width=True):
+        st.session_state.page = "📤 Data Upload"
+
+# Get page from session state or default
+if 'page' not in st.session_state:
+    st.session_state.page = "Executive Dashboard"
+
+# Try to get from sidebar if it exists, otherwise use session state
+try:
+    page = st.session_state.get('page', "Executive Dashboard")
+except:
+    page = "Executive Dashboard"
+
+st.markdown("---")
 
 # Function to filter customers by risk level
 def filter_customers_by_risk(df, risk_filter):
@@ -471,8 +516,8 @@ if page == "Executive Dashboard":
             
         # Aggregate preventative actions (QBR, Support Call, Executive Review) by month
         if not interactions_df.empty:
-            prev_actions = interactions_df[interactions_df['interaction_type'].isin(['QBR', 'Support Call', 'Executive Review'])].copy()
-            prev_actions['month'] = pd.to_datetime(prev_actions['interaction_date']).dt.strftime('%b')
+            prev_actions = interactions_df[interactions_df['interaction_type'].isin(['QBR', 'Call', 'Meeting'])].copy()
+            prev_actions['month'] = pd.to_datetime(prev_actions['interaction_date'], errors='coerce').dt.strftime('%b')
             prev_by_month = prev_actions.groupby('month').size()
         else:
             prev_by_month = pd.Series()

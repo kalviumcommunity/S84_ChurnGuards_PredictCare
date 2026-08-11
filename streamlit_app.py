@@ -290,6 +290,68 @@ def load_data():
 
 customers_df, tickets_df, interactions_df, churn_history_df = load_data()
 
+
+# ========================================
+# SQL QUERY FUNCTIONS (Module 2.38-2.40)
+# Demonstrates SQL query integration with database
+# ========================================
+
+@st.cache_data
+def get_high_risk_customers_sql(threshold=70):
+    """Get high-risk customers using SQL query from db_queries.py"""
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    return db.get_high_risk_customers(min_risk_score=threshold)
+
+
+@st.cache_data  
+def get_open_tickets_by_priority_sql(priority=None):
+    """Get open tickets by priority using SQL query from db_queries.py"""
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    return db.get_open_tickets(priority=priority)
+
+
+@st.cache_data
+def get_dashboard_kpis_sql():
+    """Get dashboard KPIs using aggregated SQL query from db_queries.py"""
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    return db.get_dashboard_kpis()
+
+
+@st.cache_data
+def get_revenue_at_risk_sql():
+    """Calculate revenue at risk using SQL SUM query from db_queries.py"""
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    return db.get_revenue_at_risk()
+
+
+@st.cache_data
+def get_ticket_metrics_sql():
+    """Get ticket summary metrics using SQL aggregation from db_queries.py"""
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    return db.get_ticket_metrics()
+
+
+@st.cache_data
+def search_customers_sql(search_term):
+    """Search customers using SQL LIKE query from db_queries.py"""
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    return db.search_customers(search_term)
+
+
+@st.cache_data
+def get_renewal_pipeline_sql(days_ahead=90):
+    """Get customers with upcoming renewals using SQL date filtering"""
+    from db_queries import ChurnGuardDB
+    db = ChurnGuardDB('churnguard.db')
+    return db.get_renewal_pipeline(days_ahead=days_ahead)
+
+
 # Add page selector in main area if sidebar is not visible
 st.markdown("### 📍 Quick Navigation")
 page_col1, page_col2, page_col3, page_col4, page_col5 = st.columns(5)
@@ -1437,6 +1499,100 @@ elif page == "Customer Directory":
 elif page == "📤 Data Upload":
     st.title("📤 Data Upload & Management")
     st.markdown("Upload CSV files to automatically load customer, ticket, and interaction data into the database.")
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    # ========================================
+    # SQL QUERY DEMONSTRATION (Module 2.38-2.40)
+    # ========================================
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    st.markdown("### 🔍 SQL Query Demonstration")
+    st.markdown("**Module 2.38-2.40:** Using `db_queries.py` functions to query the database directly with SQL")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("**📊 Dashboard KPIs (SQL)**")
+        if st.button("Run SQL Query: get_dashboard_kpis()", key="sql_kpis"):
+            with st.spinner("Executing SQL query..."):
+                kpis = get_dashboard_kpis_sql()
+                st.success("✅ SQL Query Executed!")
+                st.json(kpis)
+    
+    with col2:
+        st.markdown("**🚨 High Risk Customers (SQL)**")
+        threshold = st.slider("Risk Score Threshold:", 0, 100, 70, key="risk_threshold")
+        if st.button(f"Run SQL Query: get_high_risk_customers({threshold})", key="sql_high_risk"):
+            with st.spinner("Executing SQL query..."):
+                high_risk = get_high_risk_customers_sql(threshold)
+                st.success(f"✅ Found {len(high_risk)} high-risk customers")
+                if not high_risk.empty:
+                    st.dataframe(high_risk[['company_name', 'risk_score', 'arr', 'health_status']].head(5))
+                else:
+                    st.info("No customers above this threshold")
+    
+    with col3:
+        st.markdown("**🎫 Open Tickets (SQL)**")
+        priority_filter = st.selectbox("Priority:", [None, "Critical", "High", "Medium", "Low"], key="priority_filter")
+        if st.button(f"Run SQL Query: get_open_tickets('{priority_filter}')", key="sql_tickets"):
+            with st.spinner("Executing SQL query..."):
+                tickets = get_open_tickets_by_priority_sql(priority_filter)
+                st.success(f"✅ Found {len(tickets)} open tickets")
+                if not tickets.empty:
+                    st.dataframe(tickets[['ticket_id', 'priority', 'status', 'company_name']].head(5))
+                else:
+                    st.info("No open tickets found")
+    
+    st.markdown("</div>", unsafe_allow_html=True)
+    
+    # Show SQL Query Code
+    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown('<div class="content-card">', unsafe_allow_html=True)
+    st.markdown("### 💻 SQL Query Examples from `db_queries.py`")
+    
+    tab1, tab2, tab3 = st.tabs(["Dashboard KPIs", "High Risk Customers", "Open Tickets"])
+    
+    with tab1:
+        st.code('''
+# SQL Query for Dashboard KPIs
+query = """
+SELECT 
+    ROUND(AVG(risk_score), 1) as avg_risk_score,
+    SUM(CASE WHEN health_status = 'Critical' THEN 1 ELSE 0 END) as critical_customers,
+    SUM(CASE WHEN health_status = 'Medium' THEN 1 ELSE 0 END) as medium_customers,
+    SUM(CASE WHEN health_status = 'Low Risk' THEN 1 ELSE 0 END) as low_risk_customers,
+    SUM(CASE WHEN health_status IN ('Critical', 'Medium') THEN arr ELSE 0 END) as revenue_at_risk,
+    SUM(arr) as total_arr,
+    COUNT(*) as total_customers
+FROM customers
+"""
+''', language='sql')
+    
+    with tab2:
+        st.code('''
+# SQL Query for High Risk Customers
+query = """
+SELECT * FROM vw_high_risk_customers
+WHERE risk_score >= ?
+ORDER BY arr DESC
+"""
+params = (min_risk_score,)
+''', language='sql')
+    
+    with tab3:
+        st.code('''
+# SQL Query for Open Tickets
+query = """
+SELECT t.*, c.company_name, c.risk_score as customer_risk
+FROM tickets t
+JOIN customers c ON t.customer_id = c.customer_id
+WHERE t.status NOT IN ('Resolved', 'Closed')
+AND t.priority = ?
+ORDER BY t.created_at DESC
+"""
+''', language='sql')
+    
+    st.markdown("</div>", unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
     

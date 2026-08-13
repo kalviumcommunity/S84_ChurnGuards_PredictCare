@@ -342,12 +342,19 @@ python run_pipeline.py --verify-only
 
 ## ✅ Completed Milestones
 
+**Sprint 1 (Data & Analytics):**
 - [x] **Module 2.36** - Real risk calculation (5 factors: tickets, activity, sentiment, renewal, CSAT)
 - [x] **Module 2.37** - Database schema & population
 - [x] **Module 2.38-2.40** - SQL query integration (7 functions)
 - [x] **Module 2.52** - Browser-based data upload
 - [x] **Module 2.58** - Automated data pipeline
 - [x] **Module 2.60** - Complete documentation
+
+**Sprint 2 Prep (AI/RAG Foundation):**
+- [x] **Module 3.10** - Development environment setup (venv, .env, .gitignore)
+- [x] **Module 3.11** - GitHub workflow setup (branches, PRs, templates)
+
+**Next Up:** Module 3.12 - LLM API Access 🚀
 
 ---
 

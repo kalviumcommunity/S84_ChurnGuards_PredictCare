@@ -342,11 +342,33 @@ python run_pipeline.py --verify-only
 
 ## ✅ Completed Milestones
 
+- [x] **Module 2.36** - Real risk calculation (5 factors: tickets, activity, sentiment, renewal, CSAT)
 - [x] **Module 2.37** - Database schema & population
 - [x] **Module 2.38-2.40** - SQL query integration (7 functions)
 - [x] **Module 2.52** - Browser-based data upload
 - [x] **Module 2.58** - Automated data pipeline
 - [x] **Module 2.60** - Complete documentation
+
+---
+
+## 🎯 Risk Calculation Algorithm (Module 2.36)
+
+### **Real-Time Risk Scoring**
+Customers are scored 0-100 based on weighted business factors:
+
+**Risk Components:**
+1. **Open Tickets (0-25 pts)** - Critical tickets +5pts each, all open tickets +2pts
+2. **Last Activity (0-20 pts)** - Days since login: 30+=20pts, 14-30=15pts, 7-14=10pts
+3. **Sentiment (0-25 pts)** - Negative=25pts, Neutral=10pts, Positive=0pts
+4. **Renewal Date (0-20 pts)** - Past due=20pts, <30 days=15pts, <60 days=10pts
+5. **CSAT Score (0-10 pts)** - Score ≤2.0=10pts, ≤3.0=7pts, ≤4.0=3pts
+
+**Health Status:**
+- **Critical:** Risk ≥70
+- **Medium:** Risk 50-69
+- **Low Risk:** Risk <50
+
+**Implementation:** `calculate_real_risk_score()` in streamlit_app.py
 
 ---
 

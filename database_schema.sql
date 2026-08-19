@@ -18,6 +18,9 @@ CREATE TABLE IF NOT EXISTS customers (
     tenure_months INTEGER,
     renewal_date DATE,
     last_activity TIMESTAMP,
+    predicted_churn_prob DECIMAL(5, 4),
+    clv_forecast DECIMAL(12, 2),
+    is_anomaly BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

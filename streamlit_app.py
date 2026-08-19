@@ -1222,6 +1222,10 @@ elif page == "Customer Directory":
         cust_renewal = pd.to_datetime(cust['renewal_date']).strftime('%b %d') if pd.notna(cust['renewal_date']) else "Unknown"
         cust_industry = cust.get('industry', 'Technology')
         cust_size = cust.get('company_size', 'Enterprise')
+        
+        # ML outputs
+        cust_churn_prob = cust.get('predicted_churn_prob', np.nan)
+        cust_clv = cust.get('clv_forecast', np.nan)
     else:
         cust_name = "GlobalTech Inc."
         cust_risk = 88
@@ -1229,8 +1233,14 @@ elif page == "Customer Directory":
         cust_renewal = "Oct 15"
         cust_industry = "Financial Technology"
         cust_size = "5,000+ Employees"
-        
+        cust_churn_prob = 0.85
+        cust_clv = 1500000
+
     arr_display = f"${cust_arr/1000000:.1f}M" if cust_arr >= 1000000 else f"${cust_arr/1000:,.0f}K"
+    
+    # ML Formatting
+    prob_display = f"{cust_churn_prob*100:.1f}%" if pd.notna(cust_churn_prob) else "N/A"
+    clv_display = f"${cust_clv/1000000:.1f}M" if pd.notna(cust_clv) and cust_clv >= 1000000 else (f"${cust_clv/1000:,.0f}K" if pd.notna(cust_clv) else "N/A")
     risk_badge = f'<span class="badge" style="background: #dc2626; color: white; font-size: 14px;">⚠️ Churn Risk: High ({cust_risk})</span>' if cust_risk >= 75 else f'<span class="badge" style="background: #f59e0b; color: white; font-size: 14px;">Medium Risk ({cust_risk})</span>'
 
     # Header
@@ -1268,6 +1278,9 @@ elif page == "Customer Directory":
                     </div>
                     <div>
                         <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">💰 ARR: {arr_display}</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">🎯 ML CLV Forecast: {clv_display}</div>
                     </div>
                     <div>
                         <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">📅 Renewal: {cust_renewal}</div>
@@ -1319,11 +1332,11 @@ elif page == "Customer Directory":
         
         col_a, col_b = st.columns(2)
         with col_a:
-            st.markdown("""
+            st.markdown(f"""
             <div style="text-align: center;">
-                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">CSAT Score</div>
-                <div style="font-size: 32px; font-weight: 700; color: #dc2626;">2.4</div>
-                <div style="font-size: 12px; color: #dc2626;">↓1.2</div>
+                <div style="font-size: 11px; color: #737373; margin-bottom: 4px;">ML Churn Probability</div>
+                <div style="font-size: 32px; font-weight: 700; color: #dc2626;">{prob_display}</div>
+                <div style="font-size: 12px; color: #dc2626;">Based on Random Forest model</div>
             </div>
             """, unsafe_allow_html=True)
         with col_b:

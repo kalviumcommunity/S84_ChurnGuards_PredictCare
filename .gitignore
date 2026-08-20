@@ -60,3 +60,17 @@ logs/
 htmlcov/
 .coverage
 .pytest_cache/
+
+# AI/ML Specific (Sprint 2)
+vector_store/
+embeddings/
+*.pkl
+*.joblib
+*.h5
+*.pt
+*.pth
+
+# API Keys & Secrets
+*.key
+*.pem
+secrets/

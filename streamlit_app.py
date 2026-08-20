@@ -1341,14 +1341,58 @@ elif page == "Ticket Workspace":
 
 # PAGE 4: CUSTOMER DIRECTORY
 elif page == "Customer Directory":
-    # Dynamic Customer Profile Selection
-    if not customers_df.empty:
-        # Get the top critical customer
-        critical_customers = customers_df[customers_df['health_status'] == 'Critical'].sort_values('risk_score', ascending=False)
-        if not critical_customers.empty:
-            cust = critical_customers.iloc[0]
+    # --- NEW FILTERS SECTION ---
+    st.markdown("### 🔍 Search & Filter")
+    
+    filter_col1, filter_col2, filter_col3 = st.columns(3)
+    
+    with filter_col1:
+        search_term = st.text_input("Search by Company Name", "")
+        
+    with filter_col2:
+        if not customers_df.empty and 'industry' in customers_df.columns:
+            industries = ["All"] + sorted(customers_df['industry'].dropna().unique().tolist())
         else:
-            cust = customers_df.iloc[0]
+            industries = ["All", "Technology", "Financial Technology"]
+        selected_industry = st.selectbox("Industry", industries)
+        
+    with filter_col3:
+        health_statuses = ["All", "Critical", "Medium", "Low Risk"]
+        selected_health = st.multiselect("Health Status", health_statuses, default=["All"])
+        
+    arr_range = st.slider("Min ARR ($)", 
+                          min_value=0, 
+                          max_value=int(customers_df['arr'].max()) if not customers_df.empty and 'arr' in customers_df.columns else 1000000, 
+                          value=0, 
+                          step=10000)
+    
+    st.markdown("<hr>", unsafe_allow_html=True)
+    
+    # Apply filters
+    filtered_df = customers_df.copy()
+    if not filtered_df.empty:
+        if search_term:
+            filtered_df = filtered_df[filtered_df['company_name'].str.contains(search_term, case=False, na=False)]
+        if selected_industry != "All":
+            filtered_df = filtered_df[filtered_df['industry'] == selected_industry]
+        if "All" not in selected_health and selected_health:
+            filtered_df = filtered_df[filtered_df['health_status'].isin(selected_health)]
+        filtered_df = filtered_df[filtered_df['arr'] >= arr_range]
+    
+    # Dynamic Customer Profile Selection
+    if not filtered_df.empty:
+        st.markdown(f"**Found {len(filtered_df)} matching customers.**")
+        company_names = filtered_df['company_name'].tolist()
+        
+        # Determine index for selectbox (default to a critical customer if available)
+        default_idx = 0
+        criticals = filtered_df[filtered_df['health_status'] == 'Critical']
+        if not criticals.empty:
+            critical_company = criticals.sort_values('risk_score', ascending=False).iloc[0]['company_name']
+            default_idx = company_names.index(critical_company)
+            
+        selected_company = st.selectbox("Select a Customer to View Profile", company_names, index=default_idx)
+        cust = filtered_df[filtered_df['company_name'] == selected_company].iloc[0]
             
         cust_name = cust['company_name']
         cust_risk = int(cust['risk_score'])

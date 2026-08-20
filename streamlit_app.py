@@ -37,9 +37,22 @@ st.markdown("""
     }
     
     [data-testid="stSidebar"] {
-        background-color: #ffffff;
-        border-right: 1px solid #e2e8f0; /* Slate 200 */
+        background-color: #0F172A; /* Deep Navy from Stitch Design */
+        border-right: 1px solid #1E293B; /* Dark Slate */
         padding-top: 1rem;
+    }
+    
+    /* Target text inside sidebar to be light colored */
+    [data-testid="stSidebar"] p, 
+    [data-testid="stSidebar"] span, 
+    [data-testid="stSidebar"] label, 
+    [data-testid="stSidebar"] div,
+    [data-testid="stSidebar"] .st-emotion-cache-16idsys p {
+        color: #94A3B8 !important; /* Muted grey */
+    }
+    
+    [data-testid="stSidebar"] .stRadio label {
+        color: #F8FAFC !important; /* White for radio labels */
     }
     
     .block-container {
@@ -209,14 +222,14 @@ st.markdown("""
 # Sidebar navigation
 with st.sidebar:
     st.markdown("""
-    <div style="padding: 0 1rem 2rem 1rem; border-bottom: 1px solid #e5e5e5; margin-bottom: 1.5rem;">
+    <div style="padding: 0 1rem 2rem 1rem; border-bottom: 1px solid #1E293B; margin-bottom: 1.5rem;">
         <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 32px; height: 32px; background-color: #1a1a1a; border-radius: 6px; 
+            <div style="width: 32px; height: 32px; background-color: #3B82F6; border-radius: 6px; 
                         display: flex; align-items: center; justify-content: center; color: white; 
                         font-weight: 700; font-size: 14px;">📊</div>
             <div>
-                <div style="font-size: 16px; font-weight: 700; color: #1a1a1a;">ChurnGuard AI</div>
-                <div style="font-size: 11px; color: #737373;">Enterprise Analytics</div>
+                <div style="font-size: 16px; font-weight: 700; color: #FFFFFF;">ChurnGuard AI</div>
+                <div style="font-size: 11px; color: #94A3B8;">Enterprise Analytics</div>
             </div>
         </div>
     </div>

@@ -142,9 +142,9 @@ with col1:
     
     fig = go.Figure()
     fig.add_trace(go.Bar(x=months, y=churn_volume, name='Churn Volume', 
-                        marker_color='#0F172A', text=churn_volume, textposition='inside'))
+                        marker_color='#EF4444', text=churn_volume, textposition='inside')) # Stitch Red
     fig.add_trace(go.Bar(x=months, y=preventative, name='Preventative Actions', 
-                        marker_color='#94A3B8', text=preventative, textposition='inside'))
+                        marker_color='#3B82F6', text=preventative, textposition='inside')) # Stitch Blue
     
     fig.update_layout(
         barmode='stack',
@@ -168,7 +168,7 @@ with col2:
     industry_counts = filtered_customers['industry'].value_counts()
     labels = industry_counts.index.tolist()
     values = industry_counts.values.tolist()
-    colors = px.colors.qualitative.Pastel
+    colors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#64748B'] # Stitch semantic palette
     
     fig = go.Figure(data=[go.Pie(
         labels=labels, 

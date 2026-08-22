@@ -15,7 +15,7 @@
 
 ### **Phase 1: Foundation (Weeks 1-2)**
 
-#### **Module 3.12 - LLM API Access** 🔜 **NEXT**
+#### - [x] **Module 3.12 - LLM API Access** ✅ **JUST COMPLETED**
 **What:** Make first working call to OpenAI API
 **Files to create:**
 - `config/llm_config.py` - API client configuration
@@ -30,7 +30,7 @@
 
 ---
 
-#### **Module 3.13 - Prompt Construction**
+#### - [x] **Module 3.13 - Prompt Construction** ✅ **JUST COMPLETED**
 **What:** Structure prompts with system/user roles
 **Files to create:**
 - `prompts/system_prompts.py` - Reusable system messages
@@ -43,7 +43,7 @@
 
 ---
 
-#### **Module 3.14 - Tokens & Cost Estimation**
+#### - [x] **Module 3.14 - Tokens & Cost Estimation** ✅ **JUST COMPLETED**
 **What:** Measure tokens and estimate costs
 **Files to create:**
 - `utils/token_counter.py` - Token counting utilities
@@ -336,12 +336,12 @@ S84_ChurnGuards_PredictCare/
 
 ## 🔒 Security Checklist
 
-- [ ] `.env` file never committed
-- [ ] `.env.example` template created
-- [ ] API keys stored securely
+- [x] `.env` file never committed
+- [x] `.env.example` template created
+- [x] API keys stored securely
 - [ ] Vector store data gitignored
 - [ ] Rate limiting implemented
-- [ ] Cost monitoring active
+- [x] Cost monitoring active
 
 ---
 

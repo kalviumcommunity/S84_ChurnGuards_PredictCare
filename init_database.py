@@ -27,7 +27,7 @@ def init_database():
     cursor = conn.cursor()
     
     # Read and execute main schema
-    with open(SCHEMA_FILE, 'r') as f:
+    with open(SCHEMA_FILE, 'r', encoding='utf-8') as f:
         schema_sql = f.read()
     
     cursor.executescript(schema_sql)
@@ -35,17 +35,24 @@ def init_database():
     
     # Execute triggers
     if os.path.exists("database_triggers.sql"):
-        with open("database_triggers.sql", 'r') as f:
+        with open("database_triggers.sql", 'r', encoding='utf-8') as f:
             triggers_sql = f.read()
         cursor.executescript(triggers_sql)
         print(f"   ✓ Triggers created from database_triggers.sql")
     
     # Execute analytics schema
     if os.path.exists("database_analytics.sql"):
-        with open("database_analytics.sql", 'r') as f:
+        with open("database_analytics.sql", 'r', encoding='utf-8') as f:
             analytics_sql = f.read()
         cursor.executescript(analytics_sql)
         print(f"   ✓ Analytics schema created from database_analytics.sql")
+        
+    # Execute snapshots schema
+    if os.path.exists("database_snapshots.sql"):
+        with open("database_snapshots.sql", 'r', encoding='utf-8') as f:
+            snapshots_sql = f.read()
+        cursor.executescript(snapshots_sql)
+        print(f"   ✓ Snapshots schema created from database_snapshots.sql")
     
     conn.commit()
     return conn

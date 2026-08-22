@@ -11,10 +11,15 @@ Usage:
 
 import argparse
 import sys
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
 import os
 from datetime import datetime
 import sqlite3
 import pandas as pd
+from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+from rich.table import Table
 
 
 class ChurnGuardPipeline:
@@ -25,6 +30,7 @@ class ChurnGuardPipeline:
         self.db_path = db_path
         self.start_time = datetime.now()
         self.logs = []
+        self.console = Console()
         
     def log(self, message, level="INFO"):
         """Log pipeline progress"""
@@ -32,21 +38,18 @@ class ChurnGuardPipeline:
         log_entry = f"[{timestamp}] [{level}] {message}"
         self.logs.append(log_entry)
         
-        # Color coding
         if level == "SUCCESS":
-            print(f"\033[92m{log_entry}\033[0m")  # Green
+            self.console.print(f"[bold green]{log_entry}[/bold green]")
         elif level == "ERROR":
-            print(f"\033[91m{log_entry}\033[0m")  # Red
+            self.console.print(f"[bold red]{log_entry}[/bold red]")
         elif level == "WARNING":
-            print(f"\033[93m{log_entry}\033[0m")  # Yellow
+            self.console.print(f"[bold yellow]{log_entry}[/bold yellow]")
         else:
-            print(log_entry)
+            self.console.print(f"[cyan]{log_entry}[/cyan]")
     
     def print_header(self, text):
         """Print section header"""
-        print("\n" + "=" * 70)
-        print(f"  {text}")
-        print("=" * 70)
+        self.console.rule(f"[bold blue]{text}[/bold blue]")
     
     def step_1_validate_environment(self):
         """Validate required files and dependencies"""
@@ -343,26 +346,35 @@ class ChurnGuardPipeline:
         
         failed_steps = []
         
-        for i, (name, func) in enumerate(steps, 1):
-            self.log(f"\n{'='*70}", "INFO")
-            self.log(f"Step {i}/{len(steps)}: {name}", "INFO")
-            self.log(f"{'='*70}", "INFO")
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            BarColumn(),
+            TaskProgressColumn(),
+            console=self.console
+        ) as progress:
+            task = progress.add_task("[cyan]Running Pipeline...", total=len(steps))
             
-            try:
-                success = func()
-                if not success:
-                    failed_steps.append(name)
-                    self.log(f"Step {i} FAILED: {name}", "ERROR")
-                    
-                    if name in ["Validate Environment", "Initialize Database", "Load Data"]:
-                        self.log("Critical step failed, aborting pipeline", "ERROR")
-                        break
-            except Exception as e:
-                failed_steps.append(name)
-                self.log(f"Step {i} ERROR: {e}", "ERROR")
+            for i, (name, func) in enumerate(steps, 1):
+                progress.update(task, description=f"[cyan]Step {i}/{len(steps)}: {name}")
+                self.console.print("")
+                self.log(f"Starting Step {i}: {name}", "INFO")
                 
-                if name in ["Validate Environment", "Initialize Database", "Load Data"]:
-                    break
+                try:
+                    success = func()
+                    if not success:
+                        failed_steps.append(name)
+                        self.log(f"Step {i} FAILED: {name}", "ERROR")
+                        if name in ["Validate Environment", "Initialize Database", "Load Data"]:
+                            self.log("Critical step failed, aborting pipeline", "ERROR")
+                            break
+                except Exception as e:
+                    failed_steps.append(name)
+                    self.log(f"Step {i} ERROR: {e}", "ERROR")
+                    if name in ["Validate Environment", "Initialize Database", "Load Data"]:
+                        break
+                
+                progress.advance(task)
         
         # Final summary
         self.print_final_summary(failed_steps)
@@ -373,22 +385,20 @@ class ChurnGuardPipeline:
         """Print pipeline execution summary"""
         duration = (datetime.now() - self.start_time).total_seconds()
         
-        print("\n" + "=" * 70)
-        print("  PIPELINE EXECUTION SUMMARY")
-        print("=" * 70)
+        self.print_header("PIPELINE EXECUTION SUMMARY")
         
         if len(failed_steps) == 0:
-            print("\n\033[92m✅ SUCCESS: All steps completed successfully!\033[0m")
+            self.console.print("\n[bold green]✅ SUCCESS: All steps completed successfully![/bold green]")
         else:
-            print(f"\n\033[91m❌ FAILED: {len(failed_steps)} step(s) failed:\033[0m")
+            self.console.print(f"\n[bold red]❌ FAILED: {len(failed_steps)} step(s) failed:[/bold red]")
             for step in failed_steps:
-                print(f"  - {step}")
+                self.console.print(f"  [red]- {step}[/red]")
         
-        print(f"\n⏱️  Total execution time: {duration:.2f} seconds")
-        print(f"📊 Database: {self.db_path}")
-        print(f"📁 Data directory: {self.data_dir}")
+        self.console.print(f"\n[bold]⏱️  Total execution time:[/bold] {duration:.2f} seconds")
+        self.console.print(f"[bold]📊 Database:[/bold] {self.db_path}")
+        self.console.print(f"[bold]📁 Data directory:[/bold] {self.data_dir}\n")
         
-        # Show database stats
+        # Show database stats using Rich Table
         try:
             conn = sqlite3.connect(self.db_path)
             cursor = conn.cursor()
@@ -400,22 +410,27 @@ class ChurnGuardPipeline:
             interactions = cursor.fetchone()[0]
             conn.close()
             
-            print(f"\n📈 Database contains:")
-            print(f"   - {customers:,} customers")
-            print(f"   - {tickets:,} tickets")
-            print(f"   - {interactions:,} interactions")
-        except:
-            pass
-        
-        print("\n" + "=" * 70)
+            table = Table(title="Database Statistics")
+            table.add_column("Entity", style="cyan", no_wrap=True)
+            table.add_column("Count", style="magenta")
+            
+            table.add_row("Customers", f"{customers:,}")
+            table.add_row("Tickets", f"{tickets:,}")
+            table.add_row("Interactions", f"{interactions:,}")
+            
+            self.console.print(table)
+        except Exception as e:
+            self.console.print(f"[yellow]Could not load database stats: {e}[/yellow]")
+            
+        self.console.rule()
         
         if len(failed_steps) == 0:
-            print("\n🚀 Next steps:")
-            print("   1. Run the app: python -m streamlit run streamlit_app.py")
-            print("   2. View at: http://localhost:8501")
-            print("   3. Test SQL queries on Data Upload page")
+            self.console.print("\n[bold cyan]🚀 Next steps:[/bold cyan]")
+            self.console.print("   [green]1.[/green] Run the app: [bold]python -m streamlit run streamlit_app.py[/bold]")
+            self.console.print("   [green]2.[/green] View at: [blue]http://localhost:8501[/blue]")
+            self.console.print("   [green]3.[/green] Test SQL queries on Data Upload page")
         
-        print("\n")
+        self.console.print("\n")
 
 
 def main():

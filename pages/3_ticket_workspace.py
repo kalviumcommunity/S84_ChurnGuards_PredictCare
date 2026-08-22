@@ -6,7 +6,7 @@ _, tickets_df, _, _ = load_data()
 inject_custom_css()
 
 # Header with search
-    st.title("Ticket Workspace")
+st.title("Ticket Workspace")
 st.markdown("<br>", unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([3, 1, 1])
@@ -39,12 +39,14 @@ if not tickets_df.empty:
     tkt_customer = ticket.get('company', f"Customer {ticket['customer_id']}")
     tkt_priority = ticket['priority']
     tkt_created = pd.to_datetime(ticket['created_at']).strftime('%H:%M %p Today') if pd.notna(ticket['created_at']) else "Unknown"
+    tkt_description = ticket.get('description', ticket.get('subject', 'No details provided.'))
 else:
     tkt_id = "TKT-2842"
     tkt_subject = "Data export failing on Q3 Reports Dashboard"
     tkt_customer = "Acme Corp"
     tkt_priority = "Critical"
     tkt_created = "14:23 PM Today"
+    tkt_description = "I'm trying to export the Q3 retention reports for our executive review tomorrow, but every time I click the CSV download button, the system hangs and then gives a 504 Gateway Timeout error."
     
 priority_badge_class = "badge-critical" if tkt_priority in ['Critical', 'High'] else "badge-medium"
     
@@ -78,30 +80,18 @@ col1, col2 = st.columns([4, 1])
 
 with col1:
     # Customer Message
-    st.markdown("""
+    st.markdown(f"""
     <div style="background: #f5f5f5; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
         <div style="display: flex; gap: 12px;">
             <div style="width: 36px; height: 36px; background: #dbeafe; border-radius: 50%; 
                        display: flex; align-items: center; justify-content: center; color: #1e40af; 
-                       font-weight: 600; flex-shrink: 0;">SJ</div>
+                       font-weight: 600; flex-shrink: 0;">CC</div>
             <div style="flex: 1;">
-                <div style="font-weight: 600; margin-bottom: 8px;">Sarah Jenkins</div>
+                <div style="font-weight: 600; margin-bottom: 8px;">Customer Contact ({tkt_customer})</div>
                 <div style="color: #525252; line-height: 1.6;">
-                    Hi Support,<br><br>
-                    I'm trying to export the Q3 retention reports for our executive review tomorrow, but every 
-                    time I click the CSV download button, the system hangs and then gives a 504 Gateway 
-                    Timeout error.<br><br>
-                    This is extremely time-sensitive. We need this data for a board meeting.<br><br>
-                    Thanks,<br>
-                    Sarah
+                    {tkt_description}
                 </div>
-                <div style="margin-top: 12px;">
-                    <span style="display: inline-block; padding: 8px 12px; background: white; 
-                               border: 1px solid #d4d4d4; border-radius: 6px; font-size: 12px;">
-                        📎 error_screenshot.png
-                    </span>
-                </div>
-                <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">14:22 PM</div>
+                <div style="text-align: right; color: #a3a3a3; font-size: 12px; margin-top: 8px;">{tkt_created}</div>
             </div>
         </div>
     </div>

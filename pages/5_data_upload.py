@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-from utils.data_loader import inject_custom_css, (
+from utils.data_loader import inject_custom_css
+from utils.data_loader import (
     get_dashboard_kpis_sql,
     get_high_risk_customers_sql,
     get_open_tickets_by_priority_sql

@@ -175,3 +175,7 @@ SELECT
     SUM(errors_count) as total_errors
 FROM usage_metrics
 GROUP BY customer_id, strftime('%Y-W%W', metric_date);
+
+-- PR 11: Feature Completeness Indexes
+CREATE INDEX IF NOT EXISTS idx_customers_health_status ON customers(health_status);
+CREATE INDEX IF NOT EXISTS idx_customers_risk_score ON customers(risk_score);

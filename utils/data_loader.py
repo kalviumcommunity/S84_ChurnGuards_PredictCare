@@ -284,96 +284,36 @@ def get_renewal_pipeline_sql(days_ahead=90):
     db = ChurnGuardDB('churnguard.db')
     return db.get_renewal_pipeline(days_ahead=days_ahead)
 
- d e f   i n j e c t _ c u s t o m _ c s s ( ) : 
-         s t . m a r k d o w n ( " " " 
-         < s t y l e > 
-                 @ i m p o r t   u r l ( " h t t p s : / / f o n t s . g o o g l e a p i s . c o m / c s s 2 ? f a m i l y = I n t e r : w g h t @ 3 0 0 ; 4 0 0 ; 5 0 0 ; 6 0 0 ; 7 0 0 & d i s p l a y = s w a p " ) ; 
-                 *   {   f o n t - f a m i l y :   " I n t e r " ,   - a p p l e - s y s t e m ,   B l i n k M a c S y s t e m F o n t ,   s a n s - s e r i f   ! i m p o r t a n t ;   } 
-                 . m a i n   {   b a c k g r o u n d - c o l o r :   # f 8 f a f c ;   p a d d i n g :   2 r e m ;   } 
-                 . s t A p p   {   b a c k g r o u n d - c o l o r :   # f 8 f a f c ;   } 
-                 [ d a t a - t e s t i d = " s t S i d e b a r " ]   {   b a c k g r o u n d - c o l o r :   # 0 F 1 7 2 A ;   b o r d e r - r i g h t :   1 p x   s o l i d   # 1 E 2 9 3 B ;   p a d d i n g - t o p :   1 r e m ;   } 
-                 [ d a t a - t e s t i d = " s t S i d e b a r " ]   p ,   [ d a t a - t e s t i d = " s t S i d e b a r " ]   s p a n ,   [ d a t a - t e s t i d = " s t S i d e b a r " ]   l a b e l ,   [ d a t a - t e s t i d = " s t S i d e b a r " ]   d i v ,   [ d a t a - t e s t i d = " s t S i d e b a r " ]   . s t - e m o t i o n - c a c h e - 1 6 i d s y s   p   {   c o l o r :   # 9 4 A 3 B 8   ! i m p o r t a n t ;   } 
-                 . b l o c k - c o n t a i n e r   {   p a d d i n g - t o p :   1 r e m ;   p a d d i n g - b o t t o m :   1 r e m ;   m a x - w i d t h :   1 0 0 % ;   } 
-                 h 1   {   c o l o r :   # 0 F 1 7 2 A   ! i m p o r t a n t ;   f o n t - s i z e :   3 2 p x   ! i m p o r t a n t ;   f o n t - w e i g h t :   7 0 0   ! i m p o r t a n t ;   m a r g i n - b o t t o m :   0 . 5 r e m   ! i m p o r t a n t ;   } 
-                 h 2   {   c o l o r :   # 0 F 1 7 2 A   ! i m p o r t a n t ;   f o n t - s i z e :   1 8 p x   ! i m p o r t a n t ;   f o n t - w e i g h t :   6 0 0   ! i m p o r t a n t ;   m a r g i n - b o t t o m :   1 r e m   ! i m p o r t a n t ;   } 
-                 h 3   {   c o l o r :   # 0 F 1 7 2 A   ! i m p o r t a n t ;   f o n t - s i z e :   1 6 p x   ! i m p o r t a n t ;   f o n t - w e i g h t :   6 0 0   ! i m p o r t a n t ;   } 
-                 p ,   s p a n ,   l a b e l ,   d i v   {   c o l o r :   # 4 7 5 5 6 9   ! i m p o r t a n t ;   } 
-                 . m e t r i c - c a r d   {   b a c k g r o u n d - c o l o r :   # f f f f f f ;   b o r d e r :   1 p x   s o l i d   # e 2 e 8 f 0 ;   b o r d e r - r a d i u s :   6 p x ;   p a d d i n g :   2 0 p x ;   m a r g i n - b o t t o m :   1 6 p x ;   b o x - s h a d o w :   0 p x   4 p x   6 p x   - 1 p x   r g b a ( 1 5 ,   2 3 ,   4 2 ,   0 . 1 ) ;   t r a n s i t i o n :   t r a n s f o r m   0 . 2 s ,   b o x - s h a d o w   0 . 2 s ;   } 
-                 . m e t r i c - c a r d : h o v e r   {   t r a n s f o r m :   t r a n s l a t e Y ( - 2 p x ) ;   b o x - s h a d o w :   0 p x   1 0 p x   1 5 p x   - 3 p x   r g b a ( 1 5 ,   2 3 ,   4 2 ,   0 . 1 ) ;   } 
-                 . m e t r i c - l a b e l   {   f o n t - s i z e :   1 2 p x ;   c o l o r :   # 6 4 7 4 8 B ;   f o n t - w e i g h t :   6 0 0 ;   t e x t - t r a n s f o r m :   u p p e r c a s e ;   l e t t e r - s p a c i n g :   0 . 5 p x ;   m a r g i n - b o t t o m :   8 p x ;   } 
-                 . m e t r i c - v a l u e   {   f o n t - s i z e :   3 6 p x ;   f o n t - w e i g h t :   7 0 0 ;   c o l o r :   # 0 F 1 7 2 A ;   l i n e - h e i g h t :   1 ;   f o n t - v a r i a n t - n u m e r i c :   t a b u l a r - n u m s ;   } 
-                 . m e t r i c - c h a n g e   {   f o n t - s i z e :   1 3 p x ;   f o n t - w e i g h t :   6 0 0 ;   m a r g i n - t o p :   8 p x ;   } 
-                 . p o s i t i v e   {   c o l o r :   # 1 0 B 9 8 1 ;   }   . n e g a t i v e   {   c o l o r :   # D C 2 6 2 6 ;   } 
-                 . b a d g e   {   d i s p l a y :   i n l i n e - b l o c k ;   p a d d i n g :   4 p x   1 2 p x ;   b o r d e r - r a d i u s :   4 p x ;   f o n t - s i z e :   1 2 p x ;   f o n t - w e i g h t :   5 0 0 ;   } 
-                 . b a d g e - c r i t i c a l   {   b a c k g r o u n d - c o l o r :   # f e f 2 f 2 ;   c o l o r :   # D C 2 6 2 6 ;   b o r d e r :   1 p x   s o l i d   # f e c a c a ;   } 
-                 . b a d g e - h i g h   {   b a c k g r o u n d - c o l o r :   # f f f b e b ;   c o l o r :   # F 5 9 E 0 B ;   b o r d e r :   1 p x   s o l i d   # f d e 6 8 a ;   } 
-                 . b a d g e - m e d i u m   {   b a c k g r o u n d - c o l o r :   # f 8 f a f c ;   c o l o r :   # 6 4 7 4 8 B ;   b o r d e r :   1 p x   s o l i d   # e 2 e 8 f 0 ;   } 
-                 . b a d g e - l o w   {   b a c k g r o u n d - c o l o r :   # e c f d f 5 ;   c o l o r :   # 1 0 B 9 8 1 ;   b o r d e r :   1 p x   s o l i d   # a 7 f 3 d 0 ;   } 
-                 . c o n t e n t - c a r d   {   b a c k g r o u n d - c o l o r :   # f f f f f f ;   b o r d e r :   1 p x   s o l i d   # e 2 e 8 f 0 ;   b o r d e r - r a d i u s :   8 p x ;   p a d d i n g :   2 4 p x ;   m a r g i n - b o t t o m :   1 6 p x ;   b o x - s h a d o w :   0 p x   4 p x   6 p x   - 1 p x   r g b a ( 1 5 ,   2 3 ,   4 2 ,   0 . 1 ) ;   } 
-                 . b t n - p r i m a r y   {   b a c k g r o u n d - c o l o r :   # 0 F 1 7 2 A ;   c o l o r :   w h i t e ;   p a d d i n g :   8 p x   1 6 p x ;   b o r d e r - r a d i u s :   6 p x ;   b o r d e r :   n o n e ;   f o n t - w e i g h t :   5 0 0 ;   f o n t - s i z e :   1 4 p x ;   t e x t - d e c o r a t i o n :   n o n e ;   d i s p l a y :   i n l i n e - b l o c k ;   t r a n s i t i o n :   b a c k g r o u n d - c o l o r   0 . 2 s ;   } 
-                 . b t n - p r i m a r y : h o v e r   {   b a c k g r o u n d - c o l o r :   # 1 e 2 9 3 b ;   } 
-                 . b t n - s e c o n d a r y   {   b a c k g r o u n d - c o l o r :   w h i t e ;   c o l o r :   # 0 F 1 7 2 A ;   p a d d i n g :   8 p x   1 6 p x ;   b o r d e r - r a d i u s :   6 p x ;   b o r d e r :   1 p x   s o l i d   # e 2 e 8 f 0 ;   f o n t - w e i g h t :   5 0 0 ;   f o n t - s i z e :   1 4 p x ;   t e x t - d e c o r a t i o n :   n o n e ;   d i s p l a y :   i n l i n e - b l o c k ;   t r a n s i t i o n :   b a c k g r o u n d - c o l o r   0 . 2 s ;   } 
-                 . b t n - s e c o n d a r y : h o v e r   {   b a c k g r o u n d - c o l o r :   # f 1 f 5 f 9 ;   } 
-                 . d a t a - t a b l e   {   w i d t h :   1 0 0 % ;   b o r d e r - c o l l a p s e :   c o l l a p s e ;   } 
-                 . d a t a - t a b l e   t h   {   t e x t - a l i g n :   l e f t ;   p a d d i n g :   1 2 p x ;   f o n t - s i z e :   1 2 p x ;   f o n t - w e i g h t :   6 0 0 ;   c o l o r :   # 6 4 7 4 8 B ;   t e x t - t r a n s f o r m :   u p p e r c a s e ;   l e t t e r - s p a c i n g :   0 . 5 p x ;   b o r d e r - b o t t o m :   1 p x   s o l i d   # e 2 e 8 f 0 ;   } 
-                 . d a t a - t a b l e   t d   {   p a d d i n g :   1 6 p x   1 2 p x ;   b o r d e r - b o t t o m :   1 p x   s o l i d   # f 8 f a f c ;   f o n t - s i z e :   1 4 p x ;   c o l o r :   # 0 F 1 7 2 A ;   f o n t - v a r i a n t - n u m e r i c :   t a b u l a r - n u m s ;   } 
-         < / s t y l e > 
-         " " " ,   u n s a f e _ a l l o w _ h t m l = T r u e ) 
-         
-         w i t h   s t . s i d e b a r : 
-                 s t . m a r k d o w n ( " " " 
-                 < d i v   s t y l e = " p a d d i n g :   0   1 r e m   2 r e m   1 r e m ;   b o r d e r - b o t t o m :   1 p x   s o l i d   # 1 E 2 9 3 B ;   m a r g i n - b o t t o m :   1 . 5 r e m ; " > 
-                         < d i v   s t y l e = " d i s p l a y :   f l e x ;   a l i g n - i t e m s :   c e n t e r ;   g a p :   1 2 p x ; " > 
-                                 < d i v   s t y l e = " w i d t h :   3 2 p x ;   h e i g h t :   3 2 p x ;   b a c k g r o u n d - c o l o r :   # 3 B 8 2 F 6 ;   b o r d e r - r a d i u s :   6 p x ;   
-                                                         d i s p l a y :   f l e x ;   a l i g n - i t e m s :   c e n t e r ;   j u s t i f y - c o n t e n t :   c e n t e r ;   c o l o r :   w h i t e ;   
-                                                         f o n t - w e i g h t :   7 0 0 ;   f o n t - s i z e :   1 4 p x ; " > =ΨΚά< / d i v > 
-                                 < d i v > 
-                                         < d i v   s t y l e = " f o n t - s i z e :   1 6 p x ;   f o n t - w e i g h t :   7 0 0 ;   c o l o r :   # F F F F F F ; " > C h u r n G u a r d   A I < / d i v > 
-                                         < d i v   s t y l e = " f o n t - s i z e :   1 1 p x ;   c o l o r :   # 9 4 A 3 B 8 ; " > E n t e r p r i s e   A n a l y t i c s < / d i v > 
-                                 < / d i v > 
-                         < / d i v > 
-                 < / d i v > 
-                 " " " ,   u n s a f e _ a l l o w _ h t m l = T r u e ) 
-  
- 
 def inject_custom_css():
-    import streamlit as st
     st.markdown("""
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important; }
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+        * { font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important; }
         .main { background-color: #f8fafc; padding: 2rem; }
         .stApp { background-color: #f8fafc; }
         [data-testid="stSidebar"] { background-color: #0F172A; border-right: 1px solid #1E293B; padding-top: 1rem; }
         [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label, [data-testid="stSidebar"] div, [data-testid="stSidebar"] .st-emotion-cache-16idsys p { color: #94A3B8 !important; }
         .block-container { padding-top: 1rem; padding-bottom: 1rem; max-width: 100%; }
-        h1 { color: #0F172A !important; font-size: 32px !important; font-weight: 600 !important; margin-bottom: 0.5rem !important; }
+        h1 { color: #0F172A !important; font-size: 32px !important; font-weight: 700 !important; margin-bottom: 0.5rem !important; }
         h2 { color: #0F172A !important; font-size: 18px !important; font-weight: 600 !important; margin-bottom: 1rem !important; }
         h3 { color: #0F172A !important; font-size: 16px !important; font-weight: 600 !important; }
         p, span, label, div { color: #475569 !important; }
-        
-        /* PR 6: Metric Cards Design */
-        .metric-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1); transition: transform 0.2s, box-shadow 0.2s; }
-        .metric-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1); }
-        .content-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin-bottom: 16px; box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.1); }
-        
+        .metric-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 20px; margin-bottom: 16px; box-shadow: 0px 4px 6px -1px rgba(15, 23, 42, 0.1); transition: transform 0.2s, box-shadow 0.2s; }
+        .metric-card:hover { transform: translateY(-2px); box-shadow: 0px 10px 15px -3px rgba(15, 23, 42, 0.1); }
         .metric-label { font-size: 12px; color: #64748B; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
         .metric-value { font-size: 36px; font-weight: 700; color: #0F172A; line-height: 1; font-variant-numeric: tabular-nums; }
         .metric-change { font-size: 13px; font-weight: 600; margin-top: 8px; }
         .positive { color: #10B981; } .negative { color: #DC2626; }
-        
-        /* PR 8: Semantic Badges */
-        .badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 500; }
         .badge-critical { background-color: #fef2f2; color: #DC2626; border: 1px solid #fecaca; }
         .badge-high { background-color: #fffbeb; color: #F59E0B; border: 1px solid #fde68a; }
         .badge-medium { background-color: #f8fafc; color: #64748B; border: 1px solid #e2e8f0; }
         .badge-low { background-color: #ecfdf5; color: #10B981; border: 1px solid #a7f3d0; }
-        
-        .btn-primary { background-color: #0F172A; color: white; padding: 8px 16px; border-radius: 6px; border: none; font-weight: 600; font-size: 14px; text-decoration: none; display: inline-block; transition: background-color 0.2s; }
+        .content-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin-bottom: 16px; box-shadow: 0px 4px 6px -1px rgba(15, 23, 42, 0.1); }
+        .btn-primary { background-color: #0F172A; color: white; padding: 8px 16px; border-radius: 6px; border: none; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-block; transition: background-color 0.2s; }
         .btn-primary:hover { background-color: #1e293b; }
-        .btn-secondary { background-color: white; color: #0F172A; padding: 8px 16px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: 600; font-size: 14px; text-decoration: none; display: inline-block; transition: background-color 0.2s; }
+        .btn-secondary { background-color: white; color: #0F172A; padding: 8px 16px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-block; transition: background-color 0.2s; }
         .btn-secondary:hover { background-color: #f1f5f9; }
-        
         .data-table { width: 100%; border-collapse: collapse; }
         .data-table th { text-align: left; padding: 12px; font-size: 12px; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
         .data-table td { padding: 16px 12px; border-bottom: 1px solid #f8fafc; font-size: 14px; color: #0F172A; font-variant-numeric: tabular-nums; }
@@ -386,7 +326,7 @@ def inject_custom_css():
             <div style="display: flex; align-items: center; gap: 12px;">
                 <div style="width: 32px; height: 32px; background-color: #3B82F6; border-radius: 6px; 
                             display: flex; align-items: center; justify-content: center; color: white; 
-                            font-weight: 700; font-size: 14px;">π“</div>
+                            font-weight: 700; font-size: 14px;">=</div>
                 <div>
                     <div style="font-size: 16px; font-weight: 700; color: #FFFFFF;">ChurnGuard AI</div>
                     <div style="font-size: 11px; color: #94A3B8;">Enterprise Analytics</div>
@@ -394,3 +334,6 @@ def inject_custom_css():
             </div>
         </div>
         """, unsafe_allow_html=True)
+
+
+

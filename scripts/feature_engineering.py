@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from datetime import datetime
 
 def engineer_features(customers, tickets, interactions):
     """
@@ -84,5 +83,22 @@ def engineer_features(customers, tickets, interactions):
         tickets = tickets.rename(columns={'company_name': 'company'})
         # Use first name from customer_id as dummy customer name
         tickets['customer'] = 'User ' + tickets['customer_id'].str.split('-').str[1]
+        
+    # Calculate mathematical churn probability
+    inactivity = customers.get('days_since_active', 0)
+    neg_tix = customers.get('negative_tickets', 0)
+    crit_tix = customers.get('critical_tickets', 0)
+    
+    # Base churn risk = 5% (0.05)
+    # Usage drops = 0.5% (0.005) per day of inactivity
+    # Ticket sentiment = 10% (0.10) per negative ticket
+    # Critical issues = 15% (0.15) per critical ticket
+    churn_prob = 0.05 + (inactivity * 0.005) + (neg_tix * 0.10) + (crit_tix * 0.15)
+    
+    # Cap between 1% and 99%
+    customers['predicted_churn_prob'] = churn_prob.clip(lower=0.01, upper=0.99)
+    
+    # Round to 4 decimal places for precision
+    customers['predicted_churn_prob'] = customers['predicted_churn_prob'].round(4)
         
     return customers, tickets

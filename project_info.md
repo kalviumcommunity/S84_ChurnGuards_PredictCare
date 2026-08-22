@@ -354,7 +354,12 @@ python run_pipeline.py --verify-only
 - [x] **Module 3.10** - Development environment setup (venv, .env, .gitignore)
 - [x] **Module 3.11** - GitHub workflow setup (branches, PRs, templates)
 
-**Next Up:** Module 3.12 - LLM API Access 🚀
+**Sprint 2 Phase 1 (Foundation):**
+- [x] **Module 3.12** - LLM API Access
+- [x] **Module 3.13** - Prompt Construction
+- [x] **Module 3.14** - Tokens & Cost Estimation
+
+**Next Up:** Module 3.19 - Document Loading 🚀
 
 ---
 

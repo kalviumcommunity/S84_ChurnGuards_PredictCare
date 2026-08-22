@@ -5,6 +5,14 @@ Purpose: Reusable database queries for the Streamlit app
 
 import sqlite3
 import pandas as pd
+import logging
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+handler = logging.StreamHandler()
+handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+if not logger.handlers:
+    logger.addHandler(handler)
 from typing import Optional, List, Dict, Any
 from datetime import datetime, timedelta
 
@@ -28,6 +36,10 @@ class ChurnGuardDB:
             else:
                 df = pd.read_sql_query(query, conn)
             return df
+        except Exception as e:
+            logger.error(f"Database query error: {e}")
+            logger.debug(f"Failed query: {query} with params: {params}")
+            return pd.DataFrame()
         finally:
             conn.close()
     
@@ -42,6 +54,10 @@ class ChurnGuardDB:
                 cursor.execute(query)
             conn.commit()
             return cursor.rowcount
+        except Exception as e:
+            logger.error(f"Database write error: {e}")
+            logger.debug(f"Failed write: {query} with params: {params}")
+            return 0
         finally:
             conn.close()
     

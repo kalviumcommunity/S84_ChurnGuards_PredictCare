@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from datetime import datetime
+from utils.validators import (
+    validate_customers_schema,
+    validate_tickets_schema,
+    validate_interactions_schema
+)
 
 def calculate_real_risk_score(customer_row, tickets_df, interactions_df):
     """

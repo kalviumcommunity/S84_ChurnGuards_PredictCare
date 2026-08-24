@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Default LLM settings
-DEFAULT_MODEL = "gpt-4o-mini"
+# Default LLM settings (Updated for Groq)
+DEFAULT_MODEL = "groq/compound-mini"
 MAX_TOKENS = 1000
 TEMPERATURE = 0.3
 

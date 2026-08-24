@@ -232,7 +232,7 @@ with col2:
         st.markdown('<div style="text-align: right;"><a href="#" class="btn-secondary" style="padding: 4px 8px; font-size: 12px;">🔽</a></div>', 
                    unsafe_allow_html=True)
     
-    st.markdown("""
+    st.html("""
     <div style="margin-top: 20px; position: relative;">
         <!-- Timeline Line -->
         <div style="position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: #c6c6cd; z-index: 0;"></div>
@@ -301,7 +301,7 @@ with col2:
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """)
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Retention Strategy

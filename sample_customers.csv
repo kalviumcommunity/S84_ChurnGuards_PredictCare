@@ -1,0 +1,7 @@
+customer_id,company_name,industry,arr,contract_type,renewal_date,csm_name
+CUST-901,Acme Corp,Technology,150000,Annual,2026-10-15,Sarah Jenkins
+CUST-902,Stark Industries,Manufacturing,500000,Multi-year,2027-01-01,Tony Stark
+CUST-903,Wayne Enterprises,Finance,750000,Annual,2026-12-01,Bruce Wayne
+CUST-904,Daily Planet,Media,85000,Monthly,2026-09-30,Clark Kent
+CUST-905,Globex Corp,Technology,250000,Annual,2027-03-15,Hank Scorpio
+CUST-906,Initech,Technology,120000,Annual,2026-11-20,Bill Lumbergh

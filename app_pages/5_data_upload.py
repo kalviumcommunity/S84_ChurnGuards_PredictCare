@@ -146,9 +146,11 @@ with col1:
             
             if validation['is_valid']:
                 st.markdown(f"""
-                <div style="background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
-                    <div style="color: #065f46; font-weight: 600; font-size: 13px;">✅ Schema Validation Passed</div>
-                    <div style="color: #047857; font-size: 12px; margin-top: 2px;">
+                <div style="background-color: #DCFCE7; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                    <div style="color: #166534; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 4px;">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span> Schema Validation Passed
+                    </div>
+                    <div style="color: #166534; font-size: 12px; margin-top: 4px; margin-left: 20px;">
                         {len(customers_uploaded)} records verified • Required columns verified: <code>company_name</code>, <code>arr</code>, <code>renewal_date</code>
                     </div>
                 </div>
@@ -197,9 +199,11 @@ with col1:
             else:
                 error_list_html = "".join([f"<li>{err}</li>" for err in validation['errors']])
                 st.markdown(f"""
-                <div style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
-                    <div style="color: #991b1b; font-weight: 600; font-size: 13px;">❌ Schema Validation Failed</div>
-                    <div style="color: #b91c1c; font-size: 12px; margin-top: 4px;">
+                <div style="background-color: #ffdad6; border: 1px solid #ffb4ab; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                    <div style="color: #ba1a1a; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 4px;">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">error</span> Schema Validation Failed
+                    </div>
+                    <div style="color: #ba1a1a; font-size: 12px; margin-top: 4px; margin-left: 20px;">
                         <strong>Upload blocked due to the following errors:</strong>
                         <ul style="margin-top: 4px; margin-bottom: 0; padding-left: 20px;">
                             {error_list_html}
@@ -229,9 +233,11 @@ with col2:
             if validation['is_valid']:
                 tickets_df_uploaded = pd.DataFrame(tickets_uploaded)
                 st.markdown(f"""
-                <div style="background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
-                    <div style="color: #065f46; font-weight: 600; font-size: 13px;">✅ Schema Validation Passed</div>
-                    <div style="color: #047857; font-size: 12px; margin-top: 2px;">
+                <div style="background-color: #DCFCE7; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                    <div style="color: #166534; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 4px;">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span> Schema Validation Passed
+                    </div>
+                    <div style="color: #166534; font-size: 12px; margin-top: 4px; margin-left: 20px;">
                         {len(tickets_df_uploaded)} tickets verified • Required fields verified: <code>ticket_id</code>, <code>subject</code>, <code>priority</code>, <code>status</code>
                     </div>
                 </div>
@@ -325,9 +331,11 @@ if interactions_file is not None:
         
         if validation['is_valid']:
             st.markdown(f"""
-            <div style="background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
-                <div style="color: #065f46; font-weight: 600; font-size: 13px;">✅ Schema Validation Passed</div>
-                <div style="color: #047857; font-size: 12px; margin-top: 2px;">
+            <div style="background-color: #DCFCE7; border: 1px solid #bbf7d0; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                <div style="color: #166534; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 4px;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">check_circle</span> Schema Validation Passed
+                </div>
+                <div style="color: #166534; font-size: 12px; margin-top: 4px; margin-left: 20px;">
                     {len(interactions_uploaded)} interactions verified • Required columns verified: <code>customer_id</code>, <code>interaction_type</code>, <code>timestamp</code>
                 </div>
             </div>
@@ -396,9 +404,11 @@ if interactions_file is not None:
         else:
             error_list_html = "".join([f"<li>{err}</li>" for err in validation['errors']])
             st.markdown(f"""
-            <div style="background-color: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
-                <div style="color: #991b1b; font-weight: 600; font-size: 13px;">❌ Schema Validation Failed</div>
-                <div style="color: #b91c1c; font-size: 12px; margin-top: 4px;">
+            <div style="background-color: #ffdad6; border: 1px solid #ffb4ab; border-radius: 8px; padding: 12px; margin-bottom: 12px;">
+                <div style="color: #ba1a1a; font-weight: 600; font-size: 13px; display: flex; align-items: center; gap: 4px;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">error</span> Schema Validation Failed
+                </div>
+                <div style="color: #ba1a1a; font-size: 12px; margin-top: 4px; margin-left: 20px;">
                     <strong>Upload blocked due to the following errors:</strong>
                     <ul style="margin-top: 4px; margin-bottom: 0; padding-left: 20px;">
                         {error_list_html}

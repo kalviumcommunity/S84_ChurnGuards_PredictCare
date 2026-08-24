@@ -292,49 +292,110 @@ def get_renewal_pipeline_sql(days_ahead=90):
 def inject_custom_css():
     st.markdown("""
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-        * { font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important; }
-        .main { background-color: #f8fafc; padding: 2rem; }
-        .stApp { background-color: #f8fafc; }
-        [data-testid="stSidebar"] { background-color: #0F172A; border-right: 1px solid #1E293B; padding-top: 1rem; }
-        [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label, [data-testid="stSidebar"] div, [data-testid="stSidebar"] .st-emotion-cache-16idsys p { color: #94A3B8 !important; }
-        .block-container { padding-top: 1rem; padding-bottom: 1rem; max-width: 100%; }
-        h1 { color: #0F172A !important; font-size: 32px !important; font-weight: 700 !important; margin-bottom: 0.5rem !important; }
-        h2 { color: #0F172A !important; font-size: 18px !important; font-weight: 600 !important; margin-bottom: 1rem !important; }
-        h3 { color: #0F172A !important; font-size: 16px !important; font-weight: 600 !important; }
-        p, span, label, div { color: #475569 !important; }
-        .metric-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 20px; margin-bottom: 16px; box-shadow: 0px 4px 6px -1px rgba(15, 23, 42, 0.1); transition: transform 0.2s, box-shadow 0.2s; }
-        .metric-card:hover { transform: translateY(-2px); box-shadow: 0px 10px 15px -3px rgba(15, 23, 42, 0.1); }
-        .metric-label { font-size: 12px; color: #64748B; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
-        .metric-value { font-size: 36px; font-weight: 700; color: #0F172A; line-height: 1; font-variant-numeric: tabular-nums; }
-        .metric-change { font-size: 13px; font-weight: 600; margin-top: 8px; }
-        .positive { color: #10B981; } .negative { color: #DC2626; }
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+        html, body, p, div, span, a, h1, h2, h3, h4, h5, h6, li, label, .stMarkdown { 
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif; 
+            color: #1b1b1d; /* on-background */
+        }
+        
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined' !important;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .main { background-color: #fcf8fa; padding: 2rem; } /* bg-background */
+        .stApp { background-color: #fcf8fa; }
+        
+        /* Sidebar styling to match Stitch */
+        [data-testid="stSidebar"] { 
+            background-color: #f0edef; /* surface-container */
+            border-right: 1px solid #c6c6cd; /* outline-variant */
+            padding-top: 1rem; 
+            box-shadow: none;
+        }
+        [data-testid="stSidebar"] p, [data-testid="stSidebar"] span, [data-testid="stSidebar"] label, [data-testid="stSidebar"] div { color: #45464d !important; }
+        [data-testid="stSidebarNav"] a { border-radius: 4px; margin: 4px 12px; }
+        [data-testid="stSidebarNav"] a:hover { background-color: #e4e2e4 !important; /* surface-container-highest */ }
+        [data-testid="stSidebarNav"] a[aria-current="page"] { 
+            background-color: transparent !important; 
+            border-right: 4px solid #000000;
+            border-radius: 0;
+            color: #000000 !important;
+            font-weight: 700;
+        }
+        [data-testid="stSidebarNav"] span { color: #000000 !important; font-weight: 500; font-size: 14px; }
+        
+        /* Container and Typography */
+        .block-container { padding-top: 2rem; padding-bottom: 2rem; max-width: 100%; }
+        footer { display: none; }
+        h1 { color: #000000 !important; font-size: 36px !important; font-weight: 700 !important; margin-bottom: 0.5rem !important; line-height: 44px; letter-spacing: -0.02em; }
+        h2 { color: #000000 !important; font-size: 24px !important; font-weight: 600 !important; margin-bottom: 1rem !important; line-height: 32px; letter-spacing: -0.01em; }
+        h3 { color: #000000 !important; font-size: 20px !important; font-weight: 600 !important; }
+        
+        /* Cards */
+        .metric-card, .content-card { 
+            background-color: #ffffff; /* surface-container-lowest */
+            border: 1px solid #c6c6cd; /* outline-variant */
+            border-radius: 0.5rem; /* rounded-lg */
+            padding: 24px; 
+            margin-bottom: 16px; 
+            box-shadow: none; 
+            transition: box-shadow 0.2s; 
+        }
+        .metric-card:hover, .content-card:hover { 
+            box-shadow: 0px 4px 6px -1px rgba(15, 23, 42, 0.1); 
+        }
+        
+        /* Metrics Specific */
+        .metric-label { font-size: 12px; color: #45464d; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .metric-value { font-size: 36px; font-weight: 700; color: #000000; line-height: 44px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+        .metric-change { font-size: 12px; font-weight: 500; margin-top: 8px; }
+        .positive { color: #166534; background-color: #DCFCE7; padding: 4px; border-radius: 4px; } 
+        .negative { color: #ba1a1a; background-color: #ffdad6; padding: 4px; border-radius: 4px; }
+        
+        /* Badges */
         .badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 500; }
-        .badge-critical { background-color: #fef2f2; color: #DC2626; border: 1px solid #fecaca; }
-        .badge-high { background-color: #fffbeb; color: #F59E0B; border: 1px solid #fde68a; }
-        .badge-medium { background-color: #f8fafc; color: #64748B; border: 1px solid #e2e8f0; }
-        .badge-low { background-color: #ecfdf5; color: #10B981; border: 1px solid #a7f3d0; }
-        .content-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; margin-bottom: 16px; box-shadow: 0px 4px 6px -1px rgba(15, 23, 42, 0.1); }
-        .btn-primary { background-color: #0F172A; color: white; padding: 8px 16px; border-radius: 6px; border: none; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-block; transition: background-color 0.2s; }
-        .btn-primary:hover { background-color: #1e293b; }
-        .btn-secondary { background-color: white; color: #0F172A; padding: 8px 16px; border-radius: 6px; border: 1px solid #e2e8f0; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-block; transition: background-color 0.2s; }
-        .btn-secondary:hover { background-color: #f1f5f9; }
+        .badge-critical { background-color: #ffdad6; color: #ba1a1a; border: 1px solid #ffb4ab; }
+        .badge-high { background-color: #ffefd6; color: #ba6a1a; border: 1px solid #ffdfab; }
+        .badge-medium { background-color: #f0edef; color: #45464d; border: 1px solid #c6c6cd; }
+        .badge-low { background-color: #DCFCE7; color: #166534; border: 1px solid #bbf7d0; }
+        
+        /* Buttons */
+        .btn-primary { background-color: #000000; color: #ffffff; padding: 8px 16px; border-radius: 4px; border: none; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: opacity 0.2s; }
+        .btn-primary:hover { opacity: 0.9; }
+        .btn-secondary { background-color: transparent; color: #45464d; padding: 8px 16px; border-radius: 4px; border: 1px solid #76777d; font-weight: 500; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: background-color 0.2s; }
+        .btn-secondary:hover { background-color: #f6f3f5; }
+        
+        /* Tables */
         .data-table { width: 100%; border-collapse: collapse; }
-        .data-table th { text-align: left; padding: 12px; font-size: 12px; font-weight: 600; color: #64748B; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #e2e8f0; }
-        .data-table td { padding: 16px 12px; border-bottom: 1px solid #f8fafc; font-size: 14px; color: #0F172A; font-variant-numeric: tabular-nums; }
+        .data-table th { text-align: left; padding: 12px; font-size: 12px; font-weight: 600; color: #45464d; border-bottom: 1px solid #c6c6cd; }
+        .data-table td { padding: 16px 12px; border-bottom: 1px solid #e4e2e4; font-size: 14px; color: #1b1b1d; }
     </style>
+
     """, unsafe_allow_html=True)
     
     with st.sidebar:
         st.markdown("""
-        <div style="padding: 0 1rem 2rem 1rem; border-bottom: 1px solid #1E293B; margin-bottom: 1.5rem;">
+        <div style="padding: 0 1rem 2rem 1rem; border-bottom: 1px solid #e2e8f0; margin-bottom: 1.5rem;">
             <div style="display: flex; align-items: center; gap: 12px;">
-                <div style="width: 32px; height: 32px; background-color: #3B82F6; border-radius: 6px; 
+                <div style="width: 32px; height: 32px; background-color: #1a73e8; border-radius: 6px; 
                             display: flex; align-items: center; justify-content: center; color: white; 
-                            font-weight: 700; font-size: 14px;">=</div>
+                            font-weight: 700; font-size: 14px;">📊</div>
                 <div>
-                    <div style="font-size: 16px; font-weight: 700; color: #FFFFFF;">ChurnGuard AI</div>
-                    <div style="font-size: 11px; color: #94A3B8;">Enterprise Analytics</div>
+                    <div style="font-size: 16px; font-weight: 700; color: #0F172A;">ChurnGuard AI</div>
+                    <div style="font-size: 11px; color: #64748B;">Enterprise Analytics</div>
                 </div>
             </div>
         </div>

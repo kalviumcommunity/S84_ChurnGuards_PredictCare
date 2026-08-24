@@ -1,0 +1,6 @@
+interaction_id,customer_id,interaction_type,description,timestamp
+INT-801,CUST-901,QBR,Quarterly Business Review with CTO,2026-08-20 14:00:00
+INT-802,CUST-902,Meeting,Discussed renewal terms and new enterprise features,2026-08-21 10:30:00
+INT-803,CUST-903,Call,Support escalation follow-up regarding API latency,2026-08-22 09:15:00
+INT-804,CUST-904,QBR,Strategic roadmap planning for Q4,2026-08-23 15:45:00
+INT-805,CUST-905,Meeting,Executive sponsor check-in,2026-08-24 11:00:00

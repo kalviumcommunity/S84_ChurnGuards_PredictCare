@@ -6,13 +6,23 @@ customers_df, tickets_df, interactions_df, churn_history_df = load_data()
 inject_custom_css()
 
 # Header
-col1, col2 = st.columns([3, 1])
+col1, col2 = st.columns([2, 1])
 with col1:
-    st.title("Risk Command Center")
+    st.markdown('<h2 style="margin-bottom: 4px;">Risk Command Center</h2>', unsafe_allow_html=True)
+    st.markdown('<p style="color: #45464d;">Monitor and manage customer risk alerts across your portfolio.</p>', unsafe_allow_html=True)
 with col2:
     st.markdown('<br>', unsafe_allow_html=True)
-    st.markdown('<a href="#" class="btn-secondary">🔽 Filter by CSM</a> &nbsp; <a href="#" class="btn-secondary">📤 Export</a>', 
-               unsafe_allow_html=True)
+    st.markdown('<br>', unsafe_allow_html=True)
+    b_col1, b_col2 = st.columns([1, 1])
+    with b_col1:
+        if st.button("👥 Filter by CSM", use_container_width=True):
+            st.toast("CSM Filter activated (Demo)", icon="ℹ️")
+    with b_col2:
+        if st.button("📥 Export", type="primary", use_container_width=True):
+            import time
+            with st.spinner("Preparing export..."):
+                time.sleep(1)
+            st.toast("Risk alerts exported!", icon="✅")
 
 st.markdown("<br>", unsafe_allow_html=True)
 
@@ -30,23 +40,23 @@ with col1:
     col_a, col_b, col_c = st.columns(3)
     with col_a:
         st.markdown(f"""
-        <div style="text-align: center;">
-            <div style="font-size: 32px; font-weight: 700; color: #16a34a;">{low_count}</div>
-            <div style="font-size: 11px; color: #737373; text-transform: uppercase;">LOW RISK</div>
+        <div style="text-align: center; padding: 16px; border: 1px solid #ffb4ab; border-radius: 8px; background: #ffdad6;">
+            <div style="font-size: 36px; font-weight: 700; color: #ba1a1a;">{crit_count}</div>
+            <div style="font-size: 12px; font-weight: 600; color: #ba1a1a; text-transform: uppercase;">HIGH RISK</div>
         </div>
         """, unsafe_allow_html=True)
     with col_b:
         st.markdown(f"""
-        <div style="text-align: center;">
-            <div style="font-size: 32px; font-weight: 700; color: #f59e0b;">{med_count}</div>
-            <div style="font-size: 11px; color: #737373; text-transform: uppercase;">MEDIUM</div>
+        <div style="text-align: center; padding: 16px; border: 1px solid #ffdfab; border-radius: 8px; background: #ffefd6;">
+            <div style="font-size: 36px; font-weight: 700; color: #ba6a1a;">{med_count}</div>
+            <div style="font-size: 12px; font-weight: 600; color: #ba6a1a; text-transform: uppercase;">MEDIUM</div>
         </div>
         """, unsafe_allow_html=True)
     with col_c:
         st.markdown(f"""
-        <div style="text-align: center;">
-            <div style="font-size: 32px; font-weight: 700; color: #dc2626;">{crit_count}</div>
-            <div style="font-size: 11px; color: #737373; text-transform: uppercase;">HIGH RISK</div>
+        <div style="text-align: center; padding: 16px; border: 1px solid #bbf7d0; border-radius: 8px; background: #DCFCE7;">
+            <div style="font-size: 36px; font-weight: 700; color: #166534;">{low_count}</div>
+            <div style="font-size: 12px; font-weight: 600; color: #166534; text-transform: uppercase;">LOW RISK</div>
         </div>
         """, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
@@ -65,14 +75,16 @@ with col2:
     top_critical_alerts = customers_df[customers_df['health_status'] == 'Critical'].sort_values('risk_score', ascending=False).head(3)
     for _, row in top_critical_alerts.iterrows():
         alerts_html += f"""
-        <div style="padding: 12px; background: #fef2f2; border-left: 3px solid #dc2626; border-radius: 6px; margin-bottom: 12px;">
-            <div style="font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">
-                📈 {row['company_name']} risk score is {int(row['risk_score'])}.
+        <div style="padding: 12px; background: #ffffff; border-left: 4px solid #ba1a1a; border-radius: 6px; border-top: 1px solid #c6c6cd; border-right: 1px solid #c6c6cd; border-bottom: 1px solid #c6c6cd; margin-bottom: 12px; display: flex; gap: 12px;">
+            <span class="material-symbols-outlined" style="color: #ba1a1a;">trending_up</span>
+            <div>
+                <div style="font-weight: 400; color: #1b1b1d; margin-bottom: 4px; font-size: 14px;">
+                    <strong>{row['company_name']}</strong> risk score is <strong style="color: #ba1a1a;">{int(row['risk_score'])}</strong>.
+                </div>
+                <div style="font-size: 12px; color: #45464d;">Sentiment: {row['sentiment']}</div>
             </div>
-            <div style="font-size: 13px; color: #737373;">Sentiment: {row['sentiment']}</div>
         </div>
         """
-        
     st.markdown(alerts_html, unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
 
@@ -99,25 +111,25 @@ if alert_list:
     
     with col_stat1:
         st.markdown(f"""
-        <div style="text-align: center; padding: 12px; background: #fee2e2; border-radius: 6px;">
-            <div style="font-size: 28px; font-weight: 700; color: #dc2626;">{critical_count}</div>
-            <div style="font-size: 12px; color: #991b1b; font-weight: 600;">Critical Alerts</div>
+        <div style="text-align: center; padding: 12px; border: 1px solid #ffb4ab; background: #ffdad6; border-radius: 6px;">
+            <div style="font-size: 28px; font-weight: 700; color: #ba1a1a;">{critical_count}</div>
+            <div style="font-size: 12px; color: #ba1a1a; font-weight: 600; text-transform: uppercase;">Critical Alerts</div>
         </div>
         """, unsafe_allow_html=True)
     
     with col_stat2:
         st.markdown(f"""
-        <div style="text-align: center; padding: 12px; background: #fed7aa; border-radius: 6px;">
-            <div style="font-size: 28px; font-weight: 700; color: #ea580c;">{high_count}</div>
-            <div style="font-size: 12px; color: #9a3412; font-weight: 600;">High Priority</div>
+        <div style="text-align: center; padding: 12px; border: 1px solid #ffdfab; background: #ffefd6; border-radius: 6px;">
+            <div style="font-size: 28px; font-weight: 700; color: #ba6a1a;">{high_count}</div>
+            <div style="font-size: 12px; color: #ba6a1a; font-weight: 600; text-transform: uppercase;">High Priority</div>
         </div>
         """, unsafe_allow_html=True)
     
     with col_stat3:
         st.markdown(f"""
-        <div style="text-align: center; padding: 12px; background: #fef3c7; border-radius: 6px;">
-            <div style="font-size: 28px; font-weight: 700; color: #ca8a04;">{medium_count}</div>
-            <div style="font-size: 12px; color: #92400e; font-weight: 600;">Medium Priority</div>
+        <div style="text-align: center; padding: 12px; border: 1px solid #c6c6cd; background: #f0edef; border-radius: 6px;">
+            <div style="font-size: 28px; font-weight: 700; color: #45464d;">{medium_count}</div>
+            <div style="font-size: 12px; color: #45464d; font-weight: 600; text-transform: uppercase;">Medium Priority</div>
         </div>
         """, unsafe_allow_html=True)
     
@@ -135,9 +147,8 @@ if alert_list:
         
         arr_display = f"${alert['arr']/1000000:.1f}M" if alert['arr'] >= 1000000 else f"${alert['arr']/1000:.0f}K"
         
-        alerts_table += f"""
-        <div style="padding: 16px; border: 1px solid #e5e5e5; border-radius: 8px; margin-bottom: 12px; 
-                    background: white; display: flex; justify-content: space-between; align-items: center;">
+        alerts_table += f'''
+        <div style="padding: 16px; border: 1px solid #e5e5e5; border-radius: 8px; margin-bottom: 12px; background: white; display: flex; justify-content: space-between; align-items: center;">
             <div style="flex: 1;">
                 <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
                     <span style="font-size: 24px;">{alert['icon']}</span>
@@ -158,7 +169,7 @@ if alert_list:
                 </div>
             </div>
         </div>
-        """
+        '''
     
     st.markdown(alerts_table, unsafe_allow_html=True)
 else:
@@ -181,23 +192,21 @@ st.markdown("### High Risk Accounts")
 top_accounts = customers_df[customers_df['health_status'].isin(['Critical', 'Medium'])].sort_values('risk_score', ascending=False).head(5)
 account_rows = ""
 for _, row in top_accounts.iterrows():
-    color_hex = "#dc2626" if row['health_status'] == 'Critical' else "#f59e0b"
-    bg_hex = "#fee2e2" if row['health_status'] == 'Critical' else "#fef3c7"
-    text_hex = "#991b1b" if row['health_status'] == 'Critical' else "#92400e"
-    border_hex = "#dc2626" if row['health_status'] == 'Critical' else "#eab308"
+    color_hex = "#ba1a1a" if row['health_status'] == 'Critical' else "#ba6a1a"
+    bg_hex = "#ffdad6" if row['health_status'] == 'Critical' else "#ffefd6"
+    text_hex = "#ba1a1a" if row['health_status'] == 'Critical' else "#ba6a1a"
+    border_hex = "#ffb4ab" if row['health_status'] == 'Critical' else "#ffdfab"
     action = "Intervene" if row['health_status'] == 'Critical' else "Review"
     btn_class = "btn-primary" if row['health_status'] == 'Critical' else "btn-secondary"
     last_active_str = pd.to_datetime(row['last_activity']).strftime('%b %d, %Y') if pd.notna(row['last_activity']) else "No Activity"
     
     account_rows += f"""
         <tr>
-            <td><span style="color: {color_hex};">●</span> {row['company_name']}</td>
-            <td><div style="display: inline-flex; align-items: center; justify-content: center; 
-                      width: 40px; height: 40px; border-radius: 50%; background: {bg_hex}; 
-                      color: {text_hex}; font-weight: 700; border: 2px solid {border_hex};">{int(row['risk_score'])}</div></td>
+            <td><span style="color: {color_hex}; font-size: 10px;">●</span> <strong>{row['company_name']}</strong></td>
+            <td><span style="color: {text_hex}; font-weight: 700; font-size: 16px;">{int(row['risk_score'])}</span></td>
             <td>${row['arr']/1000:,.0f}K</td>
-            <td>{last_active_str}</td>
-            <td><a href="#" class="{btn_class}" style="padding: 6px 16px; font-size: 12px;">{action}</a></td>
+            <td style="color: #45464d;">{last_active_str}</td>
+            <td><button class="{btn_class}">{action}</button></td>
         </tr>
     """
 

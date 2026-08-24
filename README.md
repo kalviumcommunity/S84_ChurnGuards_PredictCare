@@ -17,17 +17,30 @@ This project uses technologies from the **Turn Data Into a Product** curriculum:
 
 ```
 churn-prevention-system/
-├── streamlit_app.py          # Main Streamlit application
+├── streamlit_app.py          # Main Streamlit application (Routing & Auth)
 ├── requirements.txt          # Python dependencies
 ├── .gitignore               # Git ignore rules
-├── README_STREAMLIT.md      # This file
+├── README.md                # This file
+├── QUICKSTART.md            # Quick start guide
+├── .env.example             # Environment variables template
 ├── data/                    # CSV/JSON datasets (to be added)
+├── pages/                   # Modular Page Components
+│   ├── 1_dashboard.py       # Executive Dashboard
+│   ├── 2_risk_center.py     # Risk Command Center
+│   ├── 3_tickets.py         # Ticket Workspace
+│   ├── 4_directory.py       # Customer Directory & 360 View
+│   └── 5_data_upload.py     # Data Upload & Validation
 ├── scripts/                 # Data processing scripts
 │   ├── data_ingestion.py    # CSV & JSON data loading
 │   ├── data_cleaning.py     # Missing values, duplicates, standardization
 │   ├── feature_engineering.py # Derived business columns
 │   └── churn_analysis.py    # GroupBy, KPIs, behavioral analysis
-└── notebooks/               # Exploratory analysis (optional)
+├── utils/                   # Shared Utilities
+│   ├── data_loader.py       # DB connections & CSS injection
+│   └── validators.py        # Schema validation engine
+└── tests/                   # Automated Test Suite
+    ├── test_etl_pipeline.py # End-to-End ETL tests
+    └── test_upload_validation.py # Schema validation tests
 ```
 
 ## Installation

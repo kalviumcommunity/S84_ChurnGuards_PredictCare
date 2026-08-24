@@ -298,7 +298,25 @@ S84_ChurnGuards_PredictCare/
 ├── db_queries.py                  # Query helper functions
 ├── seed_analytics_data.py         # Seed analytics tables
 │
-├── streamlit_app.py               # Main application
+├── pages/                         # Modular Streamlit Pages
+│   ├── 1_dashboard.py             # Executive Dashboard
+│   ├── 2_risk_center.py           # Risk Command Center
+│   ├── 3_tickets.py               # Ticket Workspace
+│   ├── 4_directory.py             # Customer Directory & 360 View
+│   └── 5_data_upload.py           # Data Upload & Validation
+│
+├── utils/                         # Shared Utilities
+│   ├── data_loader.py             # DB connections & CSS injection
+│   ├── validators.py              # Schema validation engine
+│   └── llm_client.py              # API client for LLM generation
+│
+├── tests/                         # Automated Test Suite
+│   ├── test_etl_pipeline.py       # End-to-End ETL tests
+│   ├── test_upload_validation.py  # Schema validation tests
+│   └── test_customer_directory.py # Customer directory tests
+│
+├── streamlit_app.py               # Main application (Routing)
+├── .env.example                   # Environment variables template
 ├── DATABASE_README.md             # Database documentation
 └── QUICKSTART.md                  # This file
 ```

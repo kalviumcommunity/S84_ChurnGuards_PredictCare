@@ -1,5 +1,7 @@
 # Sprint 2 Preparation - RAG Implementation Roadmap
 
+This roadmap is maintained alongside the implementation so progress stays visible.
+
 ## ✅ Completed (Sprint 1)
 - [x] **Module 2.36** - Real risk calculation algorithm
 - [x] **Module 2.37** - Database schema & SQL integration

@@ -2,6 +2,8 @@
 
 A data-driven platform built with **Python and Streamlit** combining support tickets, CRM, billing, and cancellation history to predict customer churn, generate proactive alerts, and provide actionable retention recommendations.
 
+For the fastest local setup, follow [QUICKSTART.md](QUICKSTART.md).
+
 ## Tech Stack (Sprint 1 Curriculum)
 
 This project uses technologies from the **Turn Data Into a Product** curriculum:

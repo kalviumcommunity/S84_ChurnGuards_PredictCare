@@ -231,12 +231,14 @@ class ChurnGuardDB:
     def get_revenue_at_risk(self) -> float:
         """Calculate total revenue at risk"""
         query = """
-        SELECT SUM(arr) as total_at_risk
+        SELECT COALESCE(SUM(arr), 0.0) as total_at_risk
         FROM customers
         WHERE health_status IN ('Critical', 'Medium')
         """
         df = self.execute_query(query)
-        return df['total_at_risk'].iloc[0] if not df.empty else 0.0
+        if not df.empty and pd.notna(df['total_at_risk'].iloc[0]):
+            return float(df['total_at_risk'].iloc[0])
+        return 0.0
     
     def get_intervention_stats(self) -> pd.DataFrame:
         """Get intervention effectiveness statistics"""

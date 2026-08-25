@@ -18,6 +18,13 @@ from scripts.feature_engineering import engineer_features
 class TestDataIngestion(unittest.TestCase):
     """Tests for scripts/data_ingestion.py"""
 
+    @classmethod
+    def setUpClass(cls):
+        """Ensure test data files exist in data directory."""
+        if not os.path.exists('data/customers.csv') or not os.path.exists('data/interactions.csv'):
+            import subprocess
+            subprocess.run(['python', 'scripts/generate_mock_data.py'], capture_output=True)
+
     def test_load_data_existing_directory(self):
         """Verify load_data successfully loads standard datasets from data directory."""
         customers, tickets, interactions, churn_history = load_data('data')

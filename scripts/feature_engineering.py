@@ -8,12 +8,22 @@ def engineer_features(customers, tickets, interactions):
     if customers.empty:
         # Create sample customers if empty
         customers = pd.DataFrame({
-            'customer_id': range(1, 201),
-            'company_name': [f'Company {chr(65 + i % 26)}{i}' for i in range(1, 201)],
+            'customer_id': [f'CUST-{1000+i}' for i in range(200)],
+            'company_name': [f'Company {chr(65 + i % 26)}{i}' for i in range(200)],
             'arr': np.random.randint(50000, 5000000, 200),
             'sentiment': np.random.choice(['Positive', 'Neutral', 'Negative'], 200, p=[0.3, 0.4, 0.3])
         })
         
+    # Ensure customer_id is string type across all datasets for safe merging
+    if 'customer_id' in customers.columns:
+        customers['customer_id'] = customers['customer_id'].astype(str)
+        
+    if not tickets.empty and 'customer_id' in tickets.columns:
+        tickets['customer_id'] = tickets['customer_id'].astype(str)
+        
+    if not interactions.empty and 'customer_id' in interactions.columns:
+        interactions['customer_id'] = interactions['customer_id'].astype(str)
+
     # Ensure arr column exists
     if 'arr' not in customers.columns:
         customers['arr'] = np.random.randint(50000, 5000000, len(customers))
@@ -52,14 +62,14 @@ def engineer_features(customers, tickets, interactions):
         
         # Calculate days since last activity
         now = pd.to_datetime('today')
-        customers['days_since_active'] = (now - customers['last_activity']).dt.days
+        customers['days_since_active'] = (now - pd.to_datetime(customers['last_activity'])).dt.days
         customers['days_since_active'] = customers['days_since_active'].fillna(30)
         
         # Add risk based on inactivity
         customers['risk_score'] += np.where(customers['days_since_active'] > 30, 20, 0)
     else:
         # Add default last_activity if no interactions
-        customers['last_activity'] = pd.to_datetime('today') - pd.to_timedelta(np.random.randint(1, 30, len(customers)), unit='d')
+        customers['last_activity'] = pd.to_datetime('today') - pd.to_timedelta(np.random.randint(1, 30, len(customers)), unit='D')
         customers['days_since_active'] = np.random.randint(1, 30, len(customers))
         customers['risk_score'] += np.where(customers['days_since_active'] > 30, 20, 0)
         
@@ -82,7 +92,7 @@ def engineer_features(customers, tickets, interactions):
         tickets = tickets.merge(customers[['customer_id', 'risk_score', 'company_name']], on='customer_id', how='left')
         tickets = tickets.rename(columns={'company_name': 'company'})
         # Use first name from customer_id as dummy customer name
-        tickets['customer'] = 'User ' + tickets['customer_id'].str.split('-').str[1]
+        tickets['customer'] = 'User ' + tickets['customer_id'].str.split('-').str[-1]
         
     # Calculate mathematical churn probability
     inactivity = customers.get('days_since_active', 0)

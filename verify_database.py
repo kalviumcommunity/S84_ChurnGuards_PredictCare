@@ -1,7 +1,9 @@
-"""
-Verify Database Setup
-Check all tables and data counts
-"""
+import sys
+if hasattr(sys.stdout, 'encoding') and sys.stdout.encoding != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 
 import sqlite3
 import pandas as pd

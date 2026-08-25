@@ -1,7 +1,9 @@
-"""
-Test SQL Query Integration (Module 2.38-2.40)
-Verifies that db_queries.py functions work correctly
-"""
+import sys
+if hasattr(sys.stdout, 'encoding') and sys.stdout.encoding != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 
 from db_queries import ChurnGuardDB
 import pandas as pd

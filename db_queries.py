@@ -326,6 +326,48 @@ class ChurnGuardDB:
         search_pattern = f'%{search_term}%'
         return self.execute_query(query, (search_pattern, search_pattern))
 
+    def get_cohort_retention_analysis(self) -> pd.DataFrame:
+        """Get customer distribution and health by industry cohort."""
+        query = """
+        SELECT 
+            industry,
+            COUNT(*) as total_customers,
+            ROUND(AVG(risk_score), 1) as avg_risk_score,
+            SUM(CASE WHEN health_status = 'Critical' THEN 1 ELSE 0 END) as critical_count,
+            SUM(arr) as total_cohort_arr
+        FROM customers
+        GROUP BY industry
+        ORDER BY total_cohort_arr DESC
+        """
+        return self.execute_query(query)
+
+    def get_arr_bridge_metrics(self) -> Dict[str, float]:
+        """Calculate ARR totals partitioned by health status tiers."""
+        query = """
+        SELECT 
+            COALESCE(SUM(CASE WHEN health_status = 'Low Risk' THEN arr ELSE 0 END), 0) as healthy_arr,
+            COALESCE(SUM(CASE WHEN health_status = 'Medium' THEN arr ELSE 0 END), 0) as medium_arr,
+            COALESCE(SUM(CASE WHEN health_status = 'Critical' THEN arr ELSE 0 END), 0) as critical_arr,
+            COALESCE(SUM(arr), 0) as total_arr
+        FROM customers
+        """
+        df = self.execute_query(query)
+        return df.to_dict('records')[0] if not df.empty else {}
+
+    def get_risk_distribution_summary(self) -> pd.DataFrame:
+        """Get summary breakdown of customer counts and revenue across health bands."""
+        query = """
+        SELECT 
+            health_status,
+            COUNT(*) as customer_count,
+            SUM(arr) as arr_sum,
+            ROUND(AVG(risk_score), 1) as avg_risk
+        FROM customers
+        GROUP BY health_status
+        ORDER BY avg_risk DESC
+        """
+        return self.execute_query(query)
+
 
 # ========================================
 # EXAMPLE USAGE
@@ -343,3 +385,4 @@ if __name__ == "__main__":
     
     print("\nActive Alerts:")
     print(db.get_active_alerts())
+

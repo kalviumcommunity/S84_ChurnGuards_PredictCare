@@ -37,4 +37,4 @@ format:
 	black streamlit_app.py
 
 test:
-	@echo "No tests configured yet. Run: pytest tests/"
+	pytest tests/

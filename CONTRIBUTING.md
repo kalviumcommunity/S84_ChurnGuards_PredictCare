@@ -40,6 +40,8 @@ python -m streamlit run streamlit_app.py
 
 ## 🌿 Branch Strategy
 
+Keep each pull request focused on one reviewable change.
+
 ### Main Branches
 - **`main`** - Production-ready code (protected)
 - **`develop`** - Integration branch for features

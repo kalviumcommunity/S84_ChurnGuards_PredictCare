@@ -1,6 +1,7 @@
 # Customer Support Churn Prevention System - Streamlit Version
 
 A data-driven platform built with **Python and Streamlit** combining support tickets, CRM, billing, and cancellation history to predict customer churn, generate proactive alerts, and provide actionable retention recommendations.
+The dashboard is intended for local customer-risk exploration and retention planning.
 
 ## Tech Stack (Sprint 1 Curriculum)
 

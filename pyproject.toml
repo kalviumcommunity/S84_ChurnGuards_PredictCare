@@ -33,7 +33,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/churnguard-ai"
+Homepage = "https://github.com/kalviumcommunity/S84_ChurnGuards_PredictCare"
 Repository = "https://github.com/yourusername/churnguard-ai"
 Documentation = "https://github.com/yourusername/churnguard-ai/blob/main/README.md"
 Issues = "https://github.com/yourusername/churnguard-ai/issues"

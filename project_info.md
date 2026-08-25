@@ -3,6 +3,8 @@
 ## 🎯 Project Overview
 Customer churn prevention system with SQLite database backend, automated ETL pipeline, and interactive Streamlit dashboard for predicting and preventing customer churn.
 
+The project is designed for local development with reproducible sample data.
+
 ---
 
 ## 🚀 Quick Start (One Command)

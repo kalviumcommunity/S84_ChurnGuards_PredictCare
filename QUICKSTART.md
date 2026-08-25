@@ -2,6 +2,8 @@
 
 ## What's New in This PR
 
+Use this guide from the repository root so the commands resolve local files correctly.
+
 ### ✅ Database Schema & Infrastructure
 - **Complete relational database schema** with 6 core tables
 - **Advanced analytics tables** for risk tracking and customer insights

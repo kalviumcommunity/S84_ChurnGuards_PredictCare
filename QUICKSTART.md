@@ -44,6 +44,7 @@ This creates `churnguard.db` with:
 python -m streamlit run streamlit_app.py
 ```
 Open browser to: **http://localhost:8501**
+If the default port is busy, configure another Streamlit server port before launching.
 
 ---
 

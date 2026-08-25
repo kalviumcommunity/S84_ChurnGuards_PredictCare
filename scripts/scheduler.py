@@ -1,4 +1,8 @@
-import schedule
+try:
+    import schedule
+except ImportError:
+    schedule = None
+
 import time
 import subprocess
 import logging
@@ -11,6 +15,9 @@ logger = logging.getLogger(__name__)
 def run_script(script_name):
     """Run a python script and log its execution."""
     script_path = os.path.join(os.path.dirname(__file__), script_name)
+    if not os.path.exists(script_path):
+        script_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), script_name)
+
     logger.info(f"Running scheduled job: {script_name}")
     try:
         # Run script using the current Python executable
@@ -33,15 +40,18 @@ def job_snapshot_manager():
 def start_scheduler():
     logger.info("Starting ChurnGuard Task Scheduler...")
     
+    if schedule is None:
+        logger.warning("'schedule' package not installed. Running tasks in manual trigger mode.")
+        logger.info("Executing initial email alerts check...")
+        job_email_alerts()
+        return
+
     # Schedule email alerts every morning at 8 AM
     schedule.every().day.at("08:00").do(job_email_alerts)
     
     # Schedule database snapshots at midnight
     schedule.every().day.at("00:00").do(job_snapshot_manager)
     
-    # For testing purposes, you can uncomment to run every minute
-    # schedule.every(1).minutes.do(job_email_alerts)
-
     logger.info("Scheduler is running. Press Ctrl+C to exit.")
     
     while True:
